@@ -1,15 +1,17 @@
 extends KinematicBody2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+# Physics and Jump
+const UP = Vector2(0, -1)
+const GRAVITY = 10
+const ACCELERATION = 20
+const MAX_SPEED = 200
+const JUMP_HEIGHT = 300
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+var motion = Vector2()
+
+func _physics_process(delta):
+	#Gravity
+	motion.y += GRAVITY
+	
+	motion = move_and_slide(motion, UP)
