@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.0625, 21 )
+
+[node name="Level" type="Node" index="0"]
+
+[node name="Floor" type="KinematicBody2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 512, 392 )
+scale = Vector2( 16, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="0"]
+
+position = Vector2( -0.0625, -1 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+
