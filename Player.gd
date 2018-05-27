@@ -18,5 +18,9 @@ func _physics_process(delta):
 	else:
 		friction = true
 	
-	if friction:
-		motion.x = lerp(motion.x, 0, FLOOR_FRICTION)
+	if is_on_floor():
+		if Input.is_action_just_pressed("jump"):
+			motion.y = -JUMP_HEIGHT
+		# Apply friction on floor
+		if friction:
+			motion.x = lerp(motion.x, 0, FLOOR_FRICTION)
