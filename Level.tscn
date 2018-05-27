@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://ground-1024x50-white.png" type="Texture" id=1]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://druplicon-blue.png" type="Texture" id=3]
+[ext_resource path="res://Character/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ground-1024x50-white.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/druplicon-blue.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -16,7 +16,15 @@ extents = Vector2( 16.4852, 17.0094 )
 
 [node name="Level" type="Node" index="0"]
 
-[node name="Floor" type="KinematicBody2D" parent="." index="0"]
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 390.22, 332.905 )
+
+[node name="Objects" type="Node" parent="." index="1"]
+
+editor/display_folded = true
+
+[node name="Floor" type="KinematicBody2D" parent="Objects" index="0"]
 
 editor/display_folded = true
 position = Vector2( 512, 392 )
@@ -29,18 +37,17 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Floor" index="0"]
 
 position = Vector2( -0.0625, -1 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Sprite" type="Sprite" parent="Floor" index="1"]
+[node name="Sprite" type="Sprite" parent="Objects/Floor" index="1"]
 
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
-[node name="Floor2" type="KinematicBody2D" parent="." index="1"]
+[node name="Floor2" type="KinematicBody2D" parent="Objects" index="1"]
 
 editor/display_folded = true
 position = Vector2( -8.30487, 130.712 )
@@ -53,22 +60,17 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Floor2" index="0"]
 
 position = Vector2( -0.0625, -1 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Sprite" type="Sprite" parent="Floor2" index="1"]
+[node name="Sprite" type="Sprite" parent="Objects/Floor2" index="1"]
 
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
-[node name="Player" parent="." index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 292.521, 60.2557 )
-
-[node name="RigidBody2D" type="RigidBody2D" parent="." index="3"]
+[node name="RigidBody2D" type="RigidBody2D" parent="Objects" index="2"]
 
 editor/display_folded = true
 position = Vector2( 604.377, 347.422 )
@@ -94,14 +96,13 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D" index="0"]
+[node name="Sprite" type="Sprite" parent="Objects/RigidBody2D" index="0"]
 
 position = Vector2( 0.193726, -0.193726 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/RigidBody2D" index="1"]
 
 position = Vector2( -6.10352e-05, 2.51822 )
 shape = SubResource( 2 )

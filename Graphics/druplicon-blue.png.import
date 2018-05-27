@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/druplicon-blue.png-1fd123340207337afa2113ea4b017629.stex"
+path="res://.import/druplicon-blue.png-84e6571202c4699afd33f67aca135a4d.stex"
 
 [deps]
 
-source_file="res://druplicon-blue.png"
+source_file="res://Graphics/druplicon-blue.png"
 source_md5="64acee29c573f5bf00a4e044d18f345f"
 
-dest_files=[ "res://.import/druplicon-blue.png-1fd123340207337afa2113ea4b017629.stex" ]
+dest_files=[ "res://.import/druplicon-blue.png-84e6571202c4699afd33f67aca135a4d.stex" ]
 dest_md5="3f6fa879c555e3a9b6e09deca95a909d"
 
 [params]
