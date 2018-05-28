@@ -37,7 +37,6 @@ func update(player, delta):
 		
 	# Apply air friction if player is in the air and
 	# lets go of the move key
-	#if not player.is_on_floor() and \
 	if not Input.is_action_pressed("move_right") and \
 	not Input.is_action_pressed("move_left"):
 		player.motion.x = lerp(player.motion.x, 0, AIR_FRICTION)
