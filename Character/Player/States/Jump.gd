@@ -11,7 +11,9 @@ const FLOOR_FRICTION = 0.2
 const AIR_FRICTION = 0.1
 
 func enter(player):
-	print("WALK")
+	print("JUMP")
+	if player.is_on_floor():
+		player.motion.y = -JUMP_HEIGHT
 	pass
 
 func exit():
@@ -31,16 +33,24 @@ func update(player, delta):
 		player.motion.x = max(player.motion.x - ACCELERATION, -MAX_SPEED)
 		player.flip_sprite(true)
 	else:
-		 return STATE.IDLE # friction = true
+		friction = true
 		
+	# Apply air friction if player is in the air and
+	# lets go of the move key
+	#if not player.is_on_floor() and \
+	if not Input.is_action_pressed("move_right") and \
+	not Input.is_action_pressed("move_left"):
+		player.motion.x = lerp(player.motion.x, 0, AIR_FRICTION)
+	
 	# Process movement using Godot physics system
 	player.motion = player.move_and_slide(player.motion, UP)
+	
+	if player.is_on_floor():
+		if friction == false:
+			return STATE.WALK
+		else:
+			return STATE.IDLE
 	pass
 	
 func handleInput(event):
-	if Input.is_action_just_pressed("jump"):
-		return STATE.JUMP
-	#if not Input.is_action_pressed("move_right") or \
-	#not Input.is_action_pressed("move_left"):
-	#	return STATE.IDLE
 	pass
