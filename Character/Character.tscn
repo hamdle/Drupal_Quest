@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Character/Character.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/druplicon-blue.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Character/States/JUMP.gd" type="Script" id=4]
 [ext_resource path="res://Character/States/WALK.gd" type="Script" id=5]
 [ext_resource path="res://Character/States/LAUNCH.gd" type="Script" id=6]
+[ext_resource path="res://Character/States/WIN.gd" type="Script" id=7]
 
 [sub_resource type="Animation" id=1]
 
@@ -367,7 +368,7 @@ tracks/8/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 13.0994, 13.467 )
 
-[node name="Character" type="KinematicBody2D"]
+[node name="Character" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -434,6 +435,10 @@ vertical_scale = 0.1
 horizontal_scale = 0.1
 max_vertical_launch = 900
 max_horizontal_launch = 300
+
+[node name="Win" type="Node" parent="States" index="4"]
+
+script = ExtResource( 7 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 

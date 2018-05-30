@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH }
+enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH, WIN }
 
 const MOUSE_RESET = Vector2(-1, -1)
 
@@ -18,7 +18,8 @@ onready var state_nodes = {
 	STATE.IDLE: $States/Idle,
 	STATE.WALK: $States/Walk,
 	STATE.JUMP: $States/Jump,
-	STATE.LAUNCH: $States/Launch
+	STATE.LAUNCH: $States/Launch,
+	STATE.WIN: $States/Win
 }
 
 func _ready():
@@ -68,7 +69,10 @@ func flip_sprite(flip):
 # Exit entered signal
 func _on_Exit_entered():
 	if has_key:
-		print("WIN")
+		if not current_state == state_nodes[STATE.WIN]:
+			current_state.exit(self)
+			current_state = state_nodes[STATE.WIN]
+			current_state.enter(self)
 	pass
 	
 func _on_AnimationPlayer_animation_finished(anim_name):
