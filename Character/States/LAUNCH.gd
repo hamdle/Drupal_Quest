@@ -12,6 +12,8 @@ const AIR_FRICTION = 0.1
 
 func enter(player):
 	print("LAUNCH")
+	if player.is_on_floor():
+		player.motion = player.launch_velocity
 	pass
 
 func exit():
@@ -23,6 +25,10 @@ func update(player, delta):
 	
 	# Process movement using Godot physics system
 	player.motion = player.move_and_slide(player.motion, UP)
+	
+	# Process states. This must be AFTER move_and_slide
+	if player.is_on_floor():
+		return STATE.IDLE
 	pass
 	
 func handleInput(player, event):

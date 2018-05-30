@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # Physics and Jump
 var motion = Vector2()
-var launch_distance
+var launch_velocity = Vector2()
 
 # State Machine
 var current_state

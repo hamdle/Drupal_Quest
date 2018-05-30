@@ -41,7 +41,8 @@ func handleInput(player, event):
 			mouse_release = event.position
 			var dir_x = mouse_press.x - mouse_release.x
 			var dir_y = mouse_press.y - mouse_release.y
-			player.launch_distance = sqrt(pow(dir_x, 2) + pow(dir_y, 2))
+			var factor = sqrt(pow(dir_x, 2) + pow(dir_y, 2))
+			player.launch_velocity = Vector2(dir_x * factor, dir_y * factor)
 			return STATE.LAUNCH
 			
 	# Check movement keys to set state change
