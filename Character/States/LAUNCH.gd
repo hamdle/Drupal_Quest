@@ -62,4 +62,8 @@ func calculate_launch_velocity(mouse_press, mouse_release):
 	else:
 		launch_velocity.x = max(launch_velocity.x * horizontal_scale, -max_horizontal_launch)
 	
+	# No launching down - causes buggy behavior
+	if launch_velocity.y == 0:
+		launch_velocity.x = 0
+	
 	return launch_velocity
