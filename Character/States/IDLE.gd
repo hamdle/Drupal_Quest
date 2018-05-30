@@ -11,7 +11,7 @@ const FLOOR_FRICTION = 0.2
 const AIR_FRICTION = 0.1
 
 func enter(player):
-	print("IDLE")
+	print(player.name + " IDLE")
 	pass
 
 func exit(player):

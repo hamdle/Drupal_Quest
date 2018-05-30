@@ -42,8 +42,8 @@ texture = ExtResource( 1 )
 
 position = Vector2( 737.322, 284.318 )
 
-[node name="KinematicBody2D" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Key" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 386.346, 476.131 )
+position = Vector2( 356.418, 482.932 )
 
 

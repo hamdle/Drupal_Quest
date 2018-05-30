@@ -1,15 +1,31 @@
 extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+enum STATE { NULL, WAIT, CARRY }
 
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+const UP = Vector2(0, -1)
+const GRAVITY = 12
+
+func enter(key):
+	print(key.name + " WAIT")
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func exit(key):
+	pass
+	
+func update(key, delta):
+	#Gravity
+	key.motion.y += GRAVITY
+	
+	# Poll Area2D for Character collision
+	var area = key.get_node("Area2D")
+	for body in area.get_overlapping_bodies():
+		if body.name == "Character":
+			key.set_character(body)
+			return STATE.CARRY
+			
+	# Process movement using Godot physics system
+	key.motion = key.move_and_slide(key.motion, UP)
+	pass
+	
+func handleInput(key, event):
+	pass

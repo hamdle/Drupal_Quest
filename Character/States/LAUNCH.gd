@@ -16,7 +16,7 @@ export var max_vertical_launch = 900
 export var max_horizontal_launch = 300
 	
 func enter(player):
-	print("LAUNCH")
+	print(player.name + " LAUNCH")
 	if player.is_on_floor():
 		player.motion = calculate_launch_velocity(player.mouse_press, player.mouse_release)
 	pass

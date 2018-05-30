@@ -8,6 +8,8 @@ const MOUSE_RESET = Vector2(-1, -1)
 var motion = Vector2()
 var mouse_press = Vector2()
 var mouse_release = Vector2()
+# Key
+var has_key = false
 
 # State Machine
 var current_state

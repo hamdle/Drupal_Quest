@@ -12,7 +12,7 @@ const AIR_FRICTION = 0.1
 export var jump_height = 325
 
 func enter(player):
-	print("JUMP")
+	print(player.name + " JUMP")
 	if player.is_on_floor():
 		player.motion.y = -jump_height
 	pass

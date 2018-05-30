@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/Key/Key.gd" type="Script" id=1]
 [ext_resource path="res://key-black.png" type="Texture" id=2]
@@ -125,7 +125,12 @@ tracks/8/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 28.4756, 14.4634 )
 
-[node name="Key" type="KinematicBody2D" index="0"]
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 63.0198
+
+[node name="Key" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -174,5 +179,22 @@ script = ExtResource( 3 )
 [node name="Carry" type="Node" parent="States" index="1"]
 
 script = ExtResource( 4 )
+carry_offset = Vector2( 0, -50 )
+
+[node name="Area2D" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+shape = SubResource( 3 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 
