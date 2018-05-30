@@ -12,6 +12,7 @@ const AIR_FRICTION = 0.1
 
 func enter(player):
 	print(player.name + " WIN")
+	get_tree().reload_current_scene()
 	pass
 
 func exit(player):
