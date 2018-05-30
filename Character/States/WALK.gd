@@ -1,6 +1,6 @@
 extends Node
 
-enum STATE { NULL, IDLE, WALK, JUMP }
+enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH }
 
 const UP = Vector2(0, -1)
 const GRAVITY = 12
@@ -37,7 +37,7 @@ func update(player, delta):
 	player.motion = player.move_and_slide(player.motion, UP)
 	pass
 	
-func handleInput(event):
+func handleInput(player, event):
 	if Input.is_action_just_pressed("jump"):
 		return STATE.JUMP
 	#if not Input.is_action_pressed("move_right") or \

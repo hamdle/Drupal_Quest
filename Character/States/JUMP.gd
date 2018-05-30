@@ -1,6 +1,6 @@
 extends Node
 
-enum STATE { NULL, IDLE, WALK, JUMP }
+enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH }
 
 const UP = Vector2(0, -1)
 const GRAVITY = 12
@@ -51,5 +51,5 @@ func update(player, delta):
 			return STATE.IDLE
 	pass
 	
-func handleInput(event):
+func handleInput(player, event):
 	pass

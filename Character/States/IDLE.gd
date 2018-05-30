@@ -1,6 +1,6 @@
 extends Node
 
-enum STATE { NULL, IDLE, WALK, JUMP }
+enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH }
 
 const UP = Vector2(0, -1)
 const GRAVITY = 12
@@ -9,6 +9,10 @@ const MAX_SPEED = 200
 const JUMP_HEIGHT = 300
 const FLOOR_FRICTION = 0.2
 const AIR_FRICTION = 0.1
+
+# Slingshot jump
+var mouse_press = Vector2()
+var mouse_release = Vector2()
 
 func enter(player):
 	print("IDLE")
@@ -28,7 +32,19 @@ func update(player, delta):
 	player.motion = player.move_and_slide(player.motion, UP)
 	pass
 	
-func handleInput(event):
+func handleInput(player, event):
+	# Slingshot jump processing
+	if event is InputEventMouseButton:
+		if event.is_action_pressed("mouse_button"):
+			mouse_press = event.position
+		if event.is_action_released("mouse_button"):
+			mouse_release = event.position
+			var dir_x = mouse_press.x - mouse_release.x
+			var dir_y = mouse_press.y - mouse_release.y
+			player.launch_distance = sqrt(pow(dir_x, 2) + pow(dir_y, 2))
+			return STATE.LAUNCH
+			
+	# Check movement keys to set state change
 	if Input.is_action_pressed("move_right"):
 		return STATE.WALK
 	if Input.is_action_pressed("move_left"):
