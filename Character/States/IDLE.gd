@@ -34,7 +34,7 @@ func handleInput(player, event):
 		if event.is_action_pressed("mouse_button"):
 			player.mouse_press = event.position
 		if event.is_action_released("mouse_button"):
-			player.calculate_launch_velocity(player.mouse_press, event.position)
+			player.mouse_release = event.position
 			return STATE.LAUNCH
 			
 	# Check movement keys to set state change
