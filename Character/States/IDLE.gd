@@ -2,11 +2,11 @@ extends Node
 
 enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH }
 
+const MOUSE_RESET = Vector2(-1, -1)
 const UP = Vector2(0, -1)
 const GRAVITY = 12
 const ACCELERATION = 20
 const MAX_SPEED = 200
-const JUMP_HEIGHT = 300
 const FLOOR_FRICTION = 0.2
 const AIR_FRICTION = 0.1
 
@@ -14,7 +14,7 @@ func enter(player):
 	print("IDLE")
 	pass
 
-func exit():
+func exit(player):
 	pass
 	
 func update(player, delta):
@@ -35,7 +35,9 @@ func handleInput(player, event):
 			player.mouse_press = event.position
 		if event.is_action_released("mouse_button"):
 			player.mouse_release = event.position
-			return STATE.LAUNCH
+			# Make sure we captured a press too
+			if player.mouse_press != MOUSE_RESET:
+				return STATE.LAUNCH
 			
 	# Check movement keys to set state change
 	if Input.is_action_pressed("move_right"):

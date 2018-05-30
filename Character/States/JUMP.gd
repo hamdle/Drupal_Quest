@@ -6,17 +6,18 @@ const UP = Vector2(0, -1)
 const GRAVITY = 12
 const ACCELERATION = 20
 const MAX_SPEED = 200
-const JUMP_HEIGHT = 300
 const FLOOR_FRICTION = 0.2
 const AIR_FRICTION = 0.1
+
+export var jump_height = 325
 
 func enter(player):
 	print("JUMP")
 	if player.is_on_floor():
-		player.motion.y = -JUMP_HEIGHT
+		player.motion.y = -jump_height
 	pass
 
-func exit():
+func exit(player):
 	pass
 	
 func update(player, delta):

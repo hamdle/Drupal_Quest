@@ -2,17 +2,17 @@ extends Node
 
 enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH }
 
+const MOUSE_RESET = Vector2(-1, -1)
 const UP = Vector2(0, -1)
 const GRAVITY = 12
 const ACCELERATION = 20
 const MAX_SPEED = 200
-const JUMP_HEIGHT = 300
 const FLOOR_FRICTION = 0.2
 const AIR_FRICTION = 0.1
 
 export var vertical_scale = 0.1
 export var horizontal_scale = 0.1
-export var max_vertical_launch = 1000
+export var max_vertical_launch = 900
 export var max_horizontal_launch = 300
 	
 func enter(player):
@@ -21,7 +21,8 @@ func enter(player):
 		player.motion = calculate_launch_velocity(player.mouse_press, player.mouse_release)
 	pass
 
-func exit():
+func exit(player):
+	player.mouse_press = MOUSE_RESET
 	pass
 	
 func update(player, delta):
@@ -53,7 +54,6 @@ func calculate_launch_velocity(mouse_press, mouse_release):
 	var dir_y = mouse_press.y - mouse_release.y
 	var factor = sqrt(pow(dir_x, 2) + pow(dir_y, 2))
 	var launch_velocity = Vector2(dir_x * factor, dir_y * factor)
-	print(launch_velocity)
 	
 	# Scale for launch
 	launch_velocity.y = min(max(launch_velocity.y * vertical_scale, -max_vertical_launch), 0)
@@ -61,5 +61,5 @@ func calculate_launch_velocity(mouse_press, mouse_release):
 		launch_velocity.x = min(launch_velocity.x * horizontal_scale, max_horizontal_launch)
 	else:
 		launch_velocity.x = max(launch_velocity.x * horizontal_scale, -max_horizontal_launch)
-	print(launch_velocity)
+	
 	return launch_velocity

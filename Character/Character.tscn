@@ -367,7 +367,7 @@ tracks/8/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 13.0994, 13.467 )
 
-[node name="Character" type="KinematicBody2D" index="0"]
+[node name="Character" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -421,6 +421,7 @@ script = ExtResource( 3 )
 [node name="Jump" type="Node" parent="States" index="1"]
 
 script = ExtResource( 4 )
+jump_height = 325
 
 [node name="Walk" type="Node" parent="States" index="2"]
 
@@ -431,7 +432,7 @@ script = ExtResource( 5 )
 script = ExtResource( 6 )
 vertical_scale = 0.1
 horizontal_scale = 0.1
-max_vertical_launch = 1000
+max_vertical_launch = 900
 max_horizontal_launch = 300
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
