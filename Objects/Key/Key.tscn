@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/Key/Key.gd" type="Script" id=1]
-[ext_resource path="res://key-black.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/key-black.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Key/States/WAIT.gd" type="Script" id=3]
 [ext_resource path="res://Objects/Key/States/CARRY.gd" type="Script" id=4]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 
 resource_name = "SETUP"
 length = 1.0
@@ -120,7 +120,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 28.4756, 14.4634 )
@@ -145,7 +145,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/SETUP = SubResource( 2 )
+anims/SETUP = SubResource( 1 )
 blend_times = [  ]
 
 [node name="Tween" type="Tween" parent="." index="1"]
@@ -159,16 +159,13 @@ playback/speed = 1.0
 
 [node name="Position2D" type="Position2D" parent="." index="2"]
 
-scale = Vector2( 1, 1 )
-
 [node name="Sprite" type="Sprite" parent="Position2D" index="0"]
 
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="States" type="Node" parent="." index="4"]
 

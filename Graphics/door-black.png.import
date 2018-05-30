@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/key-black.png-72bada35b8d3ed46e952cb03aeb795ed.stex"
+path="res://.import/door-black.png-58d71198787ff1815c98ad07aebafc5b.stex"
 
 [deps]
 
-source_file="res://key-black.png"
-source_md5="6ea4eaecd8d4fe24f9b06ba014d5dc6a"
+source_file="res://Graphics/door-black.png"
+source_md5="c4edc3c5738abbc5d5c0bd4ae96b5390"
 
-dest_files=[ "res://.import/key-black.png-72bada35b8d3ed46e952cb03aeb795ed.stex" ]
-dest_md5="bb5751347e0d332281843fe7c515749a"
+dest_files=[ "res://.import/door-black.png-58d71198787ff1815c98ad07aebafc5b.stex" ]
+dest_md5="74c2ca81766a5ff3c5a7bb05b2af165d"
 
 [params]
 

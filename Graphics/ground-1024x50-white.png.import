@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground-1024x50-white.png-6f7422eadc1679325e189866ec3a06d5.stex"
+path="res://.import/ground-1024x50-white.png-2c2a81470170d24347cb1e79738d45b3.stex"
 
 [deps]
 
-source_file="res://ground-1024x50-white.png"
+source_file="res://Graphics/ground-1024x50-white.png"
 source_md5="a8311160a271d56a53538ab3a1750b4d"
 
-dest_files=[ "res://.import/ground-1024x50-white.png-6f7422eadc1679325e189866ec3a06d5.stex" ]
+dest_files=[ "res://.import/ground-1024x50-white.png-2c2a81470170d24347cb1e79738d45b3.stex" ]
 dest_md5="8543b8fe758c8acde38c890c593c336a"
 
 [params]
