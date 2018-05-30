@@ -65,6 +65,12 @@ func _draw():
 func flip_sprite(flip):
 	$Position2D/Sprite.flip_h = flip
 
+# Exit entered signal
+func _on_Exit_entered():
+	if has_key:
+		print("WIN")
+	pass
+	
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
 	# DOES NOT RUN if animation is set to loop

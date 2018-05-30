@@ -10,6 +10,9 @@ export var carry_offset = Vector2(0, -50)
 func enter(key):
 	print(key.name + " CARRY")
 	key.character.has_key = true
+	var col = key.get_node("CollisionShape2D")
+	col.disabled = true
+	
 	pass
 
 func exit(key):
