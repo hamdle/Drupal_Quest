@@ -10,10 +10,6 @@ const JUMP_HEIGHT = 300
 const FLOOR_FRICTION = 0.2
 const AIR_FRICTION = 0.1
 
-# Slingshot jump
-var mouse_press = Vector2()
-var mouse_release = Vector2()
-
 func enter(player):
 	print("IDLE")
 	pass
@@ -33,16 +29,12 @@ func update(player, delta):
 	pass
 	
 func handleInput(player, event):
-	# Slingshot jump processing
+	# Player launch inputs
 	if event is InputEventMouseButton:
 		if event.is_action_pressed("mouse_button"):
-			mouse_press = event.position
+			player.mouse_press = event.position
 		if event.is_action_released("mouse_button"):
-			mouse_release = event.position
-			var dir_x = mouse_press.x - mouse_release.x
-			var dir_y = mouse_press.y - mouse_release.y
-			var factor = sqrt(pow(dir_x, 2) + pow(dir_y, 2))
-			player.launch_velocity = Vector2(dir_x * factor, dir_y * factor)
+			player.calculate_launch_velocity(player.mouse_press, event.position)
 			return STATE.LAUNCH
 			
 	# Check movement keys to set state change

@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 # Physics and Jump
 var motion = Vector2()
+var mouse_press = Vector2()
 var launch_velocity = Vector2()
 
 # State Machine
@@ -42,6 +43,13 @@ func _input(event):
 	
 func flip_sprite(flip):
 	$Position2D/Sprite.flip_h = flip
+	
+func calculate_launch_velocity(mouse_press, mouse_release):
+	var dir_x = mouse_press.x - mouse_release.x
+	var dir_y = mouse_press.y - mouse_release.y
+	var factor = sqrt(pow(dir_x, 2) + pow(dir_y, 2))
+	launch_velocity = Vector2(dir_x * factor, dir_y * factor)
+	pass
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
