@@ -9,6 +9,7 @@ export var carry_offset = Vector2(0, -50)
 
 func enter(bug):
 	print(bug.name + " DIE")
+	bug.die()
 	pass
 
 func exit(bug):

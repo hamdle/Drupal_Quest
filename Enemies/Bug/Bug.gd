@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal player_damage
+
 enum STATE { NULL, IDLE, PATROL, ATTACK, DIE }
 
 # Physics and Jump
@@ -21,6 +23,10 @@ onready var state_nodes = {
 func _ready():
 	# Set animation
 	$AnimationPlayer.play("SETUP")
+	
+	# Setup player_damage signal
+	var character = get_tree().get_root().get_node("Level/Character")
+	self.connect("player_damage", character, "_on_Player_damage", [])
 	
 	# Process state machine
 	current_state = state_nodes[STATE.IDLE]
@@ -48,7 +54,13 @@ func flip_sprite(flip):
 
 func set_patrol_origin():
 	patrol_origin = transform.origin
+	
+func die():
+	$AnimationPlayer.play("DIE")
 
+func emit_damage_signal():
+	emit_signal("player_damage")
+	
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
 	# DOES NOT RUN if animation is set to loop

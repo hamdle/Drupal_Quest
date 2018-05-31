@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
-[node name="Level" type="Node" index="0"]
+[node name="Level" type="Node"]
 
 [node name="TestObjects" type="Node" parent="." index="0"]
 
@@ -54,6 +54,6 @@ position = Vector2( 389.268, 456.063 )
 
 [node name="Bug" parent="." index="4" instance=ExtResource( 5 )]
 
-position = Vector2( 673.149, 263.178 )
+position = Vector2( 696.391, 376.835 )
 
 

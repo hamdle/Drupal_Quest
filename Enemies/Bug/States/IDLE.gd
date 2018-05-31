@@ -18,12 +18,12 @@ func update(bug, delta):
 	#Gravity
 	bug.motion.y += GRAVITY
 	
-	# Process movement using Godot physics system
-	bug.motion = bug.move_and_slide(bug.motion, UP)
-	
 	if bug.is_on_floor():
 		bug.set_patrol_origin()
 		return STATE.PATROL
+	
+	# Process movement using Godot physics system
+	bug.motion = bug.move_and_slide(bug.motion, UP)
 	
 func handleInput(bug, event):
 	pass

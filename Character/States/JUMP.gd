@@ -1,6 +1,6 @@
 extends Node
 
-enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH, WIN }
+enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH, WIN, DIE }
 
 const UP = Vector2(0, -1)
 const GRAVITY = 12

@@ -1,6 +1,6 @@
 extends Node
 
-enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH, WIN }
+enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH, WIN, DIE }
 
 const MOUSE_RESET = Vector2(-1, -1)
 const UP = Vector2(0, -1)
@@ -12,6 +12,7 @@ const AIR_FRICTION = 0.1
 
 func enter(player):
 	print(player.name + " IDLE")
+
 	pass
 
 func exit(player):

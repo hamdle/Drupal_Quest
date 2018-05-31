@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH, WIN }
+enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH, WIN, DIE }
 
 const MOUSE_RESET = Vector2(-1, -1)
 
@@ -19,7 +19,8 @@ onready var state_nodes = {
 	STATE.WALK: $States/Walk,
 	STATE.JUMP: $States/Jump,
 	STATE.LAUNCH: $States/Launch,
-	STATE.WIN: $States/Win
+	STATE.WIN: $States/Win,
+	STATE.DIE: $States/Die
 }
 
 func _ready():
@@ -74,7 +75,12 @@ func _on_Exit_entered():
 			current_state = state_nodes[STATE.WIN]
 			current_state.enter(self)
 	pass
-	
+
+func _on_Player_damage():
+	current_state.exit(self)
+	current_state = state_nodes[STATE.DIE]
+	current_state.enter(self)
+
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
 	# DOES NOT RUN if animation is set to loop

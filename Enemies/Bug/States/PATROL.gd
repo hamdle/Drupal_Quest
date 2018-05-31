@@ -36,6 +36,17 @@ func update(bug, delta):
 		if bug.position.x < bug.patrol_origin.x - patrol_distance:
 			current_dir = DIR.RIGHT
 	
+	# Cause damage
+	var cause_damage = bug.get_node("CauseDamageArea2D")
+	for body in cause_damage.get_overlapping_bodies():
+		if body.name == "Character":
+			bug.emit_damage_signal()
+	# Take damage
+	var take_damage = bug.get_node("TakeDamageArea2D")
+	for body in take_damage.get_overlapping_bodies():
+		if body.name == "Character":
+			return STATE.DIE
+	
 	# Process movement using Godot physics system
 	bug.motion = bug.move_and_slide(bug.motion, UP)
 	pass

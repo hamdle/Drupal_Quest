@@ -3,13 +3,12 @@
 [ext_resource path="res://Objects/Exit/Exit.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/door-black.png" type="Texture" id=2]
 
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 21.8686
 
-[node name="Exit" type="KinematicBody2D" index="0"]
+[node name="Exit" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -37,11 +36,8 @@ playback/speed = 1.0
 
 [node name="Position2D" type="Position2D" parent="." index="2"]
 
-scale = Vector2( 1, 1 )
-
 [node name="Sprite" type="Sprite" parent="Position2D" index="0"]
 
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="." index="3"]
@@ -57,6 +53,6 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
 position = Vector2( -0.387421, 9.87928 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 
