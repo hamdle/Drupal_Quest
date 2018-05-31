@@ -59,6 +59,13 @@ func _draw():
 	var line_color = Color(100, 100, 100)
 	if current_state == state_nodes[STATE.IDLE]:
 		if mouse_press != MOUSE_RESET:
+			#print("mouse press: " + String(get_viewport().get_mouse_position()))
+			#print($Camera2D.get_camera_position ( ))
+			#print("position: " + String(to_local(position)))
+			#print("mp - p: " + String(mouse_press - position))
+			#var v = Vector2(mouse_press.x, $Camera2D.get_camera_position().y - mouse_press.y)
+			#draw_circle(to_local(v), line_size / 2, Color(255,0,0))
+			draw_circle(position, line_size / 2, Color(0,255,0))
 			draw_circle(mouse_press - position, line_size / 2, line_color)
 			draw_line(mouse_press - position, \
 			get_viewport().get_mouse_position() - position, \
