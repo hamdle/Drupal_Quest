@@ -346,6 +346,13 @@ audio_bus_name = "Master"
 position = Vector2( 0.137245, -13.5028 )
 shape = SubResource( 5 )
 
+[node name="Timer" type="Timer" parent="." index="7"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = false
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 

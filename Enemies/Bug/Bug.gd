@@ -56,10 +56,19 @@ func set_patrol_origin():
 	patrol_origin = transform.origin
 	
 func die():
+	# Play dead animation
 	$AnimationPlayer.play("DIE")
+	
+	$Timer.connect("timeout", self, "_on_Timer_timeout")
+	$Timer.start()
 
 func emit_damage_signal():
 	emit_signal("player_damage")
+
+func _on_Timer_timeout():
+	# Turn off collision
+	var col = get_node("CollisionShape2D")
+	col.disabled = true
 	
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
