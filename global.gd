@@ -3,8 +3,8 @@ extends Node
 enum LEVEL { 
 	AUTO, 
 	SPLASH, START, CHARACTER, 
-	STORY_1,
-	ARCADE_1, ARCADE_2, ARCADE_3
+	STORY1,
+	ARCADE1, ARCADE2, ARCADE3
 }
 enum MODE { STORY, ARCADE }
 enum CHARACTER { DRUPLICON, DRUPAL8, MAGENTA }
@@ -13,29 +13,57 @@ var current_scene = null
 var current_mode = null
 var current_character = null
 
+var level_map = {
+	LEVEL.AUTO: "auto",
+	LEVEL.SPLASH: "res://Levels/Screen/Splash.tscn",
+	LEVEL.START: "res://Levels/Screen/Start.tscn",
+	LEVEL.CHARACTER: "res://Levels/Screen/Character.tscn",
+	LEVEL.STORY1: "res://Levels/Story/Story1.tscn",
+	LEVEL.ARCADE1: "res://Levels/Arcade/Arcade1.tscn",
+	LEVEL.ARCADE2: "res://Levels/Arcade/Arcade2.tscn",
+	LEVEL.ARCADE3: "res://Levels/Arcade/Arcade3.tscn"	
+}
+
 func _ready():
 	# Get main scene
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+	# Bypass project settings > main scene
+	# load_scene(LEVEL.START)
+	
 	# Default story mode
 	story_mode()
 	# Default Druplicon character
 	select_character(CHARACTER.DRUPLICON)
 
 # Scene loading
-func load_scene(path):
-	call_deferred("_deferred_load_scene", path)
+func load_scene(level):
+	call_deferred("_deferred_load_scene", level)
 	
-func _deferred_load_scene(path):
+func _deferred_load_scene(level):
+	# Immediately release current scene
 	current_scene.free()
 	
-	var s = ResourceLoader.load(path)
-	
+	# Load level resource
+	var s = ResourceLoader.load(_get_level(level))
+	# And create an instance
 	current_scene = s.instance()
-	
+	# Add instance to node tree
 	get_tree().get_root().add_child(current_scene)
-	
+	# SceneTree.change_scene() API compatibility
 	get_tree().set_current_scene(current_scene)
+
+func _get_level(level):
+	if level == LEVEL.AUTO:
+		if current_mode == MODE.ARCADE:
+			return level_map[LEVEL.ARCADE1]
+		if current_mode == MODE.STORY:
+			return level_map[LEVEL.STORY1]
+			
+	if level_map.has(level):
+		return level_map[level]
+		
+	return level_map[LEVEL.START]
 
 # Game mode
 func arcade_mode():

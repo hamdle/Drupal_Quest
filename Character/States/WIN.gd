@@ -12,7 +12,9 @@ const AIR_FRICTION = 0.1
 
 func enter(player):
 	print(player.name + " WIN")
-	get_tree().reload_current_scene()
+	# get_tree().reload_current_scene()
+	var global = get_node("/root/global")
+	global.load_scene(global.LEVEL.AUTO)
 	pass
 
 func exit(player):
