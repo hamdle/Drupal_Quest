@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Objects/Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Character/Character.tscn" type="PackedScene" id=5]
+
+[node name="Level" type="Node"]
+
+[node name="TestObjects" type="Node" parent="." index="0"]
+
+[node name="Floor" parent="TestObjects" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 512.644, 573.54 )
+
+[node name="Key" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 107.799, 423.693 )
+
+[node name="Exit" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 891.192, 518.715 )
+
+[node name="Bug2" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 499.358, 513.211 )
+
+[node name="Bug4" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 702.392, 515.032 )
+
+[node name="Character" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 309.645, 408.126 )
+
+
