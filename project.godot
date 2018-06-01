@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="Drupal Quest"
-run/main_scene="res://Level.tscn"
+run/main_scene="res://Levels/Screen/Splash.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://global.gd"
 
 [input]
 

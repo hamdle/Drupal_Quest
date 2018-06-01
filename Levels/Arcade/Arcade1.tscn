@@ -6,7 +6,7 @@
 [ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Character/Character.tscn" type="PackedScene" id=5]
 
-[node name="Level" type="Node"]
+[node name="Level" type="Node" index="0"]
 
 [node name="TestObjects" type="Node" parent="." index="0"]
 
