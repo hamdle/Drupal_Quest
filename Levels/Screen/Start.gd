@@ -2,12 +2,12 @@ extends Node
 
 
 func _on_StoryButton_pressed():
-	var global = get_node("/root/global")
-	global.story_mode()
-	global.load_scene(global.LEVEL.CHARACTER)
+	var gs = get_node("/root/gamestate")
+	gs.story_mode()
+	gs.load_scene(gs.LEVEL.CHARACTER)
 
 
 func _on_ArcadeButton_pressed():
-	var global = get_node("/root/global")
-	global.arcade_mode()
-	global.load_scene(global.LEVEL.CHARACTER)
+	var gs = get_node("/root/gamestate")
+	gs.arcade_mode()
+	gs.load_scene(gs.LEVEL.CHARACTER)

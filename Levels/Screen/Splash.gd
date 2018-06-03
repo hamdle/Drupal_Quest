@@ -2,5 +2,5 @@ extends Node
 
 
 func _on_Timer_timeout():
-	var global = get_node("/root/global")
-	global.load_scene(global.LEVEL.START)
+	var gs = get_node("/root/gamestate")
+	gs.load_scene(gs.LEVEL.START)

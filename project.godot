@@ -16,7 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-global="*res://global.gd"
+gamestate="*res://gamestate.gd"
 
 [input]
 

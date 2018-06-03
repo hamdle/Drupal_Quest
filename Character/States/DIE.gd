@@ -12,7 +12,9 @@ const AIR_FRICTION = 0.1
 
 func enter(player):
 	print(player.name + " DIE")
-	get_tree().reload_current_scene()
+	# get_tree().reload_current_scene()
+	var gs = get_node("/root/gamestate")
+	gs.load_scene(gs.LEVEL.AUTO)
 	pass
 
 func exit(player):
