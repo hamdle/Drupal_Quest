@@ -19,6 +19,7 @@ func enter(player):
 	print(player.name + " LAUNCH")
 	if player.is_on_floor():
 		player.motion = calculate_launch_velocity(player.mouse_press, player.mouse_release)
+		# player.motion = calculate_launch_velocity(player.position, player.mouse_release)
 	pass
 
 func exit(player):

@@ -60,21 +60,28 @@ func _input(event):
 
 func _draw():
 	# Visualize launcher
-	var line_size = 10
-	var line_color = Color(100, 100, 100)
+	var line_size = 1
+	var line_color = Color(0, 255, 0)
 	if current_state == state_nodes[STATE.IDLE]:
 		if mouse_press != MOUSE_RESET:
-			#print("mouse press: " + String(get_viewport().get_mouse_position()))
-			#print($Camera2D.get_camera_position ( ))
-			#print("position: " + String(to_local(position)))
-			#print("mp - p: " + String(mouse_press - position))
-			#var v = Vector2(mouse_press.x, $Camera2D.get_camera_position().y - mouse_press.y)
-			#draw_circle(to_local(v), line_size / 2, Color(255,0,0))
-			draw_circle(position, line_size / 2, Color(0,255,0))
-			draw_circle(mouse_press - position, line_size / 2, line_color)
-			draw_line(mouse_press - position, \
-			get_viewport().get_mouse_position() - position, \
+			# Get the distance
+			var distance_vector = self.get_global_mouse_position() - mouse_press
+			# Adjust y for global position of player
+			var y_dif = self.get_global_transform_with_canvas().get_origin().y -  global_position.y
+			distance_vector.y = distance_vector.y + y_dif
+			# Reflect the line
+			distance_vector.x = -distance_vector.x
+			distance_vector.y = -distance_vector.y
+			
+			# Draw the line
+			draw_line(to_local(position), \
+			distance_vector, \
 			line_color, line_size)
+			
+			# Draw the mouse click
+			var mouse_press_adjusted = to_local(mouse_press)
+			mouse_press_adjusted.y = mouse_press_adjusted.y - y_dif
+			draw_circle(mouse_press_adjusted, 20, Color(255,0,255))
 	
 func flip_sprite(flip):
 	$Position2D/Sprite.flip_h = flip
