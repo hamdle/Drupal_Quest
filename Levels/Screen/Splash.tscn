@@ -5,13 +5,13 @@
 
 [sub_resource type="DynamicFont" id=1]
 
-size = 18
+size = 24
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Splash" type="Node"]
+[node name="Splash" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -37,7 +37,7 @@ _sections_unfolded = [ "Margin" ]
 scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -8.79779, -5.95567, 1036.08, -10.3878, 1047.16, 616.759, -12.1219, 622.299 )
 uv = PoolVector2Array(  )
-color = Color( 0.0196078, 0.27451, 0.439216, 1 )
+color = Color( 0.132812, 0.132812, 0.132812, 1 )
 vertex_colors = PoolColorArray(  )
 offset = Vector2( 0, 0 )
 antialiased = false
@@ -54,10 +54,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 442.0
-margin_top = 290.0
-margin_right = 582.0
-margin_bottom = 310.0
+margin_left = 369.0
+margin_top = 286.0
+margin_right = 655.0
+margin_bottom = 313.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -65,7 +65,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
-text = "Made with Drupal"
+text = "A game made with Drupal"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -74,7 +74,7 @@ _sections_unfolded = [ "custom_fonts" ]
 [node name="Timer" type="Timer" parent="." index="1"]
 
 process_mode = 1
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
 autostart = true
 

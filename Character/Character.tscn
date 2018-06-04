@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Character/Character.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/druplicon-blue.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/druplicon-blue-invert.png" type="Texture" id=2]
 [ext_resource path="res://Character/States/IDLE.gd" type="Script" id=3]
 [ext_resource path="res://Character/States/JUMP.gd" type="Script" id=4]
 [ext_resource path="res://Character/States/WALK.gd" type="Script" id=5]
