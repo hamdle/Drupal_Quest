@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Levels/Screen/Splash.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=2]
 
-[node name="Splash" type="Node"]
+[sub_resource type="DynamicFont" id=1]
+
+size = 18
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[node name="Splash" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -23,26 +32,44 @@ size_flags_vertical = 1
 use_top_left = false
 _sections_unfolded = [ "Margin" ]
 
-[node name="Label" type="Label" parent="CenterContainer" index="0"]
+[node name="Polygon2D" type="Polygon2D" parent="CenterContainer" index="0"]
+
+scale = Vector2( 1, 1 )
+polygon = PoolVector2Array( -8.79779, -5.95567, 1036.08, -10.3878, 1047.16, 616.759, -12.1219, 622.299 )
+uv = PoolVector2Array(  )
+color = Color( 0.0196078, 0.27451, 0.439216, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Label" type="Label" parent="CenterContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 456.0
-margin_top = 293.0
-margin_right = 568.0
-margin_bottom = 307.0
+margin_left = 442.0
+margin_top = 290.0
+margin_right = 582.0
+margin_bottom = 310.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
 text = "Made with Drupal"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="Timer" type="Timer" parent="." index="1"]
 
