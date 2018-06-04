@@ -1,9 +1,41 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Levels/Screen/Character.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/druplicon-blue.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/bubble-type-1.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/bubble-type-2.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/bubble-type-3.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/druplicon-blue.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/druplicon-drupal8.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Graphics/Buttons/select.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Buttons/select-hover.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/nav-header.png" type="Texture" id=10]
 
-[node name="Character" type="Node"]
+[sub_resource type="DynamicFont" id=1]
+
+size = 18
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 18
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 72
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Character" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -23,66 +55,32 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Margin" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Container" index="0"]
+[node name="Polygon2D" type="Polygon2D" parent="Container" index="0"]
+
+scale = Vector2( 1, 1 )
+polygon = PoolVector2Array( 1037.11, -28.7379, 1042.55, 639.206, -18.5367, 624.242, -30.7801, -12.4134 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Bubble1Texture" type="TextureRect" parent="Container" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1025.0
-margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-_sections_unfolded = [ "Margin" ]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Container/CenterContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 432.0
-margin_top = 268.0
-margin_right = 593.0
-margin_bottom = 331.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="CharacterImages" type="HBoxContainer" parent="Container/CenterContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 161.0
-margin_bottom = 39.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Anchor", "Margin" ]
-
-[node name="DrupliconTexture" type="TextureRect" parent="Container/CenterContainer/VBoxContainer/CharacterImages" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 34.0
-margin_bottom = 39.0
+margin_left = 160.0
+margin_top = 288.0
+margin_right = 358.0
+margin_bottom = 419.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -91,139 +89,325 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 2 )
 stretch_mode = 0
-_sections_unfolded = [ "Margin" ]
 
-[node name="Drupal8Texture" type="TextureRect" parent="Container/CenterContainer/VBoxContainer/CharacterImages" index="1"]
+[node name="Bubble2Texture" type="TextureRect" parent="Container" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 38.0
-margin_right = 72.0
-margin_bottom = 39.0
+margin_left = 424.0
+margin_top = 279.0
+margin_right = 615.0
+margin_bottom = 427.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="Bubble3Texture" type="TextureRect" parent="Container" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 698.0
+margin_top = 289.0
+margin_right = 891.0
+margin_bottom = 418.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 0
+
+[node name="DrupliconTexture" type="TextureRect" parent="Container" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 238.0
+margin_top = 313.0
+margin_right = 272.0
+margin_bottom = 352.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="Drupal8Texture" type="TextureRect" parent="Container" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 504.0
+margin_top = 315.0
+margin_right = 538.0
+margin_bottom = 354.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor" ]
 
-[node name="MagentaTexture" type="TextureRect" parent="Container/CenterContainer/VBoxContainer/CharacterImages" index="2"]
+[node name="MagentaTexture" type="TextureRect" parent="Container" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 76.0
-margin_right = 110.0
-margin_bottom = 39.0
+margin_left = 776.0
+margin_top = 312.0
+margin_right = 810.0
+margin_bottom = 351.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin" ]
 
-[node name="SelectButtons" type="HBoxContainer" parent="Container/CenterContainer/VBoxContainer" index="1"]
+[node name="DrupliconLabel" type="RichTextLabel" parent="Container" index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 43.0
-margin_right = 161.0
-margin_bottom = 63.0
+margin_left = 220.0
+margin_top = 371.0
+margin_right = 356.0
+margin_bottom = 424.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Druplicon"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Drupal8Label" type="RichTextLabel" parent="Container" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 486.0
+margin_top = 367.0
+margin_right = 622.0
+margin_bottom = 420.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Drupal 8"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="MagenticonLabel" type="RichTextLabel" parent="Container" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 749.0
+margin_top = 369.0
+margin_right = 885.0
+margin_bottom = 422.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Magenticon"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 230.0
+margin_top = 132.0
+margin_right = 970.0
+margin_bottom = 372.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0.145098, 0.172549, 0.231373, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Character Select"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
+
+[node name="DrupliconButton" type="TextureButton" parent="Container" index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 205.0
+margin_top = 450.0
+margin_right = 316.0
+margin_bottom = 492.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Drupal8Button" type="TextureButton" parent="Container" index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 473.0
+margin_top = 435.0
+margin_right = 578.0
+margin_bottom = 477.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="MagenticonButton" type="TextureButton" parent="Container" index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 746.0
+margin_top = 430.0
+margin_right = 851.0
+margin_bottom = 472.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="NavHeaderTexture" type="TextureRect" parent="Container" index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-alignment = 0
+texture = ExtResource( 10 )
+stretch_mode = 0
 
-[node name="DrupliconButton" type="Button" parent="Container/CenterContainer/VBoxContainer/SelectButtons" index="0"]
+[connection signal="pressed" from="Container/DrupliconButton" to="." method="_on_DrupliconButton_pressed"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 51.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Select"
-flat = false
-align = 1
-_sections_unfolded = [ "Margin" ]
+[connection signal="pressed" from="Container/Drupal8Button" to="." method="_on_Drupal8Button_pressed"]
 
-[node name="Drupal8Button" type="Button" parent="Container/CenterContainer/VBoxContainer/SelectButtons" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 55.0
-margin_right = 106.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Select"
-flat = false
-align = 1
-
-[node name="MagentaButton2" type="Button" parent="Container/CenterContainer/VBoxContainer/SelectButtons" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 110.0
-margin_right = 161.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Select"
-flat = false
-align = 1
-
-[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/SelectButtons/DrupliconButton" to="." method="_on_DrupliconButton_pressed"]
-
-[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/SelectButtons/Drupal8Button" to="." method="_on_Drupal8Button_pressed"]
-
-[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/SelectButtons/MagentaButton2" to="." method="_on_MagentaButton2_pressed"]
+[connection signal="pressed" from="Container/MagenticonButton" to="." method="_on_MagenticonButton_pressed"]
 
 
