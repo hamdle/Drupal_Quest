@@ -19,7 +19,7 @@ func update(key, delta):
 	# Poll Area2D for Character collision
 	var area = key.get_node("Area2D")
 	for body in area.get_overlapping_bodies():
-		if body.name == "Character":
+		if body.name == "Player":
 			key.set_character(body)
 			return STATE.CARRY
 			

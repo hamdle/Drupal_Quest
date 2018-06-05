@@ -15,13 +15,13 @@ var current_character = null
 
 var level_map = {
 	LEVEL.AUTO: "auto",
-	LEVEL.SPLASH: "res://Levels/Screen/Splash.tscn",
-	LEVEL.START: "res://Levels/Screen/Start.tscn",
-	LEVEL.CHARACTER: "res://Levels/Screen/Character.tscn",
-	LEVEL.STORY1: "res://Levels/Story/Story1.tscn",
-	LEVEL.ARCADE1: "res://Levels/Arcade/Arcade1.tscn",
-	LEVEL.ARCADE2: "res://Levels/Arcade/Arcade2.tscn",
-	LEVEL.ARCADE3: "res://Levels/Arcade/Arcade3.tscn"	
+	LEVEL.SPLASH: "res://Scenes/Screen/Splash.tscn",
+	LEVEL.START: "res://Scenes/Screen/Start.tscn",
+	LEVEL.CHARACTER: "res://Scenes/Screen/Character.tscn",
+	LEVEL.STORY1: "res://Scenes/Story/Story1.tscn",
+	LEVEL.ARCADE1: "res://Scenes/Arcade/Arcade1.tscn",
+	LEVEL.ARCADE2: "res://Scenes/Arcade/Arcade2.tscn",
+	LEVEL.ARCADE3: "res://Scenes/Arcade/Arcade3.tscn"	
 }
 
 func _ready():

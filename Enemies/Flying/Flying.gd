@@ -7,9 +7,6 @@ enum STATE { NULL, IDLE, PATROL, ATTACK, DIE }
 # Physics and Jump
 var motion = Vector2()
 
-# AI system
-var patrol_origin = Vector2()
-
 # State Machine
 var current_state
 
@@ -29,7 +26,7 @@ func _ready():
 	self.connect("player_damage", character, "_on_Player_damage", [])
 	
 	# Process state machine
-	current_state = state_nodes[STATE.IDLE]
+	current_state = state_nodes[STATE.PATROL]
 	current_state.enter(self)
 	pass
 	
@@ -51,9 +48,6 @@ func _input(event):
 	
 func flip_sprite(flip):
 	$Position2D/Sprite.flip_h = flip
-
-func set_patrol_origin():
-	patrol_origin = transform.origin
 	
 func die():
 	# Play dead animation

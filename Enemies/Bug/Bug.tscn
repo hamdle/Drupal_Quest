@@ -1,11 +1,15 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Bug/Bug.gd" type="Script" id=1]
-[ext_resource path="res://sprites/characters/drupal-bug-2.png" type="Texture" id=2]
-[ext_resource path="res://Enemies/Bug/States/IDLE.gd" type="Script" id=3]
-[ext_resource path="res://Enemies/Bug/States/PATROL.gd" type="Script" id=4]
-[ext_resource path="res://Enemies/Bug/States/ATTACK.gd" type="Script" id=5]
-[ext_resource path="res://Enemies/Bug/States/DIE.gd" type="Script" id=6]
+[ext_resource path="res://Sprites/Characters/drupal-bug-2.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Bug/States/Idle.gd" type="Script" id=3]
+[ext_resource path="res://Enemies/Bug/States/Patrol.gd" type="Script" id=4]
+[ext_resource path="res://Enemies/Bug/States/Attack.gd" type="Script" id=5]
+[ext_resource path="res://Enemies/Bug/States/Die.gd" type="Script" id=6]
+
+
+
+
 
 
 
