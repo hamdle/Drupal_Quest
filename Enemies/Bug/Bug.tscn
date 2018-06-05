@@ -7,12 +7,6 @@
 [ext_resource path="res://Enemies/Bug/States/Attack.gd" type="Script" id=5]
 [ext_resource path="res://Enemies/Bug/States/Die.gd" type="Script" id=6]
 
-
-
-
-
-
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "DIE"

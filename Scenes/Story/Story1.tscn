@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 [node name="TestObjects" type="Node" parent="." index="0"]
 
@@ -122,6 +122,10 @@ position = Vector2( 249.234, 211.471 )
 
 [node name="Flying" parent="." index="8" instance=ExtResource( 7 )]
 
-position = Vector2( 642.191, 157.894 )
+position = Vector2( 544.684, 307.479 )
+
+[node name="Flying2" parent="." index="9" instance=ExtResource( 7 )]
+
+position = Vector2( 501.21, 789.452 )
 
 

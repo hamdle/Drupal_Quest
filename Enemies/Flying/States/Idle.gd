@@ -17,7 +17,7 @@ func update(flying, delta):
 	flying.motion.y += GRAVITY
 	
 	# Process movement using Godot physics system
-	flying.motion = flying.move_and_slide(flying.motion, UP)
+	#flying.motion = flying.move_and_slide(flying.motion, UP)
 	
 func handleInput(flying, event):
 	pass

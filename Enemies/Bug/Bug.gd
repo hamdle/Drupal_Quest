@@ -59,6 +59,7 @@ func die():
 	# Play dead animation
 	$AnimationPlayer.play("DIE")
 	
+	$TakeDamageArea2D/CollisionShape2D.disabled = true
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Timer.start()
 
