@@ -14,5 +14,5 @@ func _on_Drupal8Button_pressed():
 
 func _on_MagenticonButton_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.select_character(gs.CHARACTER.MAGENTA)
+	gs.select_character(gs.CHARACTER.DRUPALQUEST)
 	gs.load_scene(gs.LEVEL.AUTO)

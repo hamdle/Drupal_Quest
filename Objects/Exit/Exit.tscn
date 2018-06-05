@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Exit/Exit.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/door-black.png" type="Texture" id=2]
+[ext_resource path="res://sprites/door-black.png" type="Texture" id=2]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

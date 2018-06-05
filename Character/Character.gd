@@ -29,6 +29,9 @@ func _ready():
 	# Clear mouse input
 	mouse_press = MOUSE_RESET
 	
+	# Load character
+	load_character()
+	
 	# Process state machine
 	current_state = state_nodes[STATE.IDLE]
 	current_state.enter(self)
@@ -86,6 +89,16 @@ func _draw():
 func flip_sprite(flip):
 	$Position2D/Sprite.flip_h = flip
 
+func load_character():
+	var gs = get_node("/root/gamestate")
+	if gs.current_character == gs.CHARACTER.DRUPLICON:
+		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_texture
+	elif gs.current_character == gs.CHARACTER.DRUPAL8:
+		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_8_texture
+	elif gs.current_character == gs.CHARACTER.DRUPALQUEST:
+		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_quest_texture
+	
+	
 # Exit entered signal
 func _on_Exit_entered():
 	if has_key:

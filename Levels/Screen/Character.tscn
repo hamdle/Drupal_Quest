@@ -1,19 +1,19 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Levels/Screen/Character.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/bubble-type-1.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/bubble-type-2.png" type="Texture" id=3]
-[ext_resource path="res://Graphics/bubble-type-3.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/nonary.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/druplicon-blue.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/druplicon-drupal8.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/druplicon-blue-invert.png" type="Texture" id=8]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://Graphics/nav-header.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Buttons/select.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/Buttons/select-hover.png" type="Texture" id=12]
+[ext_resource path="res://sprites/world/bubble-type-1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/world/bubble-type-2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/world/bubble-type-3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/world/nonary.png" type="Texture" id=5]
+[ext_resource path="res://sprites/characters/druplicon-blue.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/druplicon-drupal8.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/druplicon-blue-invert.png" type="Texture" id=8]
+[ext_resource path="res://fonts/Ubuntu-B.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://sprites/world/nav-header.png" type="Texture" id=10]
+[ext_resource path="res://sprites/buttons/select.png" type="Texture" id=11]
+[ext_resource path="res://sprites/buttons/select-hover.png" type="Texture" id=12]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 
 size = 72
 use_mipmaps = false
@@ -21,7 +21,7 @@ use_filter = false
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 
 size = 18
 use_mipmaps = false
@@ -29,7 +29,7 @@ use_filter = false
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 
 size = 18
 use_mipmaps = false
@@ -59,7 +59,6 @@ _sections_unfolded = [ "Margin" ]
 
 [node name="Polygon2D" type="Polygon2D" parent="Container" index="0"]
 
-scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( 1037.11, -28.7379, 1042.55, 639.206, -18.5367, 624.242, -30.7801, -12.4134 )
 uv = PoolVector2Array(  )
 color = Color( 1, 1, 1, 1 )
@@ -224,7 +223,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.145098, 0.172549, 0.231373, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -245,17 +244,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 220.0
-margin_top = 321.0
-margin_right = 356.0
-margin_bottom = 374.0
+margin_left = 227.0
+margin_top = 320.0
+margin_right = 363.0
+margin_bottom = 373.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -263,7 +262,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Drupal 7"
+text = "Drupal"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
@@ -286,7 +285,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -301,7 +300,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="MagenticonLabel" type="RichTextLabel" parent="Container" index="11"]
+[node name="DrupalQuestLabel" type="RichTextLabel" parent="Container" index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -317,7 +316,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
 bbcode_enabled = false
 bbcode_text = ""

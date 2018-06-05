@@ -1,13 +1,18 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Levels/Screen/Start.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/nav-header.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/drupal-home.png" type="Texture" id=3]
-[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Graphics/Buttons/story.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Buttons/story-hover.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Buttons/arcade.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/Buttons/arcade-story.png" type="Texture" id=8]
+[ext_resource path="res://sprites/world/nav-header.png" type="Texture" id=2]
+[ext_resource path="res://sprites/world/drupal-home.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Ubuntu-R.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://sprites/buttons/story.png" type="Texture" id=5]
+[ext_resource path="res://sprites/buttons/story-hover.png" type="Texture" id=6]
+[ext_resource path="res://sprites/buttons/arcade.png" type="Texture" id=7]
+[ext_resource path="res://sprites/buttons/arcade-story.png" type="Texture" id=8]
+
+
+
+
+
 
 [sub_resource type="DynamicFont" id=1]
 

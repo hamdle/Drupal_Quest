@@ -7,7 +7,7 @@ enum LEVEL {
 	ARCADE1, ARCADE2, ARCADE3
 }
 enum MODE { STORY, ARCADE }
-enum CHARACTER { DRUPLICON, DRUPAL8, MAGENTA }
+enum CHARACTER { DRUPLICON, DRUPAL8, DRUPALQUEST }
 
 var current_scene = null
 var current_mode = null
