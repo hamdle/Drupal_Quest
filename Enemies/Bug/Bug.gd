@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal player_damage
+signal enemy_died
 
 enum STATE { NULL, IDLE, PATROL, ATTACK, DIE }
 
@@ -23,16 +24,19 @@ onready var state_nodes = {
 }
 
 func _ready():
-	# Set animation
+	# Set base animation
 	$AnimationPlayer.play("SETUP")
 	
 	# Setup player_damage signal
 	var character = get_tree().get_root().get_node("World/Player")
 	self.connect("player_damage", character, "_on_Player_damage", [])
+	# Setup died signal to notify Key
+	var key = get_tree().get_root().get_node("World/Key")
+	self.connect("enemy_died", key, "_on_Enemy_die")
 	
-	# Add to 'bug' group
+	# Add to appropriate groups
 	self.add_to_group("bug")
-	self.add_to_group("living_enemies")
+	self.add_to_group("enemies")
 	
 	# Process state machine
 	current_state = state_nodes[STATE.IDLE]
@@ -54,7 +58,8 @@ func _input(event):
 		current_state.exit(self)
 		current_state = state_nodes[new_state]
 		current_state.enter(self)
-	
+
+# Helper functions
 func flip_sprite(flip):
 	$Position2D/Sprite.flip_h = flip
 
@@ -66,12 +71,17 @@ func die():
 	$AnimationPlayer.play("DIE")
 	
 	# Remove from the living
-	remove_from_group("living_enemies")
+	remove_from_group("enemies")
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	
 	
 	$TakeDamageArea2D/CollisionShape2D.disabled = true
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Timer.start()
+	
+	emit_signal("enemy_died", self.position)
 
+# Signal functions
 func emit_damage_signal():
 	emit_signal("player_damage")
 

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum STATE { NULL, WAIT, CARRY }
+enum STATE { NULL, HIDE, SHOW, CARRY }
 
 # Physics and Jump
 var motion = Vector2()
@@ -9,8 +9,12 @@ var character
 # State Machine
 var current_state
 
+# Key mechanics
+var spawn_position = Vector2()
+
 onready var state_nodes = {
-	STATE.WAIT: $States/Wait,
+	STATE.HIDE: $States/Hide,
+	STATE.SHOW: $States/Show,
 	STATE.CARRY: $States/Carry
 }
 
@@ -18,8 +22,10 @@ func _ready():
 	# Set animation
 	$AnimationPlayer.play("SETUP")
 	
+	# Disabled by default
+	
 	# Process state machine
-	current_state = state_nodes[STATE.WAIT]
+	current_state = state_nodes[STATE.HIDE]
 	current_state.enter(self)
 	pass
 	
@@ -45,6 +51,14 @@ func flip_sprite(flip):
 func set_character(character):
 	self.character = character
 
+func _on_Enemy_die(pos):
+	var e = get_tree().get_nodes_in_group("enemies")
+	if e.size() == 0:
+		spawn_position = pos
+		current_state.exit(self)
+		current_state = state_nodes[STATE.SHOW]
+		current_state.enter(self)
+	
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
 	# DOES NOT RUN if animation is set to loop

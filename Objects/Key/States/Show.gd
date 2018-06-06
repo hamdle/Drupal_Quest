@@ -1,12 +1,16 @@
 extends Node
 
-enum STATE { NULL, WAIT, CARRY }
+enum STATE { NULL, HIDE, SHOW, CARRY }
 
 const UP = Vector2(0, -1)
 const GRAVITY = 12
 
 func enter(key):
-	print(key.name + " WAIT")
+	print(key.name + " SHOW")
+	
+	var adjusted_pos = Vector2(key.spawn_position.x, key.spawn_position.y + -200)
+	key.position = adjusted_pos
+	key.motion.y = -200
 	pass
 
 func exit(key):
