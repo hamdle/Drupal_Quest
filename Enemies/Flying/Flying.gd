@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 signal player_damage
 signal bug_damage
+signal enemy_died
 
 enum STATE { NULL, IDLE, PATROL, ATTACK, DIE }
 
@@ -30,10 +31,13 @@ func _ready():
 	var bugs = get_tree().get_nodes_in_group("bug")
 	for bug in bugs:
 		self.connect("bug_damage", bug, "_on_Bug_damage")
+	# Setup died signal to notify Key
+	var key = get_tree().get_root().get_node("World/Key")
+	self.connect("enemy_died", key, "_on_Enemy_die")
 	
 	# Add to 'flying' group
 	self.add_to_group("flying")
-	self.add_to_group("living_enemies")
+	self.add_to_group("enemies")
 	
 	# Process state machine
 	current_state = state_nodes[STATE.PATROL]
@@ -64,11 +68,15 @@ func die():
 	$AnimationPlayer.play("DIE")
 	
 	# Remove from the living
-	remove_from_group("living_enemies")
+	remove_from_group("enemies")
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	print(enemies)
 	
 	$TakeDamageArea2D/CollisionShape2D.disabled = true
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Timer.start()
+	
+	emit_signal("enemy_died", self.position)
 
 func emit_player_damage_signal():
 	emit_signal("player_damage")

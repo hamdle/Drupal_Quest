@@ -40,9 +40,6 @@ func _ready():
 
 func _process(delta):
 	update()
-	var e = get_tree().get_nodes_in_group("living_enemies")
-	if e.size() == 0:
-		print("spawn key")
 	
 func _physics_process(delta):
 	# Process state machine

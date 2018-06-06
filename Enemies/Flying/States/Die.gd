@@ -19,12 +19,12 @@ func update(flying, delta):
 	#Gravity
 	flying.motion.y += GRAVITY
 	
-	# Cause damage
+	# Cause damage to bugs while falling
 	var cause_damage = flying.get_node("CauseDamageArea2D")
 	for body in cause_damage.get_overlapping_bodies():
-		if ("TAG" in body):
-			if body.TAG == "Bug":
-				if not (body.current_state == body.state_nodes[body.STATE.DIE]):
+		if ("TAG" in body): # If TAG exists
+			if body.TAG == "Bug": # If the TAG is a Bug
+				if not (body.current_state == body.state_nodes[body.STATE.DIE]): # Check the state
 					flying.emit_bug_damage_signal(body.name)
 			
 	if flying.is_on_floor():
