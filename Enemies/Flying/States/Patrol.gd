@@ -36,13 +36,15 @@ func update(flying, delta):
 	# Cause damage
 	var cause_damage = flying.get_node("CauseDamageArea2D")
 	for body in cause_damage.get_overlapping_bodies():
-		if body.TAG == "Player":
-			flying.emit_player_damage_signal()
+		if ("TAG" in body): # If TAG exists
+			if body.TAG == "Player":
+				flying.emit_player_damage_signal()
 	# Take damage
 	var take_damage = flying.get_node("TakeDamageArea2D")
 	for body in take_damage.get_overlapping_bodies():
-		if body.TAG == "Player":
-			return STATE.DIE
+		if ("TAG" in body): # If TAG exists
+			if body.TAG == "Player":
+				return STATE.DIE
 		
 	# Process movement using Godot physics system
 	flying.motion = flying.move_and_slide(get_next_vector(), UP)
