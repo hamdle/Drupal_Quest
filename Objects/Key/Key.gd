@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 enum STATE { NULL, HIDE, SHOW, CARRY }
 
+const TAG = "Key"
 # Physics and Jump
 var motion = Vector2()
 var character

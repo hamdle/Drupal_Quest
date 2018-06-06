@@ -11,9 +11,11 @@ func _process(delta):
 			teleport_player_to_gate_b()
 		if ("TAG" in body): # If TAG exists
 			if body.TAG == "Bug": # If the TAG is a Bug
-				teleport_enemy_to_gate_a(body)
+				teleport_object_to_gate_b(body)
 			elif body.TAG == "Flying": # If the TAG is a Bug
-				teleport_enemy_to_gate_a(body)
+				teleport_object_to_gate_b(body)
+			elif body.TAG == "Key":
+				teleport_object_to_gate_b(body)
 
 func teleport_player_to_gate_b():
 	# Get player
@@ -26,7 +28,7 @@ func teleport_player_to_gate_b():
 	player.position = teleport_to_position
 	player.motion = Vector2(0, 0)
 
-func teleport_enemy_to_gate_a(body):
+func teleport_object_to_gate_b(body):
 	var gate_a = get_tree().get_root().get_node("World/Gates/GateB")
 	# Set player to Gate B position
 	var teleport_to_position = gate_a.position

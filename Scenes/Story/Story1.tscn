@@ -99,11 +99,11 @@ texture = ExtResource( 2 )
 
 [node name="GateA" parent="Gates" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 609.186, 516.742 )
+position = Vector2( 717.248, 169.667 )
 
 [node name="GateB" parent="Gates" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 690, 160 )
+position = Vector2( 675.195, 953.916 )
 
 [node name="Enemies" type="Node" parent="." index="2"]
 
