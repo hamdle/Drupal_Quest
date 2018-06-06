@@ -4,10 +4,10 @@
 [ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Flying/Flying.tscn" type="PackedScene" id=4]
-[ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=6]
+[ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -121,25 +121,27 @@ position = Vector2( 544.684, 307.479 )
 
 position = Vector2( 501.21, 789.452 )
 
-[node name="NPCs" type="Node" parent="." index="2"]
-
-editor/display_folded = true
-
-[node name="NPC" parent="NPCs" index="0" instance=ExtResource( 5 )]
-
-position = Vector2( 80.3627, 695.227 )
-scale = Vector2( 1, 1 )
-
-[node name="Exit" parent="." index="3" instance=ExtResource( 6 )]
+[node name="Exit" parent="." index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 81.8253, 250.061 )
 
-[node name="Player" parent="." index="4" instance=ExtResource( 7 )]
-
-position = Vector2( 280.134, 248.351 )
-
-[node name="Key" parent="." index="5" instance=ExtResource( 8 )]
+[node name="Key" parent="." index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -130.47, 211.324 )
+scale = Vector2( 1, 1 )
+
+[node name="NPCs" type="Node" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="NPC" parent="NPCs" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 172.223, 686.876 )
+scale = Vector2( 1, 1 )
+dialog_text = "This is a test to see how much text will fit into the text box. Lets add just a bit more."
+
+[node name="Player" parent="." index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 280.134, 248.351 )
 
 

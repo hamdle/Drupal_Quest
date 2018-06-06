@@ -4,6 +4,8 @@ enum STATE { NULL, SILENT, TALK }
 
 const MOUSE_RESET = Vector2(-1, -1)
 
+export var dialog_text = ""
+
 # Physics and Jump
 var motion = Vector2()
 
@@ -18,6 +20,10 @@ onready var state_nodes = {
 func _ready():
 	# Set animation
 	$AnimationPlayer.play("SETUP")
+	
+	# Set custom dialog text
+	$Text.visible = false
+	$Text.text = dialog_text
 	
 	# Process state machine
 	current_state = state_nodes[STATE.SILENT]

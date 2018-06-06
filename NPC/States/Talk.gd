@@ -9,9 +9,15 @@ const FLOOR_FRICTION = 0.2
 func enter(npc):
 	print(npc.name + " TALK")
 
+	var text = npc.get_node("Text")
+	text.visible = true
+	# text.set("custom_colors/font_color", Color(255, 255, 255))
+	# text.add_color_override("font_color", Color(0, 255, 0))
 	pass
 
 func exit(npc):
+	var text = npc.get_node("Text")
+	text.visible = false
 	pass
 	
 func update(npc, delta):
