@@ -27,6 +27,12 @@ func _ready():
 	# Setup player_damage signal
 	var character = get_tree().get_root().get_node("World/Player")
 	self.connect("player_damage", character, "_on_Player_damage", [])
+	var bugs = get_tree().get_nodes_in_group("bug")
+	for bug in bugs:
+		self.connect("bug_damage", bug, "_on_Bug_damage")
+	
+	# Add to 'flying' group
+	self.add_to_group("flying")
 	
 	# Process state machine
 	current_state = state_nodes[STATE.PATROL]
@@ -63,8 +69,8 @@ func die():
 func emit_player_damage_signal():
 	emit_signal("player_damage")
 	
-func emit_bug_damage_signal():
-	print("bug hit")
+func emit_bug_damage_signal(name):
+	emit_signal("bug_damage", name)
 
 func _on_Timer_timeout():
 	# Turn off collision

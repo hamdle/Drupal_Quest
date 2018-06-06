@@ -30,6 +30,9 @@ func _ready():
 	var character = get_tree().get_root().get_node("World/Player")
 	self.connect("player_damage", character, "_on_Player_damage", [])
 	
+	# Add to 'bug' group
+	self.add_to_group("bug")
+	
 	# Process state machine
 	current_state = state_nodes[STATE.IDLE]
 	current_state.enter(self)
@@ -72,7 +75,13 @@ func _on_Timer_timeout():
 	# Turn off collision
 	var col = get_node("CollisionShape2D")
 	col.disabled = true
-	
+
+func _on_Bug_damage(name):
+	if self.name == name:
+		current_state.exit(self)
+		current_state = state_nodes[STATE.DIE]
+		current_state.enter(self)
+		
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
 	# DOES NOT RUN if animation is set to loop
