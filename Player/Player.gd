@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 enum STATE { NULL, IDLE, WALK, JUMP, LAUNCH, WIN, DIE }
 
+const TAG = "Player"
 const MOUSE_RESET = Vector2(-1, -1)
 
 # Physics and Jump

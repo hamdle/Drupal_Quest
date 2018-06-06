@@ -1,8 +1,11 @@
 extends KinematicBody2D
 
 signal player_damage
+signal bug_damage
 
 enum STATE { NULL, IDLE, PATROL, ATTACK, DIE }
+
+const TAG = "Flying"
 
 # Physics and Jump
 var motion = Vector2()
@@ -57,8 +60,11 @@ func die():
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Timer.start()
 
-func emit_damage_signal():
+func emit_player_damage_signal():
 	emit_signal("player_damage")
+	
+func emit_bug_damage_signal():
+	print("bug hit")
 
 func _on_Timer_timeout():
 	# Turn off collision

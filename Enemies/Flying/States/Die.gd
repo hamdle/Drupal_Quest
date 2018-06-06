@@ -19,6 +19,13 @@ func update(flying, delta):
 	#Gravity
 	flying.motion.y += GRAVITY
 	
+	# Cause damage
+	var cause_damage = flying.get_node("CauseDamageArea2D")
+	for body in cause_damage.get_overlapping_bodies():
+		if ("TAG" in body):
+			if body.TAG == "Bug":
+				flying.emit_bug_damage_signal()
+			
 	if flying.is_on_floor():
 		return STATE.IDLE
 	

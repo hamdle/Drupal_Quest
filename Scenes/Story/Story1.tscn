@@ -118,7 +118,7 @@ position = Vector2( 722.337, 508.384 )
 
 [node name="Player" parent="." index="7" instance=ExtResource( 6 )]
 
-position = Vector2( 249.234, 211.471 )
+position = Vector2( 283.315, 713.6 )
 
 [node name="Flying" parent="." index="8" instance=ExtResource( 7 )]
 
@@ -127,5 +127,13 @@ position = Vector2( 544.684, 307.479 )
 [node name="Flying2" parent="." index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 501.21, 789.452 )
+
+[node name="Bug5" parent="." index="10" instance=ExtResource( 5 )]
+
+position = Vector2( 831.579, 942.911 )
+
+[node name="Bug6" parent="." index="11" instance=ExtResource( 5 )]
+
+position = Vector2( 667.99, 942.911 )
 
 

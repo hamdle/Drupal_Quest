@@ -7,7 +7,7 @@
 [ext_resource path="res://Enemies/Flying/States/Attack.gd" type="Script" id=5]
 [ext_resource path="res://Enemies/Flying/States/Die.gd" type="Script" id=6]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 
 resource_name = "DIE"
 length = 1.0
@@ -237,18 +237,18 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 15.8361
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 14.3834
 height = 6.52629
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.7945, 11.7731 )
@@ -268,7 +268,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/DIE = SubResource( 5 )
+anims/DIE = SubResource( 1 )
 anims/SETUP = SubResource( 2 )
 blend_times = [  ]
 
@@ -290,7 +290,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
 position = Vector2( -0.15778, 3.31336 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="States" type="Node" parent="." index="4"]
 
@@ -335,7 +335,7 @@ audio_bus_name = "Master"
 
 position = Vector2( -0.117111, 5.27694 )
 rotation = 1.59506
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="TakeDamageArea2D" type="Area2D" parent="." index="7"]
 
@@ -350,6 +350,6 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TakeDamageArea2D" index="0"]
 
 position = Vector2( 0.0895767, -7.091 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 

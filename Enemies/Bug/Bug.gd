@@ -4,6 +4,8 @@ signal player_damage
 
 enum STATE { NULL, IDLE, PATROL, ATTACK, DIE }
 
+const TAG = "Bug"
+
 # Physics and Jump
 var motion = Vector2()
 
