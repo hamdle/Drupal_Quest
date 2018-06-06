@@ -32,6 +32,7 @@ func _ready():
 	
 	# Add to 'bug' group
 	self.add_to_group("bug")
+	self.add_to_group("living_enemies")
 	
 	# Process state machine
 	current_state = state_nodes[STATE.IDLE]
@@ -63,6 +64,9 @@ func set_patrol_origin():
 func die():
 	# Play dead animation
 	$AnimationPlayer.play("DIE")
+	
+	# Remove from the living
+	remove_from_group("living_enemies")
 	
 	$TakeDamageArea2D/CollisionShape2D.disabled = true
 	$Timer.connect("timeout", self, "_on_Timer_timeout")

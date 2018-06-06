@@ -33,6 +33,7 @@ func _ready():
 	
 	# Add to 'flying' group
 	self.add_to_group("flying")
+	self.add_to_group("living_enemies")
 	
 	# Process state machine
 	current_state = state_nodes[STATE.PATROL]
@@ -61,6 +62,9 @@ func flip_sprite(flip):
 func die():
 	# Play dead animation
 	$AnimationPlayer.play("DIE")
+	
+	# Remove from the living
+	remove_from_group("living_enemies")
 	
 	$TakeDamageArea2D/CollisionShape2D.disabled = true
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
