@@ -26,8 +26,8 @@ func _ready():
 	$AnimationPlayer.play("SETUP")
 	
 	# Setup player_damage signal
-	var character = get_tree().get_root().get_node("World/Player")
-	self.connect("player_damage", character, "_on_Player_damage", [])
+	var player = get_tree().get_root().get_node("World/Player")
+	self.connect("player_damage", player, "_on_Player_damage", [])
 	var bugs = get_tree().get_nodes_in_group("bug")
 	for bug in bugs:
 		self.connect("bug_damage", bug, "_on_Bug_damage")
