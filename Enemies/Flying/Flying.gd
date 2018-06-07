@@ -86,8 +86,10 @@ func emit_bug_damage_signal(name):
 
 func _on_Timer_timeout():
 	# Turn off collision
-	var col = get_node("CollisionShape2D")
-	col.disabled = true
+	# only if we've hit the ground since death
+	if not current_state == state_nodes[STATE.DIE]:
+		var col = get_node("CollisionShape2D")
+		col.disabled = true
 	
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished

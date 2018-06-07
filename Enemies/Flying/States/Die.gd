@@ -9,6 +9,7 @@ func enter(flying):
 	print(flying.name + " DIE")
 	
 	flying.motion.x = 0
+	flying.motion.y = 0
 	flying.die()
 	pass
 
@@ -28,6 +29,8 @@ func update(flying, delta):
 					flying.emit_bug_damage_signal(body.name)
 			
 	if flying.is_on_floor():
+		var col = flying.get_node("CollisionShape2D")
+		col.disabled = true
 		return STATE.IDLE
 	
 	# Process movement using Godot physics system

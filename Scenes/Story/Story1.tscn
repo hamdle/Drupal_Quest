@@ -99,15 +99,13 @@ texture = ExtResource( 2 )
 
 [node name="GateA" parent="Gates" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 717.248, 169.667 )
+position = Vector2( 291.606, 145.609 )
 
 [node name="GateB" parent="Gates" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 675.195, 953.916 )
+position = Vector2( 812.141, 365.419 )
 
 [node name="Enemies" type="Node" parent="." index="2"]
-
-editor/display_folded = true
 
 [node name="Bug" parent="Enemies" index="0" instance=ExtResource( 5 )]
 
@@ -119,7 +117,7 @@ position = Vector2( 376.787, 950.304 )
 
 [node name="Bug4" parent="Enemies" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 722.337, 508.384 )
+position = Vector2( 481.757, 526.89 )
 
 [node name="Bug6" parent="Enemies" index="3" instance=ExtResource( 5 )]
 
@@ -127,11 +125,11 @@ position = Vector2( 541.673, 949.727 )
 
 [node name="Flying" parent="Enemies" index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 544.684, 307.479 )
+position = Vector2( 670.526, 821.951 )
 
 [node name="Flying2" parent="Enemies" index="5" instance=ExtResource( 6 )]
 
-position = Vector2( 501.21, 789.452 )
+position = Vector2( 628.903, 210.208 )
 
 [node name="Exit" parent="." index="3" instance=ExtResource( 7 )]
 
@@ -144,16 +142,14 @@ scale = Vector2( 1, 1 )
 
 [node name="NPCs" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="NPC" parent="NPCs" index="0" instance=ExtResource( 9 )]
 
-position = Vector2( 172.223, 686.876 )
+position = Vector2( 113.003, 733.142 )
 scale = Vector2( 1, 1 )
 dialog_text = "This is a test to see how much text will fit into the text box. Lets add just a bit more."
 
 [node name="Player" parent="." index="6" instance=ExtResource( 10 )]
 
-position = Vector2( 280.134, 248.351 )
+position = Vector2( 757.594, 442.666 )
 
 

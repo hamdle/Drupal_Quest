@@ -3,7 +3,7 @@ extends Node
 enum STATE { NULL, IDLE, PATROL, ATTACK, DIE }
 
 const UP = Vector2(0, -1)
-const GRAVITY = 12
+const GRAVITY = 10
 
 export var carry_offset = Vector2(0, -50)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Gates/GateB.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/door-black.png" type="Texture" id=2]
@@ -8,11 +8,6 @@
 custom_solver_bias = 0.0
 radius = 21.5886
 
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 10.0
-
 [node name="GateB" type="KinematicBody2D"]
 
 input_pickable = false
@@ -20,6 +15,10 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+gate_player = true
+gate_bug = true
+gate_flying = true
+gate_key = true
 
 [node name="Position2D" type="Position2D" parent="." index="0"]
 
@@ -46,7 +45,5 @@ scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-
-shape = SubResource( 1 )
 
 
