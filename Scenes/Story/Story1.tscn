@@ -16,7 +16,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 [node name="Level" type="Node" parent="." index="0"]
 
@@ -115,25 +115,21 @@ position = Vector2( 251.286, 951.632 )
 
 position = Vector2( 376.787, 950.304 )
 
-[node name="Bug4" parent="Enemies" index="2" instance=ExtResource( 5 )]
-
-position = Vector2( 481.757, 526.89 )
-
-[node name="Bug6" parent="Enemies" index="3" instance=ExtResource( 5 )]
+[node name="Bug6" parent="Enemies" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 541.673, 949.727 )
 
-[node name="Flying" parent="Enemies" index="4" instance=ExtResource( 6 )]
+[node name="Flying" parent="Enemies" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 670.526, 821.951 )
 
-[node name="Flying2" parent="Enemies" index="5" instance=ExtResource( 6 )]
+[node name="Flying2" parent="Enemies" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 628.903, 210.208 )
 
 [node name="Exit" parent="." index="3" instance=ExtResource( 7 )]
 
-position = Vector2( 81.8253, 250.061 )
+position = Vector2( 528.618, 517.365 )
 
 [node name="Key" parent="." index="4" instance=ExtResource( 8 )]
 
@@ -144,12 +140,12 @@ scale = Vector2( 1, 1 )
 
 [node name="NPC" parent="NPCs" index="0" instance=ExtResource( 9 )]
 
-position = Vector2( 113.003, 733.142 )
+position = Vector2( 150.686, 724.098 )
 scale = Vector2( 1, 1 )
-dialog_text = "This is a test to see how much text will fit into the text box. Lets add just a bit more."
+dialog_text = "Can you help me fix these bugs?"
 
 [node name="Player" parent="." index="6" instance=ExtResource( 10 )]
 
-position = Vector2( 757.594, 442.666 )
+position = Vector2( 147.121, 246.712 )
 
 
