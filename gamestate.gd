@@ -12,12 +12,14 @@ enum CHARACTER { DRUPLICON, DRUPAL8, DRUPALQUEST }
 var current_scene = null
 var current_mode = null
 var current_character = null
+var current_level = null
 
 var level_map = {
 	LEVEL.AUTO: "auto",
 	LEVEL.SPLASH: "res://Scenes/Screen/Splash.tscn",
 	LEVEL.START: "res://Scenes/Screen/Start.tscn",
 	LEVEL.CHARACTER: "res://Scenes/Screen/Character.tscn",
+	LEVEL.ARCADE: "res://Scenes/Screen/Arcade.tscn",
 	LEVEL.STORY1: "res://Scenes/Story/Story1.tscn",
 	LEVEL.ARCADE1: "res://Scenes/Arcade/Arcade1.tscn",
 	LEVEL.ARCADE2: "res://Scenes/Arcade/Arcade2.tscn",
@@ -56,7 +58,7 @@ func _deferred_load_scene(level):
 func _get_level(level):
 	if level == LEVEL.AUTO:
 		if current_mode == MODE.ARCADE:
-			return level_map[LEVEL.ARCADE1]
+			return level_map[LEVEL.ARCADE]
 		if current_mode == MODE.STORY:
 			return level_map[LEVEL.STORY1]
 			
