@@ -1,30 +1,25 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Screen/Character.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/World/bubble-type-1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/World/bubble-type-2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/World/bubble-type-3.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/World/nonary.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=8]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Buttons/select.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Buttons/select-hover.png" type="Texture" id=12]
-
-
-
-
-
-
+[ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Sprites/Buttons/select.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Buttons/select-hover.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 
-size = 72
+size = 82
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -32,18 +27,26 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 18
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+font_data = ExtResource( 11 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=3]
 
 size = 18
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 11 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Character" type="Node"]
+[sub_resource type="DynamicFont" id=4]
+
+size = 18
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 11 )
+_sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
+
+[node name="Character" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -84,9 +87,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 160.0
+margin_left = 165.0
 margin_top = 238.0
-margin_right = 358.0
+margin_right = 363.0
 margin_bottom = 369.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -122,10 +125,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 698.0
-margin_top = 239.0
-margin_right = 891.0
-margin_bottom = 368.0
+margin_left = 682.0
+margin_top = 235.0
+margin_right = 875.0
+margin_bottom = 364.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -153,191 +156,7 @@ size_flags_vertical = 1
 texture = ExtResource( 5 )
 stretch_mode = 0
 
-[node name="DrupliconTexture" type="TextureRect" parent="Container" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 238.0
-margin_top = 263.0
-margin_right = 272.0
-margin_bottom = 302.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 6 )
-stretch_mode = 0
-_sections_unfolded = [ "Margin" ]
-
-[node name="Drupal8Texture" type="TextureRect" parent="Container" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 504.0
-margin_top = 265.0
-margin_right = 538.0
-margin_bottom = 304.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 7 )
-stretch_mode = 0
-_sections_unfolded = [ "Anchor" ]
-
-[node name="MagentaTexture" type="TextureRect" parent="Container" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 776.0
-margin_top = 262.0
-margin_right = 810.0
-margin_bottom = 301.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 8 )
-stretch_mode = 0
-_sections_unfolded = [ "Margin" ]
-
-[node name="CharSelectTextLabel" type="RichTextLabel" parent="Container" index="8"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 230.0
-margin_top = 112.0
-margin_right = 970.0
-margin_bottom = 352.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 1 )
-custom_colors/default_color = Color( 0.145098, 0.172549, 0.231373, 1 )
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Character Select"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
-
-[node name="DrupliconLabel" type="RichTextLabel" parent="Container" index="9"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 227.0
-margin_top = 320.0
-margin_right = 363.0
-margin_bottom = 373.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 2 )
-custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Drupal"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[node name="Drupal8Label" type="RichTextLabel" parent="Container" index="10"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 486.0
-margin_top = 317.0
-margin_right = 622.0
-margin_bottom = 370.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 2 )
-custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Drupal 8"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[node name="DrupalQuestLabel" type="RichTextLabel" parent="Container" index="11"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 742.0
-margin_top = 313.0
-margin_right = 878.0
-margin_bottom = 366.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 3 )
-custom_colors/default_color = Color( 0.305882, 0.305882, 0.305882, 1 )
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Drupal Quest"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[node name="NavHeaderTexture" type="TextureRect" parent="Container" index="12"]
+[node name="NavHeaderTexture" type="TextureRect" parent="Container" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -351,19 +170,370 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 stretch_mode = 0
 
-[node name="DrupliconButton" type="TextureButton" parent="Container" index="13"]
+[node name="CenterContainer" type="CenterContainer" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 205.0
-margin_top = 437.0
-margin_right = 316.0
-margin_bottom = 479.0
+margin_right = 1025.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 197.0
+margin_top = 70.0
+margin_right = 828.0
+margin_bottom = 529.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 631.0
+margin_bottom = 166.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_top = 25
+custom_constants/margin_bottom = 50
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 25.0
+margin_right = 631.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+text = "Character Select"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 170.0
+margin_right = 631.0
+margin_bottom = 239.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_top = 20
+custom_constants/margin_bottom = 10
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer/MarginContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 20.0
+margin_right = 631.0
+margin_bottom = 59.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="DrupliconTexture" type="TextureRect" parent="CenterContainer/VBoxContainer/MarginContainer2/HBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 36.0
+margin_right = 70.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer/MarginContainer2/HBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 74.0
+margin_right = 548.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 220
+custom_constants/margin_left = 220
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Drupal8Texture" type="TextureRect" parent="CenterContainer/VBoxContainer/MarginContainer2/HBoxContainer2/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 220.0
+margin_right = 254.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor" ]
+
+[node name="MagentaTexture" type="TextureRect" parent="CenterContainer/VBoxContainer/MarginContainer2/HBoxContainer2" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 552.0
+margin_right = 586.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 243.0
+margin_right = 631.0
+margin_bottom = 363.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_bottom = 100
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer/MarginContainer3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 631.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer3/HBoxContainer3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 86.0
+margin_right = 143.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+text = "Drupal"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer/MarginContainer3/HBoxContainer3" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 147.0
+margin_right = 418.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer3/HBoxContainer3/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 100.0
+margin_right = 171.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+text = "Drupal 8"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Label3" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer3/HBoxContainer3" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 422.0
+margin_right = 536.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+text = "Drupal Quest"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="MarginContainer4" type="MarginContainer" parent="CenterContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 367.0
+margin_right = 631.0
+margin_bottom = 459.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_bottom = 50
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/MarginContainer4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 631.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+
+[node name="DrupliconButton" type="TextureButton" parent="CenterContainer/VBoxContainer/MarginContainer4/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 105.0
+margin_bottom = 42.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -375,20 +545,39 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
 _sections_unfolded = [ "Margin", "Textures" ]
 
-[node name="Drupal8Button" type="TextureButton" parent="Container" index="14"]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer/MarginContainer4/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 473.0
-margin_top = 437.0
-margin_right = 578.0
-margin_bottom = 477.0
+margin_left = 109.0
+margin_right = 514.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 150
+custom_constants/margin_left = 150
+custom_constants/margin_bottom = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Drupal8Button" type="TextureButton" parent="CenterContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 150.0
+margin_right = 255.0
+margin_bottom = 42.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -400,20 +589,19 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
 _sections_unfolded = [ "Margin", "Textures" ]
 
-[node name="MagenticonButton" type="TextureButton" parent="Container" index="15"]
+[node name="MagenticonButton" type="TextureButton" parent="CenterContainer/VBoxContainer/MarginContainer4/HBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 746.0
-margin_top = 437.0
-margin_right = 851.0
-margin_bottom = 479.0
+margin_left = 518.0
+margin_right = 623.0
+margin_bottom = 42.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -425,14 +613,14 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
 _sections_unfolded = [ "Margin", "Textures" ]
 
-[connection signal="pressed" from="Container/DrupliconButton" to="." method="_on_DrupliconButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MarginContainer4/HBoxContainer/DrupliconButton" to="." method="_on_DrupliconButton_pressed"]
 
-[connection signal="pressed" from="Container/Drupal8Button" to="." method="_on_Drupal8Button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer/Drupal8Button" to="." method="_on_Drupal8Button_pressed"]
 
-[connection signal="pressed" from="Container/MagenticonButton" to="." method="_on_MagenticonButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MarginContainer4/HBoxContainer/MagenticonButton" to="." method="_on_MagenticonButton_pressed"]
 
 
