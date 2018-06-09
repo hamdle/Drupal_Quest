@@ -4,6 +4,7 @@ enum LEVEL {
 	AUTO, 
 	SPLASH, START, CHARACTER, 
 	STORY1,
+	ARCADE,
 	ARCADE1, ARCADE2, ARCADE3
 }
 enum MODE { STORY, ARCADE }
@@ -19,8 +20,8 @@ var level_map = {
 	LEVEL.SPLASH: "res://Scenes/Screen/Splash.tscn",
 	LEVEL.START: "res://Scenes/Screen/Start.tscn",
 	LEVEL.CHARACTER: "res://Scenes/Screen/Character.tscn",
-	LEVEL.ARCADE: "res://Scenes/Screen/Arcade.tscn",
 	LEVEL.STORY1: "res://Scenes/Story/Story1.tscn",
+	LEVEL.ARCADE: "res://Scenes/Screen/Arcade.tscn",
 	LEVEL.ARCADE1: "res://Scenes/Arcade/Arcade1.tscn",
 	LEVEL.ARCADE2: "res://Scenes/Arcade/Arcade2.tscn",
 	LEVEL.ARCADE3: "res://Scenes/Arcade/Arcade3.tscn"	
@@ -58,14 +59,25 @@ func _deferred_load_scene(level):
 func _get_level(level):
 	if level == LEVEL.AUTO:
 		if current_mode == MODE.ARCADE:
-			return level_map[LEVEL.ARCADE]
+			if current_level == LEVEL.ARCADE1:
+				current_level = LEVEL.ARCADE2
+				return level_map[current_level]
+			elif current_level == LEVEL.ARCADE2:
+				current_level = LEVEL.ARCADE3
+				return level_map[current_level]
+			else:
+				current_level = LEVEL.ARCADE
+				return level_map[current_level]
 		if current_mode == MODE.STORY:
-			return level_map[LEVEL.STORY1]
+			current_level = LEVEL.STORY1
+			return level_map[current_level]
 			
 	if level_map.has(level):
-		return level_map[level]
-		
-	return level_map[LEVEL.START]
+		current_level = level
+		return level_map[current_level]
+	
+	current_level = LEVEL.START
+	return level_map[current_level]
 
 # Game mode
 func arcade_mode():

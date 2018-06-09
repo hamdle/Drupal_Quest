@@ -16,7 +16,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 [node name="Level" type="Node" parent="." index="0"]
 
@@ -97,6 +97,8 @@ texture = ExtResource( 2 )
 
 [node name="Gates" type="Node" parent="." index="1"]
 
+editor/display_folded = true
+
 [node name="GateA" parent="Gates" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 291.606, 145.609 )
@@ -109,15 +111,15 @@ position = Vector2( 812.141, 365.419 )
 
 [node name="Bug" parent="Enemies" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 251.286, 951.632 )
+position = Vector2( 439.704, 951.632 )
 
 [node name="Bug3" parent="Enemies" index="1" instance=ExtResource( 5 )]
 
-position = Vector2( 376.787, 950.304 )
+position = Vector2( 542.595, 951.811 )
 
 [node name="Bug6" parent="Enemies" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 541.673, 949.727 )
+position = Vector2( 653.216, 954.249 )
 
 [node name="Flying" parent="Enemies" index="3" instance=ExtResource( 6 )]
 
@@ -134,14 +136,14 @@ position = Vector2( 528.618, 517.365 )
 [node name="Key" parent="." index="4" instance=ExtResource( 8 )]
 
 position = Vector2( -130.47, 211.324 )
-scale = Vector2( 1, 1 )
 
 [node name="NPCs" type="Node" parent="." index="5"]
+
+editor/display_folded = true
 
 [node name="NPC" parent="NPCs" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 150.686, 724.098 )
-scale = Vector2( 1, 1 )
 dialog_text = "Can you help me fix these bugs?"
 
 [node name="Player" parent="." index="6" instance=ExtResource( 10 )]

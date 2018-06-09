@@ -1,23 +1,28 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=1]
-[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Gates/GateA.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Gates/GateB.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
-[node name="TestObjects" type="Node" parent="." index="0"]
-
-[node name="Floor3" type="KinematicBody2D" parent="TestObjects" index="0"]
+[node name="Level" type="Node" parent="." index="0"]
 
 editor/display_folded = true
-position = Vector2( -124.468, 305.522 )
+
+[node name="Floor3" type="KinematicBody2D" parent="Level" index="0"]
+
+editor/display_folded = true
+position = Vector2( 510.201, 571.081 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -27,20 +32,20 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestObjects/Floor3" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Floor3" index="0"]
 
 position = Vector2( -0.0625, -1 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Sprite" type="Sprite" parent="TestObjects/Floor3" index="1"]
+[node name="Sprite" type="Sprite" parent="Level/Floor3" index="1"]
 
 texture = ExtResource( 1 )
 
-[node name="Floor4" type="KinematicBody2D" parent="TestObjects" index="1"]
+[node name="Floor4" type="KinematicBody2D" parent="Level" index="1"]
 
 editor/display_folded = true
-position = Vector2( 1165.33, 299.371 )
+position = Vector2( 510.618, 282.669 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -50,24 +55,50 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestObjects/Floor4" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Floor4" index="0"]
 
 position = Vector2( -0.0625, -1 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Sprite" type="Sprite" parent="TestObjects/Floor4" index="1"]
+[node name="Sprite" type="Sprite" parent="Level/Floor4" index="1"]
 
 texture = ExtResource( 1 )
 
-[node name="Key" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Gates" type="Node" parent="." index="1"]
 
-position = Vector2( 159.492, 230.611 )
+editor/display_folded = true
 
-[node name="Exit" parent="." index="2" instance=ExtResource( 3 )]
+[node name="GateA" parent="Gates" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 535.9, 488.09 )
+position = Vector2( 273.435, 338.733 )
+scale = Vector2( 1, 1 )
 
-[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
+[node name="GateB" parent="Gates" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 276.156, 32.649 )
+scale = Vector2( 1, 1 )
+
+[node name="Enemies" type="Node" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="Bug" parent="Enemies" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 606.276, 212.113 )
+scale = Vector2( 1, 1 )
+
+[node name="Exit" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 524.539, 513.813 )
+scale = Vector2( 1, 1 )
+
+[node name="Key" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( -132.79, 110.358 )
+
+[node name="Player" parent="." index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 110.19, 467.969 )
 
 
