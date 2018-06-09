@@ -40,9 +40,12 @@ func _ready():
 	select_character(CHARACTER.DRUPLICON)
 
 # Scene loading
+func reload_scene():
+	load_scene(current_scene)
+
 func load_scene(level):
 	call_deferred("_deferred_load_scene", level)
-	
+
 func _deferred_load_scene(level):
 	# Immediately release current scene
 	current_scene.free()

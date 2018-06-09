@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Objects/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=2]
@@ -9,7 +9,8 @@
 [ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/LevelOver/LevelOver.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -146,7 +147,9 @@ editor/display_folded = true
 position = Vector2( 150.686, 724.098 )
 dialog_text = "Can you help me fix these bugs?"
 
-[node name="Player" parent="." index="6" instance=ExtResource( 10 )]
+[node name="LevelOver" parent="." index="6" instance=ExtResource( 10 )]
+
+[node name="Player" parent="." index="7" instance=ExtResource( 11 )]
 
 position = Vector2( 147.121, 246.712 )
 

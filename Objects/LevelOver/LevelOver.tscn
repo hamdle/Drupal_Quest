@@ -2,25 +2,28 @@
 
 [ext_resource path="res://Objects/LevelOver/LevelOver.gd" type="Script" id=1]
 
-[node name="LevelOver" type="Node" index="0"]
+[node name="LevelOver" type="Node"]
 
+pause_mode = 2
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+current_level = "none"
+next_level = "none"
 
 [node name="Container" type="Container" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1025.0
-margin_bottom = 600.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-_sections_unfolded = [ "Margin" ]
+_sections_unfolded = [ "Anchor", "Margin", "Visibility" ]
 
 [node name="CenterContainer" type="CenterContainer" parent="Container" index="0"]
 
@@ -58,7 +61,7 @@ size_flags_vertical = 1
 alignment = 1
 _sections_unfolded = [ "Margin" ]
 
-[node name="MarginContainer3" type="MarginContainer" parent="Container/CenterContainer/VBoxContainer" index="0"]
+[node name="MarginContainer2" type="MarginContainer" parent="Container/CenterContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -72,8 +75,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+_sections_unfolded = [ "Margin" ]
 
-[node name="TitleLabel" type="Label" parent="Container/CenterContainer/VBoxContainer/MarginContainer3" index="0"]
+[node name="TitleLabel" type="Label" parent="Container/CenterContainer/VBoxContainer/MarginContainer2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -176,7 +180,7 @@ text = "Next Level"
 flat = false
 align = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="Container/CenterContainer/VBoxContainer" index="2"]
+[node name="MarginContainer3" type="MarginContainer" parent="Container/CenterContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -191,9 +195,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-_sections_unfolded = [ "Margin" ]
 
-[node name="Label" type="Label" parent="Container/CenterContainer/VBoxContainer/MarginContainer2" index="0"]
+[node name="TimeLabel" type="Label" parent="Container/CenterContainer/VBoxContainer/MarginContainer3" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -213,5 +216,7 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
 
 
