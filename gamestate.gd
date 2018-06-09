@@ -1,38 +1,30 @@
 extends Node
 
-enum LEVEL { 
-	AUTO, 
-	SPLASH, START, CHARACTER, 
-	STORY1,
-	ARCADE,
-	ARCADE1, ARCADE2, ARCADE3
-}
 enum MODE { STORY, ARCADE }
 enum CHARACTER { DRUPLICON, DRUPAL8, DRUPALQUEST }
 
-var current_scene = null
+var level_map = {
+	"none": null,
+	"splash": "res://Scenes/Screen/Splash.tscn",
+	"start": "res://Scenes/Screen/Start.tscn",
+	"character": "res://Scenes/Screen/Character.tscn",
+	"story1": "res://Scenes/Story/Story1.tscn",
+	"arcade": "res://Scenes/Screen/Arcade.tscn",
+	"arcade1": "res://Scenes/Arcade/Arcade1.tscn",
+	"arcade2": "res://Scenes/Arcade/Arcade2.tscn",
+	"arcade3": "res://Scenes/Arcade/Arcade3.tscn"	
+}
+
+var current_scene_instance = null
 var current_mode = null
 var current_character = null
-var current_level = null
-
-var level_map = {
-	LEVEL.AUTO: "auto",
-	LEVEL.SPLASH: "res://Scenes/Screen/Splash.tscn",
-	LEVEL.START: "res://Scenes/Screen/Start.tscn",
-	LEVEL.CHARACTER: "res://Scenes/Screen/Character.tscn",
-	LEVEL.STORY1: "res://Scenes/Story/Story1.tscn",
-	LEVEL.ARCADE: "res://Scenes/Screen/Arcade.tscn",
-	LEVEL.ARCADE1: "res://Scenes/Arcade/Arcade1.tscn",
-	LEVEL.ARCADE2: "res://Scenes/Arcade/Arcade2.tscn",
-	LEVEL.ARCADE3: "res://Scenes/Arcade/Arcade3.tscn"	
-}
 
 func _ready():
 	# Get main scene
 	var root = get_tree().get_root()
-	current_scene = root.get_child(root.get_child_count() - 1)
+	current_scene_instance = root.get_child(root.get_child_count() - 1)
 	# Bypass project settings > main scene
-	# load_scene(LEVEL.START)
+	# load_scene("arcade")
 	
 	# Default story mode
 	story_mode()
@@ -40,47 +32,23 @@ func _ready():
 	select_character(CHARACTER.DRUPLICON)
 
 # Scene loading
-func reload_scene():
-	load_scene(current_scene)
+func load_scene(res):
+	call_deferred("_deferred_load_scene", res)
 
-func load_scene(level):
-	call_deferred("_deferred_load_scene", level)
-
-func _deferred_load_scene(level):
+func _deferred_load_scene(res):
 	# Immediately release current scene
-	current_scene.free()
+	current_scene_instance.free()
 	
 	# Load level resource
-	var s = ResourceLoader.load(_get_level(level))
+	var s = ResourceLoader.load(res)
 	# And create an instance
-	current_scene = s.instance()
+	current_scene_instance = s.instance()
 	# Add instance to node tree
-	get_tree().get_root().add_child(current_scene)
+	get_tree().get_root().add_child(current_scene_instance)
 	# SceneTree.change_scene() API compatibility
-	get_tree().set_current_scene(current_scene)
-
-func _get_level(level):
-	if level == LEVEL.AUTO:
-		if current_mode == MODE.ARCADE:
-			if current_level == LEVEL.ARCADE1:
-				current_level = LEVEL.ARCADE2
-				return level_map[current_level]
-			elif current_level == LEVEL.ARCADE2:
-				current_level = LEVEL.ARCADE3
-				return level_map[current_level]
-			else:
-				current_level = LEVEL.ARCADE
-				return level_map[current_level]
-		if current_mode == MODE.STORY:
-			current_level = LEVEL.STORY1
-			return level_map[current_level]
-			
-	if level_map.has(level):
-		current_level = level
-		return level_map[current_level]
-	
-	current_level = LEVEL.START
-	return level_map[current_level]
+	get_tree().set_current_scene(current_scene_instance)
+	# Make sure the node tree is not paused
+	get_tree().paused = false
 
 # Game mode
 func arcade_mode():

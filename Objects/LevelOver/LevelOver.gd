@@ -1,44 +1,58 @@
 extends Node
 
 var start_time
-var end_time
-
-var level_map = {
-	"none": null,
-	"splash": "res://Scenes/Screen/Splash.tscn",
-	"start": "res://Scenes/Screen/Start.tscn",
-	"character": "res://Scenes/Screen/Character.tscn",
-	"story1": "res://Scenes/Story/Story1.tscn",
-	"arcade": "res://Scenes/Screen/Arcade.tscn",
-	"arcade1": "res://Scenes/Arcade/Arcade1.tscn",
-	"arcade2": "res://Scenes/Arcade/Arcade2.tscn",
-	"arcade3": "res://Scenes/Arcade/Arcade3.tscn"	
-}
 
 export var current_level = "none"
 export var next_level = "none"
 
 func _ready():
-	start_time = OS.get_unix_time()
+	start_time = OS.get_ticks_msec()
 	
-	$Container.visible = false
+	$KinematicBody2D.visible = false
 
+func level_over_die():
+	# Set title label
+	var title_label = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer2/TitleLabel
+	title_label.text = "You Died"
+	
+	# Clear time label
+	var time_label = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer3/TimeLabel
+	time_label.visible = false
+	
+	level_over()
+	
+func level_over_win():
+	# Set title label
+	var title_label = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer2/TitleLabel
+	title_label.text = "Complete!!"
+	
+	# Set time label
+	var elapsed_time = OS.get_ticks_msec() - start_time
+	var time_label = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer3/TimeLabel
+	time_label.text = String(elapsed_time / 1000.0)
+	
+	level_over()
+	
 func level_over():
-	end_time = OS.get_unix_time()
-	var elapsed_time = end_time - start_time
-	
 	# Show the level over menu
-	$Container.visible = true
+	$KinematicBody2D.visible = true
 	
-	# Set the elapsed time
-	var time_label = $Container/CenterContainer/VBoxContainer/MarginContainer3/TimeLabel
-	time_label.text = String(elapsed_time)
 	
 	get_tree().paused = true
-	#var gs = get_node("/root/gamestate")
-	#gs.load_scene(gs.LEVEL.AUTO)
+	
+	# Set menu location
+	var player = get_tree().get_root().get_node("World/Player")
+	var new_loc = Vector2()
+	new_loc.x = player.position.x
+	new_loc.y = player.position.y - 50
+	$KinematicBody2D.position = new_loc
 
 
 func _on_PlayAgainButton_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(level_map[current_level])
+	gs.load_scene(gs.level_map[current_level])
+
+
+func _on_NextLevelButton_pressed():
+	var gs = get_node("/root/gamestate")
+	gs.load_scene(gs.level_map[next_level])

@@ -48,7 +48,6 @@ _sections_unfolded = [ "Margin" ]
 
 [node name="Polygon2D" type="Polygon2D" parent="Container" index="0"]
 
-scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( 9.14093, -11.8707, 1044.12, -13.0984, 1042.89, 621.638, -12.9582, 622.866, -15.4137, -5.73201 )
 uv = PoolVector2Array(  )
 color = Color( 0.0196078, 0.27451, 0.439216, 1 )
@@ -105,7 +104,6 @@ _sections_unfolded = [ "Margin" ]
 [node name="Polygon2D2" type="Polygon2D" parent="Container" index="3"]
 
 position = Vector2( -3.3241, 455.402 )
-scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -0.221603, -1.27423, 1036.9, -0.166203, 1039.11, 240.277, -31.2465, 229.197, -26.8144, -1.27423 )
 uv = PoolVector2Array(  )
 color = Color( 1, 1, 1, 1 )

@@ -14,7 +14,7 @@ func enter(player):
 	print(player.name + " DIE")
 	# get_tree().reload_current_scene()
 	var lo = get_tree().get_root().get_node("World/LevelOver")
-	lo.level_over()
+	lo.level_over_die()
 
 func exit(player):
 	pass

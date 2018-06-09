@@ -10,48 +10,44 @@ _sections_unfolded = [ "Pause" ]
 current_level = "none"
 next_level = "none"
 
-[node name="Container" type="Container" parent="." index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+
+scale = Vector2( 1, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Transform", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="KinematicBody2D" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 1.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 169.0
+margin_bottom = 56.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-_sections_unfolded = [ "Anchor", "Margin", "Visibility" ]
+use_top_left = true
 
-[node name="CenterContainer" type="CenterContainer" parent="Container" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1025.0
-margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-_sections_unfolded = [ "Margin" ]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Container/CenterContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="KinematicBody2D/CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 428.0
-margin_top = 272.0
-margin_right = 597.0
-margin_bottom = 328.0
+margin_left = -85.0
+margin_top = -28.0
+margin_right = 84.0
+margin_bottom = 28.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -61,7 +57,7 @@ size_flags_vertical = 1
 alignment = 1
 _sections_unfolded = [ "Margin" ]
 
-[node name="MarginContainer2" type="MarginContainer" parent="Container/CenterContainer/VBoxContainer" index="0"]
+[node name="MarginContainer2" type="MarginContainer" parent="KinematicBody2D/CenterContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -77,7 +73,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Margin" ]
 
-[node name="TitleLabel" type="Label" parent="Container/CenterContainer/VBoxContainer/MarginContainer2" index="0"]
+[node name="TitleLabel" type="Label" parent="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -98,7 +94,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/CenterContainer/VBoxContainer" index="1"]
+[node name="MarginContainer" type="MarginContainer" parent="KinematicBody2D/CenterContainer/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -115,7 +111,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Margin" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/CenterContainer/VBoxContainer/MarginContainer" index="0"]
+[node name="HBoxContainer" type="HBoxContainer" parent="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -133,7 +129,7 @@ size_flags_vertical = 1
 alignment = 1
 _sections_unfolded = [ "Margin" ]
 
-[node name="PlayAgainButton" type="Button" parent="Container/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+[node name="PlayAgainButton" type="Button" parent="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -156,7 +152,7 @@ text = "Play Again"
 flat = false
 align = 1
 
-[node name="NextLevelButton" type="Button" parent="Container/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer" index="1"]
+[node name="NextLevelButton" type="Button" parent="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -180,7 +176,7 @@ text = "Next Level"
 flat = false
 align = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="Container/CenterContainer/VBoxContainer" index="2"]
+[node name="MarginContainer3" type="MarginContainer" parent="KinematicBody2D/CenterContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -196,7 +192,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="TimeLabel" type="Label" parent="Container/CenterContainer/VBoxContainer/MarginContainer3" index="0"]
+[node name="TimeLabel" type="Label" parent="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer3" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -217,6 +213,8 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+
+[connection signal="pressed" from="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 
 

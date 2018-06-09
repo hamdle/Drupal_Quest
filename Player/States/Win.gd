@@ -13,8 +13,8 @@ const AIR_FRICTION = 0.1
 func enter(player):
 	print(player.name + " WIN")
 	# get_tree().reload_current_scene()
-	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.LEVEL.AUTO)
+	var lo = get_tree().get_root().get_node("World/LevelOver")
+	lo.level_over_win()
 	pass
 
 func exit(player):
