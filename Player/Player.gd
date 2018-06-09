@@ -50,11 +50,6 @@ func _physics_process(delta):
 		current_state.enter(self)
 	
 func _input(event):
-	# Escape to Start screen shortcut
-	if Input.is_action_just_pressed("escape"):
-		var gs = get_node("/root/gamestate")
-		gs.load_scene(gs.LEVEL.START)
-	
 	# Process state machine
 	var new_state = current_state.handleInput(self, event)
 	if new_state:

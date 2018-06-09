@@ -10,6 +10,11 @@ func _ready():
 	
 	$KinematicBody2D.visible = false
 
+func _input(event):
+	# Escape to Start screen shortcut
+	if Input.is_action_just_pressed("escape"):
+		level_over()
+
 func level_over_die():
 	# Set title label
 	var title_label = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer2/TitleLabel
@@ -18,7 +23,9 @@ func level_over_die():
 	# Clear time label
 	var time_label = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer3/TimeLabel
 	time_label.visible = false
-	
+	# And hide next level button
+	var next_level_button = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/NextLevelButton
+	next_level_button.visible = false	
 	level_over()
 	
 func level_over_win():
@@ -30,7 +37,9 @@ func level_over_win():
 	var elapsed_time = OS.get_ticks_msec() - start_time
 	var time_label = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer3/TimeLabel
 	time_label.text = String(elapsed_time / 1000.0)
-	
+	# Hide quit button
+	var quit_button = $KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/QuitButton
+	quit_button.visible = false
 	level_over()
 	
 func level_over():
@@ -56,3 +65,8 @@ func _on_PlayAgainButton_pressed():
 func _on_NextLevelButton_pressed():
 	var gs = get_node("/root/gamestate")
 	gs.load_scene(gs.level_map[next_level])
+
+
+func _on_QuitButton_pressed():
+	var gs = get_node("/root/gamestate")
+	gs.load_scene(gs.level_map["start"])

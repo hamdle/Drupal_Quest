@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Objects/LevelOver/LevelOver.gd" type="Script" id=1]
 
-[node name="LevelOver" type="Node"]
+[node name="LevelOver" type="Node" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -44,9 +44,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -85.0
+margin_left = -133.0
 margin_top = -28.0
-margin_right = 84.0
+margin_right = 132.0
 margin_bottom = 28.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -59,11 +59,12 @@ _sections_unfolded = [ "Margin" ]
 
 [node name="MarginContainer2" type="MarginContainer" parent="KinematicBody2D/CenterContainer/VBoxContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 169.0
+margin_right = 265.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -80,7 +81,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 169.0
+margin_right = 265.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -101,7 +102,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 18.0
-margin_right = 169.0
+margin_right = 265.0
 margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -118,7 +119,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 169.0
+margin_right = 265.0
 margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -176,14 +177,39 @@ text = "Next Level"
 flat = false
 align = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="KinematicBody2D/CenterContainer/VBoxContainer" index="2"]
+[node name="QuitButton" type="Button" parent="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_left = 165.0
+margin_right = 257.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Quit to Main"
+flat = false
+align = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="KinematicBody2D/CenterContainer/VBoxContainer" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_top = 42.0
-margin_right = 169.0
+margin_right = 265.0
 margin_bottom = 56.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -199,7 +225,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_right = 169.0
+margin_right = 265.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -216,5 +242,7 @@ max_lines_visible = -1
 [connection signal="pressed" from="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
 
 [connection signal="pressed" from="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
+
+[connection signal="pressed" from="KinematicBody2D/CenterContainer/VBoxContainer/MarginContainer/HBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
 
 

@@ -14,3 +14,8 @@ func _on_Level2Button_pressed():
 func _on_Level3Button_pressed():
 	var gs = get_node("/root/gamestate")
 	gs.load_scene(gs.level_map["arcade3"])
+
+
+func _on_BackButton_pressed():
+	var gs = get_node("/root/gamestate")
+	gs.load_scene(gs.level_map["start"])
