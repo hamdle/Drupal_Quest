@@ -5,14 +5,14 @@
 [ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/LevelOver/LevelOver.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 [node name="Level" type="Node" parent="." index="0"]
 
@@ -61,9 +61,6 @@ position = Vector2( -144.04, 168.076 )
 
 position = Vector2( 115.777, 454.5 )
 
-[node name="LevelOver" parent="." index="5" instance=ExtResource( 6 )]
-
-current_level = "arcade2"
-next_level = "arcade3"
+[node name="Menus" parent="." index="5" instance=ExtResource( 6 )]
 
 

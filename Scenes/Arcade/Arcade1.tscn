@@ -5,9 +5,9 @@
 [ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/LevelOver/LevelOver.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=6]
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 [node name="TestObjects" type="Node" parent="." index="0"]
 
@@ -31,7 +31,7 @@ position = Vector2( 417.358, 323.211 )
 
 position = Vector2( 140, 376 )
 
-[node name="LevelOver" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Menus" parent="." index="5" instance=ExtResource( 6 )]
 
 current_level = "arcade1"
 next_level = "arcade2"
