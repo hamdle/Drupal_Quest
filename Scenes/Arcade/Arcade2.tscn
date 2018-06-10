@@ -12,7 +12,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 [node name="Level" type="Node" parent="." index="0"]
 
@@ -62,5 +62,8 @@ position = Vector2( -144.04, 168.076 )
 position = Vector2( 115.777, 454.5 )
 
 [node name="Menus" parent="." index="5" instance=ExtResource( 6 )]
+
+current_level = "arcade2"
+next_level = "arcade3"
 
 
