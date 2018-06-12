@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Cutscene/CutsceneProcessor.gd" type="Script" id=1]
 [ext_resource path="res://Cutscene/States/Idle.gd" type="Script" id=2]
+[ext_resource path="res://Cutscene/States/show_text.gd" type="Script" id=3]
+[ext_resource path="res://Cutscene/States/wait.gd" type="Script" id=4]
 
-[node name="CutsceneProcessor" type="KinematicBody2D" index="0"]
+[sub_resource type="AudioStreamSample" id=1]
+
+format = 0
+loop_mode = 0
+loop_begin = 0
+loop_end = 0
+mix_rate = 44100
+stereo = false
+data = PoolByteArray(  )
+
+[node name="CutsceneProcessor" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -56,7 +68,7 @@ autostart = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
 
-stream = null
+stream = SubResource( 1 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0
@@ -69,5 +81,13 @@ area_mask = 1
 [node name="Idle" type="Node" parent="States" index="0"]
 
 script = ExtResource( 2 )
+
+[node name="show_text" type="Node" parent="States" index="1"]
+
+script = ExtResource( 3 )
+
+[node name="wait" type="Node" parent="States" index="2"]
+
+script = ExtResource( 4 )
 
 
