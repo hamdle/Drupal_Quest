@@ -66,7 +66,7 @@ func process_next_state():
 		$type_text/Container.visible = false
 		$delete_text/Container.visible = true
 		processing = "delete_text"
-		$delete_text.start(next_item[1], next_item[2])
+		$delete_text.start(next_item[1], next_item[2], $type_text)
 	elif next_item[0] == "load_scene":
 		print("load_scene")
 		processing = "load_scene"

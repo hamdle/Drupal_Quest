@@ -14,6 +14,7 @@ func _ready():
 func start(arg1, arg2):
 	text_to_type = arg1
 	type_speed = arg2
+	$Container/Label.text = ""
 	$Timer.wait_time = float(type_speed)
 	print($Timer.wait_time)
 	$Timer.start()

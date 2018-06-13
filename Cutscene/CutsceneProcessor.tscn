@@ -270,7 +270,7 @@ _sections_unfolded = [ "Margin", "custom_fonts" ]
 [node name="Timer" type="Timer" parent="delete_text" index="1"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.1
 one_shot = false
 autostart = false
 
@@ -281,5 +281,7 @@ script = ExtResource( 9 )
 [connection signal="timeout" from="wait/Timer" to="wait" method="_on_Timer_timeout"]
 
 [connection signal="timeout" from="type_text/Timer" to="type_text" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="delete_text/Timer" to="delete_text" method="_on_Timer_timeout"]
 
 
