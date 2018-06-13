@@ -1,48 +1,39 @@
 extends KinematicBody2D
 
-enum STATE { NULL, IDLE, SHOW_TEXT, WAIT }
-
 var cutscene_array = []
-
-# State Machine
-var current_state
-
-onready var state_nodes = {
-	STATE.IDLE: $States/Idle,
-	STATE.SHOW_TEXT: $States/show_text,
-	STATE.WAIT: $States/wait,
-}
+var processing
+var get_next = true
 
 func _ready():
-	# Process state machine
-	current_state = state_nodes[STATE.IDLE]
-	current_state.enter(self)
+	pass
 	
-func _physics_process(delta):
-	# Process state machine
-	var new_state = current_state.update(self, delta)
-	if new_state:
-		current_state.exit(self)
-		current_state = state_nodes[new_state]
-		current_state.enter(self)
+func _process(delta):
+	if cutscene_array.empty():
+		return
+	
+	if get_next:
+		process_next_state()
+	
+	if processing == "show_text":
+		$show_text.run(self)
+	elif processing == "wait":
+		$wait.run(self)
 	
 func _input(event):
-	# Process state machine
-	var new_state = current_state.handleInput(self, event)
-	if new_state:
-		current_state.exit(self)
-		current_state = state_nodes[new_state]
-		current_state.enter(self)
+	pass
 
-func process_next_index():
+func process_next_state():
+	get_next = false
 	if cutscene_array.empty():
-		return STATE.IDLE
+		return
 		
 	var next_item = cutscene_array.pop_front()
 	if next_item[0] == "show_text":
-		return STATE.SHOW_TEXT
+		print("show_text")
+		processing = "show_text"
+		$show_text.start(next_item[1])
+		get_next = true
 	elif next_item[0] == "wait":
-		return STATE.WAIT
-	
-	return STATE.IDLE
-		
+		print("wait")
+		processing = "wait"
+		$wait.start(next_item[1])
