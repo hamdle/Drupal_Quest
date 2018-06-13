@@ -13,6 +13,8 @@ func start(arg):
 
 func run(processor):
 	if complete:
+		$Timer.stop()
+		complete = false
 		processor.get_next = true
 
 func _on_Timer_timeout():

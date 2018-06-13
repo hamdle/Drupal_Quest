@@ -1,9 +1,22 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Cutscene/CutsceneProcessor.gd" type="Script" id=1]
 [ext_resource path="res://Cutscene/show_text.gd" type="Script" id=2]
-[ext_resource path="res://Cutscene/wait.gd" type="Script" id=3]
-[ext_resource path="res://Cutscene/play_audio.gd" type="Script" id=4]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Cutscene/wait.gd" type="Script" id=4]
+[ext_resource path="res://Cutscene/play_audio.gd" type="Script" id=5]
+[ext_resource path="res://Cutscene/type_text.gd" type="Script" id=6]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Cutscene/delete_text.gd" type="Script" id=8]
+[ext_resource path="res://Cutscene/load_scene.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 62
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="AudioStreamSample" id=1]
 
@@ -15,7 +28,23 @@ mix_rate = 44100
 stereo = false
 data = PoolByteArray(  )
 
-[node name="CutsceneProcessor" type="KinematicBody2D" index="0"]
+[sub_resource type="DynamicFont" id=4]
+
+size = 62
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 62
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="CutsceneProcessor" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -28,7 +57,6 @@ __meta__ = {
 
 [node name="show_text" type="Node" parent="." index="0"]
 
-editor/display_folded = true
 script = ExtResource( 2 )
 
 [node name="Container" type="Container" parent="show_text" index="0"]
@@ -37,37 +65,61 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1025.0
+margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+_sections_unfolded = [ "Margin" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Label" type="Label" parent="show_text/Container" index="0"]
+[node name="Polygon2D" type="Polygon2D" parent="show_text/Container" index="0"]
+
+scale = Vector2( 1, 1 )
+polygon = PoolVector2Array( 1045.43, -14.5385, 1045.43, 632.11, -27.7963, 627.588, -26.2889, -40.1633 )
+uv = PoolVector2Array(  )
+color = Color( 0, 0, 0, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Label" type="Label" parent="show_text/Container" index="1"]
 
 anchor_left = 0.0
-anchor_top = 0.0
+anchor_top = 0.5
 anchor_right = 0.0
-anchor_bottom = 0.0
+anchor_bottom = 0.5
+margin_left = 100.0
+margin_top = -35.0
 margin_right = 40.0
-margin_bottom = 14.0
+margin_bottom = 35.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
 [node name="wait" type="Node" parent="." index="1"]
 
 editor/display_folded = true
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="wait" index="0"]
 
@@ -78,7 +130,8 @@ autostart = false
 
 [node name="play_audio" type="Node" parent="." index="2"]
 
-script = ExtResource( 4 )
+editor/display_folded = true
+script = ExtResource( 5 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="play_audio" index="0"]
 
@@ -93,7 +146,137 @@ area_mask = 1
 
 [node name="type_text" type="Node" parent="." index="3"]
 
+script = ExtResource( 6 )
+
+[node name="Container" type="Container" parent="type_text" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1025.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin", "Visibility" ]
+
+[node name="Polygon2D" type="Polygon2D" parent="type_text/Container" index="0"]
+
+scale = Vector2( 1, 1 )
+polygon = PoolVector2Array( -18.1312, -38.7488, 1040.18, -25.2437, 1042.63, 626.685, -20.5866, 623.002 )
+uv = PoolVector2Array(  )
+color = Color( 0.184314, 0.0392157, 0.137255, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Label" type="Label" parent="type_text/Container" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 100.0
+margin_top = -35.0
+margin_right = 40.0
+margin_bottom = 35.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_fonts" ]
+
+[node name="Timer" type="Timer" parent="type_text" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [node name="delete_text" type="Node" parent="." index="4"]
+
+script = ExtResource( 8 )
+
+[node name="Container" type="Container" parent="delete_text" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1025.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="Polygon2D" type="Polygon2D" parent="delete_text/Container" index="0"]
+
+scale = Vector2( 1, 1 )
+polygon = PoolVector2Array( -14.448, -32.6101, 1034.04, -26.4714, 1041.41, 625.457, -23.0421, 625.457 )
+uv = PoolVector2Array(  )
+color = Color( 0.184314, 0.0392157, 0.137255, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Label" type="Label" parent="delete_text/Container" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 100.0
+margin_top = -35.0
+margin_right = 40.0
+margin_bottom = 35.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_fonts" ]
+
+[node name="Timer" type="Timer" parent="delete_text" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="load_scene" type="Node" parent="." index="5"]
+
+script = ExtResource( 9 )
 
 [connection signal="timeout" from="wait/Timer" to="wait" method="_on_Timer_timeout"]
 
