@@ -18,6 +18,8 @@ func _process(delta):
 		$show_text.run(self)
 	elif processing == "wait":
 		$wait.run(self)
+	elif processing == "play_audio":
+		$wait.run(self)
 	
 func _input(event):
 	pass
@@ -37,3 +39,8 @@ func process_next_state():
 		print("wait")
 		processing = "wait"
 		$wait.start(next_item[1])
+	elif next_item[0] == "play_audio":
+		print("play_audio")
+		processing = "play_audio"
+		$play_audio.start(next_item[1])
+		get_next = true

@@ -5,6 +5,7 @@ var cutscene = [
 	[ "wait", 2 ],
 	[ "show_text", "A developer went to" ],
 	[ "wait", 2 ],
+	[ "play_audio", "res://Cutscene/sample.wav" ],
 ]
 
 func _ready():

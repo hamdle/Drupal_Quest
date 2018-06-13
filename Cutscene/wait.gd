@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 func start(arg):
-	$Timer.wait_time = arg
+	$Timer.wait_time = int(arg)
 	$Timer.start()
 
 func run(processor):
