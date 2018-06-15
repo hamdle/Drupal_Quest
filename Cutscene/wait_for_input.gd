@@ -8,6 +8,7 @@ func _ready():
 	pass
 
 func start(arg):
+	complete = false
 	pass
 
 func run(processor):
@@ -16,4 +17,5 @@ func run(processor):
 
 func _input(event):
 	if event is InputEventMouseButton:
-		complete = true
+		if event.is_action_released("mouse_button"):
+			complete = true
