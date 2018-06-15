@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://NPC/NPC.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Characters/druplicon-invert.png" type="Texture" id=2]
@@ -22,7 +22,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -5 ), Vector2( 0, -10 ) ]
+"values": [ Vector2( 0, -5 ), Vector2( 0, -13 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Position2D/Sprite:rotation_degrees")
@@ -49,7 +49,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/path = NodePath("GroundCollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -61,7 +61,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0.214638, 3.8635 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("CollisionShape2D:rotation_degrees")
+tracks/4/path = NodePath("GroundCollisionShape2D:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -73,7 +73,7 @@ tracks/4/keys = {
 "values": [ 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("CollisionShape2D:scale")
+tracks/5/path = NodePath("GroundCollisionShape2D:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -119,6 +119,18 @@ tracks/8/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("CollisionShape2D:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.6, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -10 ), Vector2( 0, -2 ) ]
 }
 
 [sub_resource type="Animation" id=1]
@@ -164,7 +176,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/path = NodePath("GroundCollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -176,7 +188,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0.214638, 3.8635 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("CollisionShape2D:rotation_degrees")
+tracks/4/path = NodePath("GroundCollisionShape2D:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -188,7 +200,7 @@ tracks/4/keys = {
 "values": [ 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("CollisionShape2D:scale")
+tracks/5/path = NodePath("GroundCollisionShape2D:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -235,11 +247,52 @@ tracks/8/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("CollisionShape2D:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -3 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("CollisionShape2D:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("CollisionShape2D:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 13.539, 15.9169 )
+
+[sub_resource type="CircleShape2D" id=6]
+
+custom_solver_bias = 0.0
+radius = 16.6443
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -287,15 +340,21 @@ playback/speed = 1.0
 
 [node name="Sprite" type="Sprite" parent="Position2D" index="0"]
 
-position = Vector2( 0, -6.05515 )
+position = Vector2( 0, -5 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+[node name="GroundCollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
 position = Vector2( 0.214638, 3.8635 )
 shape = SubResource( 2 )
 
-[node name="States" type="Node" parent="." index="4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
+
+position = Vector2( 0, -2 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 6 )
+
+[node name="States" type="Node" parent="." index="5"]
 
 [node name="Silent" type="Node" parent="States" index="0"]
 
@@ -305,7 +364,7 @@ script = ExtResource( 3 )
 
 script = ExtResource( 4 )
 
-[node name="Area2D" type="Area2D" parent="." index="5"]
+[node name="Area2D" type="Area2D" parent="." index="6"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -320,7 +379,7 @@ audio_bus_name = "Master"
 position = Vector2( 3.63844, -47.6786 )
 shape = SubResource( 3 )
 
-[node name="Text" type="Label" parent="." index="6"]
+[node name="Text" type="Label" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0

@@ -15,8 +15,15 @@ func enter(player):
 	print(player.name + " JUMP")
 	if player.is_on_floor():
 		player.motion.y = -jump_height
+		player.get_node("AnimationPlayer").play("SETUP")
+		player.get_node("GroundCollisionShape2D").disabled = true
+		
 
 func exit(player):
+	player.get_node("GroundCollisionShape2D").disabled = false
+	var player_animation = player.get_node("AnimationPlayer")
+	# player_animation.seek(0)
+	player_animation.play("LAND")
 	pass
 	
 func update(player, delta):

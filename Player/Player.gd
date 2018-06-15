@@ -112,4 +112,6 @@ func _on_Player_damage():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
 	# DOES NOT RUN if animation is set to loop
+	if anim_name == "LAND":
+		$AnimationPlayer.play("FLOAT")
 	pass
