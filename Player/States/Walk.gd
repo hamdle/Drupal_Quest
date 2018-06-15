@@ -12,6 +12,8 @@ const AIR_FRICTION = 0.1
 
 func enter(player):
 	print(player.name + " WALK")
+	var gs = get_node("/root/gamestate")
+	gs.local_moves += 1
 	pass
 
 func exit(player):

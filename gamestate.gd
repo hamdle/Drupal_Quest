@@ -19,6 +19,11 @@ var current_scene_instance = null
 var current_mode = null
 var current_character = null
 
+# Stat variables
+var local_jumps = 0
+var local_launches = 0
+var local_moves = 0
+
 func _ready():
 	# Get main scene
 	var root = get_tree().get_root()
@@ -38,6 +43,11 @@ func load_scene(res):
 func _deferred_load_scene(res):
 	# Immediately release current scene
 	current_scene_instance.free()
+	
+	# Reset level stats
+	local_jumps = 0
+	local_launches = 0
+	local_moves = 0
 	
 	# Load level resource
 	var s = ResourceLoader.load(res)

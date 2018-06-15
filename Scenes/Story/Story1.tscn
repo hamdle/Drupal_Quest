@@ -21,6 +21,8 @@ extents = Vector2( 508.063, 24.0422 )
 
 [node name="Level" type="Node" parent="." index="0"]
 
+editor/display_folded = true
+
 [node name="Floor" parent="Level" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 923.304, 573.325 )
@@ -206,8 +208,6 @@ position = Vector2( 82.2162, 250.435 )
 position = Vector2( -130.47, 211.324 )
 
 [node name="NPCs" type="Node" parent="." index="5"]
-
-editor/display_folded = true
 
 [node name="NPC" parent="NPCs" index="0" instance=ExtResource( 9 )]
 

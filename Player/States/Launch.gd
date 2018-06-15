@@ -14,17 +14,36 @@ export var vertical_scale = 0.1
 export var horizontal_scale = 0.1
 export var max_vertical_launch = 900
 export var max_horizontal_launch = 300
-	
+
+# False launch happens when the player clicks
+# and releases but never moves the mouse
+var false_launch = false
+
 func enter(player):
 	print(player.name + " LAUNCH")
+	var gs = get_node("/root/gamestate")
+	gs.local_launches += 1
+	
+	false_launch = false
+	
 	if player.is_on_floor():
 		player.motion = calculate_launch_velocity(player.mouse_press, player.mouse_release)
 		# player.motion = calculate_launch_velocity(player.position, player.mouse_release)
-	pass
+		
+		if player.motion == Vector2(0, 0):
+			false_launch = true
+		else:
+			player.get_node("AnimationPlayer").play("SETUP")
+			player.get_node("GroundCollisionShape2D").disabled = true
 
 func exit(player):
 	player.mouse_press = MOUSE_RESET
-	pass
+	
+	if false_launch == false:
+		player.get_node("GroundCollisionShape2D").disabled = false
+		var player_animation = player.get_node("AnimationPlayer")
+		# player_animation.seek(0)
+		player_animation.play("LAND")
 	
 func update(player, delta):
 	#Gravity

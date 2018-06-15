@@ -29,9 +29,13 @@ func player_win():
 	$WinMenu.visible = true
 	
 	# Set finish time
+	var gs = get_node("/root/gamestate")
 	var finish_time = (OS.get_ticks_msec() - start_time) / 1000.0
 	var time_label = $WinMenu/CC/VBC/MC3/TimeLabel
-	time_label.text = String(finish_time)
+	time_label.text = String(finish_time) \
+	+ " J" + String(gs.local_jumps) \
+	+ " L" + String(gs.local_launches) \
+	+ " M" + String(gs.local_moves)
 	_level_over($WinMenu)
 
 func _level_pause():

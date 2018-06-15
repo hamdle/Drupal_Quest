@@ -13,6 +13,9 @@ export var jump_height = 325
 
 func enter(player):
 	print(player.name + " JUMP")
+	var gs = get_node("/root/gamestate")
+	gs.local_jumps += 1
+	
 	if player.is_on_floor():
 		player.motion.y = -jump_height
 		player.get_node("AnimationPlayer").play("SETUP")
