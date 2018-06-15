@@ -26,7 +26,7 @@ onready var state_nodes = {
 
 func _ready():
 	# Set animation
-	$AnimationPlayer.play("SETUP")
+	$AnimationPlayer.play("FLOAT")
 	# Clear mouse input
 	mouse_press = MOUSE_RESET
 	

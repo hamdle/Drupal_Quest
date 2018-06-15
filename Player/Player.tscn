@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=2]
@@ -15,7 +15,7 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "FLOAT"
-length = 1.0
+length = 1.5
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -25,10 +25,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -9.40868 ), Vector2( 0, -15.2422 ) ]
+"values": [ Vector2( 0, -7.40868 ), Vector2( 0, -13.2422 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Position2D/Sprite:rotation_degrees")
@@ -367,12 +367,17 @@ tracks/8/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="CircleShape2D" id=5]
+
+custom_solver_bias = 0.0
+radius = 16.9921
+
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 13.0994, 13.467 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -409,7 +414,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="Position2D" index="0"]
 
-position = Vector2( 0, -9.40868 )
+position = Vector2( 0, -8.98392 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
@@ -417,11 +422,16 @@ drupal_texture = ExtResource( 4 )
 drupal_8_texture = ExtResource( 5 )
 drupal_quest_texture = ExtResource( 2 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Position2D" index="1"]
+
+position = Vector2( 0, -6 )
+shape = SubResource( 5 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
 position = Vector2( -0.385532, 6.03307 )
 shape = SubResource( 4 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="States" type="Node" parent="." index="4"]
 

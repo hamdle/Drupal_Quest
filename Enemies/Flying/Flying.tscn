@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Flying/Flying.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Characters/drupal8-bug.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Characters/drupal8-red.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Flying/States/Idle.gd" type="Script" id=3]
 [ext_resource path="res://Enemies/Flying/States/Patrol.gd" type="Script" id=4]
 [ext_resource path="res://Enemies/Flying/States/Attack.gd" type="Script" id=5]

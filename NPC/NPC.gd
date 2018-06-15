@@ -19,7 +19,7 @@ onready var state_nodes = {
 
 func _ready():
 	# Set animation
-	$AnimationPlayer.play("SETUP")
+	$AnimationPlayer.play("FLOAT")
 	
 	# Set custom dialog text
 	$Text.visible = false

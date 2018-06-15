@@ -15,7 +15,6 @@ func enter(player):
 	print(player.name + " JUMP")
 	if player.is_on_floor():
 		player.motion.y = -jump_height
-	pass
 
 func exit(player):
 	pass
