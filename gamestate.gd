@@ -8,6 +8,7 @@ var level_map = {
 	"splash": "res://Scenes/Screen/Splash.tscn",
 	"start": "res://Scenes/Screen/Start.tscn",
 	"character": "res://Scenes/Screen/Character.tscn",
+	"intro": "res://Scenes/Cutscene/Intro.tscn",
 	"story1": "res://Scenes/Story/Story1.tscn",
 	"arcade": "res://Scenes/Screen/Arcade.tscn",
 	"arcade1": "res://Scenes/Arcade/Arcade1.tscn",

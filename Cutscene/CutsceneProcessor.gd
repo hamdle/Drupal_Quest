@@ -26,6 +26,8 @@ func _process(delta):
 		$delete_text.run(self)
 	elif processing == "load_scene":
 		$load_scene.run(self)
+	elif processing == "wait_for_input":
+		$wait_for_input.run(self)
 	
 func _input(event):
 	pass
@@ -71,3 +73,7 @@ func process_next_state():
 		print("load_scene")
 		processing = "load_scene"
 		$load_scene.start(next_item[1])
+	elif next_item[0] == "wait_for_input":
+		print("wait_for_input")
+		processing = "wait_for_input"
+		$wait_for_input.start(next_item[1])
