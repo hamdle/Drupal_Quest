@@ -12,6 +12,7 @@ var level_map = {
 	"story1": "res://Scenes/Story/Story1.tscn",
 	"story2": "res://Scenes/Story/Story2.tscn",
 	"story3": "res://Scenes/Story/Story3.tscn",
+	"story4": "res://Scenes/Story/Story4.tscn",
 	"arcade": "res://Scenes/Screen/Arcade.tscn",
 	"arcade1": "res://Scenes/Arcade/Arcade1.tscn",
 	"arcade2": "res://Scenes/Arcade/Arcade2.tscn",

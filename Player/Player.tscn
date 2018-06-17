@@ -600,7 +600,7 @@ extents = Vector2( 16.6601, 13.467 )
 custom_solver_bias = 0.0
 radius = 16.9921
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -696,7 +696,7 @@ current = true
 zoom = Vector2( 1, 1 )
 limit_left = 0
 limit_top = 0
-limit_right = 1000000
+limit_right = 1280
 limit_bottom = 10000000
 limit_smoothed = false
 drag_margin_h_enabled = false

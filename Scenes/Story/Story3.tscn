@@ -18,7 +18,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 [node name="Level" type="Node" parent="." index="0"]
 
@@ -176,7 +176,6 @@ bounce = 0.0
 [node name="download" type="Sprite" parent="Level/StaticBody2D" index="0"]
 
 position = Vector2( 1713.42, 1554.28 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 
 [node name="Gates" type="Node" parent="." index="1"]
