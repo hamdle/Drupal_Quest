@@ -94,7 +94,6 @@ func load_character():
 	elif gs.current_character == gs.CHARACTER.DRUPALQUEST:
 		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_quest_texture
 	
-	
 # Exit entered signal
 func _on_Exit_entered():
 	if has_key:
