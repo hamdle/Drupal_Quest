@@ -208,7 +208,7 @@ dialog_text = "Can you help me fix these bugs?"
 
 [node name="Player" parent="." index="6" instance=ExtResource( 13 )]
 
-position = Vector2( 604.72, 132.082 )
+position = Vector2( 230.39, 1548.6 )
 
 [node name="Menus" parent="." index="7" instance=ExtResource( 14 )]
 
