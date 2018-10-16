@@ -7,10 +7,7 @@ path="res://.import/story.png-ca4aded13d03fe62e8d6f65626032af0.stex"
 [deps]
 
 source_file="res://Sprites/Buttons/story.png"
-source_md5="be2788651ffac70fad94a331f3c51c50"
-
 dest_files=[ "res://.import/story.png-ca4aded13d03fe62e8d6f65626032af0.stex" ]
-dest_md5="7df26a42d6f99ab6cc135793775b71c3"
 
 [params]
 

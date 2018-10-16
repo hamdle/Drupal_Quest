@@ -7,10 +7,7 @@ path="res://.import/drupal-bug.png-f492cd63db694c75afe92dba79db5687.stex"
 [deps]
 
 source_file="res://Sprites/Characters/drupal-bug.png"
-source_md5="af5536029aaaec145378ac3c33dcdb06"
-
 dest_files=[ "res://.import/drupal-bug.png-f492cd63db694c75afe92dba79db5687.stex" ]
-dest_md5="48b570da7abe30dc3303faac0238d13d"
 
 [params]
 

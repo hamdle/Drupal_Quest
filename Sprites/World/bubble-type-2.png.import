@@ -7,10 +7,7 @@ path="res://.import/bubble-type-2.png-3e16e13d35c8b664eb378c68e447ba24.stex"
 [deps]
 
 source_file="res://Sprites/World/bubble-type-2.png"
-source_md5="713c4ff793c1c33866c57d99db5913ff"
-
 dest_files=[ "res://.import/bubble-type-2.png-3e16e13d35c8b664eb378c68e447ba24.stex" ]
-dest_md5="4ed507b8ea684ce3f90ad8aea166ab3a"
 
 [params]
 

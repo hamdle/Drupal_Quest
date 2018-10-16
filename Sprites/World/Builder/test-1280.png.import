@@ -7,10 +7,7 @@ path="res://.import/test-1280.png-bcc89bf31757e2115fa52aeff99b9fd3.stex"
 [deps]
 
 source_file="res://Sprites/World/Builder/test-1280.png"
-source_md5="79346bf76d806bfd25cc7cd0acf4d1f0"
-
 dest_files=[ "res://.import/test-1280.png-bcc89bf31757e2115fa52aeff99b9fd3.stex" ]
-dest_md5="abd6b7d1bd115789367c93cc3f1273f5"
 
 [params]
 

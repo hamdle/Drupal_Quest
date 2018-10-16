@@ -7,10 +7,7 @@ path="res://.import/story-hover.png-6b96251025099185619eff9f9258908c.stex"
 [deps]
 
 source_file="res://Sprites/Buttons/story-hover.png"
-source_md5="ba19c79f3dd5b82be845c75b139a796d"
-
 dest_files=[ "res://.import/story-hover.png-6b96251025099185619eff9f9258908c.stex" ]
-dest_md5="4ed9a1e3e4703f255bff90f9e0ea339d"
 
 [params]
 

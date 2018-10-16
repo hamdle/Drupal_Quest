@@ -7,10 +7,7 @@ path="res://.import/druplicon-magenta.png-d3338dbf2c286c0eb4f037d840a47a36.stex"
 [deps]
 
 source_file="res://Sprites/Characters/druplicon-magenta.png"
-source_md5="0d40e54aaf6f391a1acdf2d769bfbe48"
-
 dest_files=[ "res://.import/druplicon-magenta.png-d3338dbf2c286c0eb4f037d840a47a36.stex" ]
-dest_md5="6c9452674576d4d3aa27bff57cd7ad76"
 
 [params]
 

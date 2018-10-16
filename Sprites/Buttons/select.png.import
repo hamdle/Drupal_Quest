@@ -7,10 +7,7 @@ path="res://.import/select.png-8a04affe489320366e32ea47776d70e2.stex"
 [deps]
 
 source_file="res://Sprites/Buttons/select.png"
-source_md5="a9cf04aafc2d937105aa59cbcddb8587"
-
 dest_files=[ "res://.import/select.png-8a04affe489320366e32ea47776d70e2.stex" ]
-dest_md5="c5ef0543c086fa49c78d989000f50070"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/key-black.png-9006b868e67c29cebbe042f237a7a02d.stex"
 [deps]
 
 source_file="res://Sprites/key-black.png"
-source_md5="6ea4eaecd8d4fe24f9b06ba014d5dc6a"
-
 dest_files=[ "res://.import/key-black.png-9006b868e67c29cebbe042f237a7a02d.stex" ]
-dest_md5="bb5751347e0d332281843fe7c515749a"
 
 [params]
 

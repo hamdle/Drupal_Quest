@@ -7,10 +7,7 @@ path="res://.import/nav-header.png-1e65b93106aed387c84bc6a4b7d3437a.stex"
 [deps]
 
 source_file="res://Sprites/World/nav-header.png"
-source_md5="448d9260669fd4e1ebb718fe56645b41"
-
 dest_files=[ "res://.import/nav-header.png-1e65b93106aed387c84bc6a4b7d3437a.stex" ]
-dest_md5="b0fc159a34e092c50eb514b4b91b5eec"
 
 [params]
 

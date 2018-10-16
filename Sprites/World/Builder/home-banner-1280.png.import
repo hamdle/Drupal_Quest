@@ -7,10 +7,7 @@ path="res://.import/home-banner-1280.png-ebc21ee8e2ccd918fef8c0555a02ec7c.stex"
 [deps]
 
 source_file="res://Sprites/World/Builder/home-banner-1280.png"
-source_md5="243fc69eb5e0dfc6e1dc8e991a437f01"
-
 dest_files=[ "res://.import/home-banner-1280.png-ebc21ee8e2ccd918fef8c0555a02ec7c.stex" ]
-dest_md5="15a0ae1d57bc34d9b47a51eaf8653305"
 
 [params]
 

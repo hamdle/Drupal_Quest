@@ -7,10 +7,7 @@ path="res://.import/druplicon-invert.png-1bfdfc817e322c6f124f91827ff076f3.stex"
 [deps]
 
 source_file="res://Sprites/Characters/druplicon-invert.png"
-source_md5="7a54f39eee723a57f4e03a5992bbf095"
-
 dest_files=[ "res://.import/druplicon-invert.png-1bfdfc817e322c6f124f91827ff076f3.stex" ]
-dest_md5="350a85398ea9019d17892d1a5f2f4b3f"
 
 [params]
 

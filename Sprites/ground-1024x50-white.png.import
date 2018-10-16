@@ -7,10 +7,7 @@ path="res://.import/ground-1024x50-white.png-286d8ef9dd361b08d8dd0f32ce1965ea.st
 [deps]
 
 source_file="res://Sprites/ground-1024x50-white.png"
-source_md5="a8311160a271d56a53538ab3a1750b4d"
-
 dest_files=[ "res://.import/ground-1024x50-white.png-286d8ef9dd361b08d8dd0f32ce1965ea.stex" ]
-dest_md5="8543b8fe758c8acde38c890c593c336a"
 
 [params]
 

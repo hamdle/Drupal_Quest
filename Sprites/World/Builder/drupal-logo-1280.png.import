@@ -7,10 +7,7 @@ path="res://.import/drupal-logo-1280.png-d96cbdb76cbfc032cc4fbb370d47c03f.stex"
 [deps]
 
 source_file="res://Sprites/World/Builder/drupal-logo-1280.png"
-source_md5="fbfae0b871a12062568a392cb26ef9d1"
-
 dest_files=[ "res://.import/drupal-logo-1280.png-d96cbdb76cbfc032cc4fbb370d47c03f.stex" ]
-dest_md5="946af1cd1eb4f601558f7a9b7229aa99"
 
 [params]
 

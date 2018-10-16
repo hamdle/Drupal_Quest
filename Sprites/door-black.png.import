@@ -7,10 +7,7 @@ path="res://.import/door-black.png-4a536d788576484b63913c84b1d116a1.stex"
 [deps]
 
 source_file="res://Sprites/door-black.png"
-source_md5="c4edc3c5738abbc5d5c0bd4ae96b5390"
-
 dest_files=[ "res://.import/door-black.png-4a536d788576484b63913c84b1d116a1.stex" ]
-dest_md5="74c2ca81766a5ff3c5a7bb05b2af165d"
 
 [params]
 

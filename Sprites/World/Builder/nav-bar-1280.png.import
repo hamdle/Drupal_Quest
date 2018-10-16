@@ -7,10 +7,7 @@ path="res://.import/nav-bar-1280.png-db8477e9fb6865aa54cea38f23375b41.stex"
 [deps]
 
 source_file="res://Sprites/World/Builder/nav-bar-1280.png"
-source_md5="dd5346177eb3b01158149e2cbbc9a157"
-
 dest_files=[ "res://.import/nav-bar-1280.png-db8477e9fb6865aa54cea38f23375b41.stex" ]
-dest_md5="f9fd02141a11f2aaf6073f496791409c"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/arcade.png-4445f10d73d05c039b8d03e7144eb0f5.stex"
 [deps]
 
 source_file="res://Sprites/Buttons/arcade.png"
-source_md5="49dd2e65266b918abe7d31da58020dc4"
-
 dest_files=[ "res://.import/arcade.png-4445f10d73d05c039b8d03e7144eb0f5.stex" ]
-dest_md5="fe3fb395f82d2707840b6d8387d99b2a"
 
 [params]
 

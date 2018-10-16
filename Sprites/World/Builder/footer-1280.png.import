@@ -7,10 +7,7 @@ path="res://.import/footer-1280.png-27389f860ebb7f0c266a16c8d2d02f9b.stex"
 [deps]
 
 source_file="res://Sprites/World/Builder/footer-1280.png"
-source_md5="9e147a83ba062ed5a4d2324e503b300d"
-
 dest_files=[ "res://.import/footer-1280.png-27389f860ebb7f0c266a16c8d2d02f9b.stex" ]
-dest_md5="6729edd1092990a21e8a3021c14add5e"
 
 [params]
 
