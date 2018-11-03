@@ -26,7 +26,7 @@ use_filter = false
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Start" type="Node"]
+[node name="Start" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -141,9 +141,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 215.0
-margin_top = 50.0
+margin_top = 23.0
 margin_right = 809.0
-margin_bottom = 550.0
+margin_bottom = 577.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -155,13 +155,12 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="MarginContainer3" type="MarginContainer" parent="CenterContainer/VBoxContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 594.0
-margin_bottom = 203.0
+margin_bottom = 204.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -180,7 +179,7 @@ anchor_bottom = 0.0
 margin_left = 8.0
 margin_top = 100.0
 margin_right = 594.0
-margin_bottom = 203.0
+margin_bottom = 204.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -188,7 +187,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
-text = "Drupal Quest"
+text = "Drupal Jump"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -201,9 +200,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 207.0
+margin_top = 208.0
 margin_right = 594.0
-margin_bottom = 349.0
+margin_bottom = 350.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -233,6 +232,7 @@ alignment = 1
 
 [node name="StoryButton" type="TextureButton" parent="CenterContainer/VBoxContainer/MarginContainer2/HBoxContainer" index="0"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -261,8 +261,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 289.0
-margin_right = 400.0
+margin_left = 237.0
+margin_right = 348.0
 margin_bottom = 42.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -285,9 +285,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 353.0
+margin_top = 354.0
 margin_right = 594.0
-margin_bottom = 500.0
+margin_bottom = 554.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -297,7 +297,7 @@ size_flags_vertical = 1
 custom_constants/margin_top = 100
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="PlayModeLabel" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -306,7 +306,23 @@ anchor_bottom = 0.0
 margin_left = 8.0
 margin_top = 100.0
 margin_right = 594.0
-margin_bottom = 147.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="PlayModeLabel" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 586.0
+margin_bottom = 48.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -315,7 +331,31 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.301961, 0.301961, 0.301961, 1 )
-text = "Select a play mode"
+text = "A, W, D keys to move and jump"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="PlayModeLabel2" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 52.0
+margin_right = 586.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.301961, 0.301961, 0.301961, 1 )
+text = "Click-and-drag to launch"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
