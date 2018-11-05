@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Screen/Arcade.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/World/Builder/nav-bar-1280.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/star.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -14,9 +15,125 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
+[sub_resource type="StyleBoxFlat" id=9]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.164706, 0.470588, 0.72549, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=10]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.141176, 0.670588, 0.25098, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=11]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.294118, 0.294118, 0.294118, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Corner Radius" ]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0, 0.278431, 0.521569, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Corner Radius" ]
+
 [sub_resource type="DynamicFont" id=2]
 
-size = 55
+size = 45
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 4 )
@@ -28,14 +145,6 @@ size = 18
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=4]
-
-size = 55
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Arcade" type="Node" index="0"]
@@ -132,10 +241,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Back to Start"
+text = "Main Menu"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "custom_styles" ]
 
 [node name="GridContainer2" type="GridContainer" parent="Container" index="5"]
 
@@ -161,7 +270,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 620.0
+margin_right = 308.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -205,6 +314,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/disabled = SubResource( 11 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -241,6 +354,39 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/GridContainer2/GridContainer/Container" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="Star" type="Sprite" parent="Container/GridContainer2/GridContainer/Container/HBoxContainer" index="0"]
+
+position = Vector2( 20, 16 )
+texture = ExtResource( 6 )
+
+[node name="Star2" type="Sprite" parent="Container/GridContainer2/GridContainer/Container/HBoxContainer" index="1"]
+
+position = Vector2( 50, 16 )
+texture = ExtResource( 6 )
+
+[node name="Star3" type="Sprite" parent="Container/GridContainer2/GridContainer/Container/HBoxContainer" index="2"]
+
+position = Vector2( 80, 16 )
+texture = ExtResource( 6 )
+
 [node name="Container2" type="Container" parent="Container/GridContainer2/GridContainer" index="1"]
 
 anchor_left = 0.0
@@ -257,8 +403,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
 
-[node name="Level2Button" type="Button" parent="Container/GridContainer2/GridContainer/Container2" index="0"]
+[node name="Level1Button" type="Button" parent="Container/GridContainer2/GridContainer/Container2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -274,7 +421,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/disabled = SubResource( 11 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -282,393 +433,9 @@ group = null
 text = "2"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label2" type="Label" parent="Container/GridContainer2/GridContainer/Container2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 100, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[node name="Container3" type="Container" parent="Container/GridContainer2/GridContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 208.0
-margin_right = 308.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Level3Button" type="Button" parent="Container/GridContainer2/GridContainer/Container3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "3"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label3" type="Label" parent="Container/GridContainer2/GridContainer/Container3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 100, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
-
-[node name="Container4" type="Container" parent="Container/GridContainer2/GridContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 312.0
-margin_right = 412.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Level4Button2" type="Button" parent="Container/GridContainer2/GridContainer/Container4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "4"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label4" type="Label" parent="Container/GridContainer2/GridContainer/Container4" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 100, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
-
-[node name="Container5" type="Container" parent="Container/GridContainer2/GridContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 416.0
-margin_right = 516.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Level5Button3" type="Button" parent="Container/GridContainer2/GridContainer/Container5" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "4"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label5" type="Label" parent="Container/GridContainer2/GridContainer/Container5" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 100, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
-
-[node name="Container6" type="Container" parent="Container/GridContainer2/GridContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 520.0
-margin_right = 620.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Level6Button4" type="Button" parent="Container/GridContainer2/GridContainer/Container6" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 100.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
-disabled = true
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "6"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label6" type="Label" parent="Container/GridContainer2/GridContainer/Container6" index="1"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 100, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
-
-[node name="MarginContainer" type="MarginContainer" parent="Container/GridContainer2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 104.0
-margin_right = 620.0
-margin_bottom = 124.0
-rect_min_size = Vector2( 0, 20 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="GridContainer2" type="GridContainer" parent="Container/GridContainer2" index="2"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 128.0
-margin_right = 620.0
-margin_bottom = 228.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-columns = 6
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_constants" ]
-
-[node name="Container" type="Container" parent="Container/GridContainer2/GridContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Level1Button" type="Button" parent="Container/GridContainer2/GridContainer2/Container" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "1"
-flat = false
-align = 1
 _sections_unfolded = [ "Margin", "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Label" type="Label" parent="Container/GridContainer2/GridContainer2/Container" index="1"]
+[node name="Label" type="Label" parent="Container/GridContainer2/GridContainer/Container2" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -694,76 +461,40 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Container2" type="Container" parent="Container/GridContainer2/GridContainer2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 104.0
-margin_right = 204.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Level2Button" type="Button" parent="Container/GridContainer2/GridContainer2/Container2" index="0"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/GridContainer2/GridContainer/Container2" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "2"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label2" type="Label" parent="Container/GridContainer2/GridContainer2/Container2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="Container3" type="Container" parent="Container/GridContainer2/GridContainer2" index="2"]
+[node name="Star" type="Sprite" parent="Container/GridContainer2/GridContainer/Container2/HBoxContainer" index="0"]
+
+position = Vector2( 20, 16 )
+texture = ExtResource( 6 )
+
+[node name="Star2" type="Sprite" parent="Container/GridContainer2/GridContainer/Container2/HBoxContainer" index="1"]
+
+position = Vector2( 50, 16 )
+texture = ExtResource( 6 )
+
+[node name="Star3" type="Sprite" parent="Container/GridContainer2/GridContainer/Container2/HBoxContainer" index="2"]
+
+position = Vector2( 80, 16 )
+texture = ExtResource( 6 )
+
+[node name="Container3" type="Container" parent="Container/GridContainer2/GridContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -779,8 +510,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
 
-[node name="Level3Button" type="Button" parent="Container/GridContainer2/GridContainer2/Container3" index="0"]
+[node name="Level1Button" type="Button" parent="Container/GridContainer2/GridContainer/Container3" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -796,7 +528,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/disabled = SubResource( 11 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -804,78 +540,9 @@ group = null
 text = "3"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Margin", "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Label3" type="Label" parent="Container/GridContainer2/GridContainer2/Container3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 100, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
-
-[node name="Container4" type="Container" parent="Container/GridContainer2/GridContainer2" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 312.0
-margin_right = 412.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Level4Button2" type="Button" parent="Container/GridContainer2/GridContainer2/Container4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "4"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label4" type="Label" parent="Container/GridContainer2/GridContainer2/Container4" index="1"]
+[node name="Label" type="Label" parent="Container/GridContainer2/GridContainer/Container3" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -899,95 +566,9 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Container5" type="Container" parent="Container/GridContainer2/GridContainer2" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 416.0
-margin_right = 516.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Level5Button3" type="Button" parent="Container/GridContainer2/GridContainer2/Container5" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "4"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label5" type="Label" parent="Container/GridContainer2/GridContainer2/Container5" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 100, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
-
-[node name="Container6" type="Container" parent="Container/GridContainer2/GridContainer2" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 520.0
-margin_right = 620.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 100, 100 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Level6Button4" type="Button" parent="Container/GridContainer2/GridContainer2/Container6" index="0"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/GridContainer2/GridContainer/Container3" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -995,74 +576,55 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 100.0
 margin_bottom = 40.0
-rect_min_size = Vector2( 100, 100 )
+rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "6"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
+alignment = 0
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="Label6" type="Label" parent="Container/GridContainer2/GridContainer2/Container6" index="1"]
+[node name="Star" type="Sprite" parent="Container/GridContainer2/GridContainer/Container3/HBoxContainer" index="0"]
+
+position = Vector2( 20, 16 )
+texture = ExtResource( 6 )
+
+[node name="Star2" type="Sprite" parent="Container/GridContainer2/GridContainer/Container3/HBoxContainer" index="1"]
+
+position = Vector2( 50, 16 )
+texture = ExtResource( 6 )
+
+[node name="Star3" type="Sprite" parent="Container/GridContainer2/GridContainer/Container3/HBoxContainer" index="2"]
+
+position = Vector2( 80, 16 )
+texture = ExtResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/GridContainer2" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
-margin_right = 100.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 100, 0 )
+margin_top = 104.0
+margin_right = 308.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 0, 20 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "00:00"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
 
 [connection signal="pressed" from="Container/BackButton" to="." method="_on_BackButton_pressed"]
 
 [connection signal="pressed" from="Container/GridContainer2/GridContainer/Container/Level1Button" to="." method="_on_Level1Button_pressed"]
 
-[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container2/Level2Button" to="." method="_on_Level2Button_pressed"]
+[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container2/Level1Button" to="." method="_on_Level1Button_pressed"]
 
-[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container3/Level3Button" to="." method="_on_Level3Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container4/Level4Button2" to="." method="_on_Level3Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container5/Level5Button3" to="." method="_on_Level3Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container6/Level6Button4" to="." method="_on_Level3Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer2/Container/Level1Button" to="." method="_on_Level1Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer2/Container2/Level2Button" to="." method="_on_Level2Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer2/Container3/Level3Button" to="." method="_on_Level3Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer2/Container4/Level4Button2" to="." method="_on_Level3Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer2/Container5/Level5Button3" to="." method="_on_Level3Button_pressed"]
-
-[connection signal="pressed" from="Container/GridContainer2/GridContainer2/Container6/Level6Button4" to="." method="_on_Level3Button_pressed"]
+[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container3/Level1Button" to="." method="_on_Level1Button_pressed"]
 
 
