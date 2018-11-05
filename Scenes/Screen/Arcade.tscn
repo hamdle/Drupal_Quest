@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Screen/Arcade.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/World/Builder/nav-bar-1280.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Sprites/Buttons/select.png" type="Texture" id=4]
-[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -14,31 +13,12 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="StyleBoxTexture" id=3]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 105, 42 )
-margin_left = 0.0
-margin_right = 0.0
-margin_top = 0.0
-margin_bottom = 0.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
-
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 
 size = 18
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Arcade" type="Node"]
@@ -89,9 +69,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 123.0
-margin_top = 143.0
+margin_top = 73.0
 margin_right = 901.0
-margin_bottom = 236.0
+margin_bottom = 166.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -100,271 +80,24 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.294118, 0.294118, 0.294118, 1 )
-text = "Arcade Level Select"
+text = "Stage Select"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="Container" index="3"]
+[node name="BackButton" type="Button" parent="Container" index="3"]
 
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -389.0
-margin_top = -192.0
-margin_right = 389.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Container/CenterContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 273.0
-margin_top = 39.0
-margin_right = 504.0
-margin_bottom = 153.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/CenterContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 231.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-
-[node name="Level1Button" type="Button" parent="Container/CenterContainer/VBoxContainer/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 46.0
-margin_right = 146.0
-margin_bottom = 40.0
+margin_left = -50.0
+margin_top = -71.0
+margin_right = 50.0
+margin_bottom = -31.0
 rect_min_size = Vector2( 100, 40 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_styles/normal = SubResource( 3 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = false
-align = 1
-_sections_unfolded = [ "Margin", "Rect", "custom_styles" ]
-
-[node name="Label" type="Label" parent="Container/CenterContainer/VBoxContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 150.0
-margin_top = 9.0
-margin_right = 184.0
-margin_bottom = 30.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.294118, 0.294118, 0.294118, 1 )
-text = "4:32"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Container/CenterContainer/VBoxContainer" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 44.0
-margin_right = 231.0
-margin_bottom = 65.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="Level2Button" type="Button" parent="Container/CenterContainer/VBoxContainer/HBoxContainer2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 106.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Arcade Level 2"
-flat = false
-align = 1
-
-[node name="Label" type="Label" parent="Container/CenterContainer/VBoxContainer/HBoxContainer2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 110.0
-margin_right = 231.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
-text = "Best time: 0.00"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="Container/CenterContainer/VBoxContainer" index="2"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 69.0
-margin_right = 231.0
-margin_bottom = 90.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="Level3Button" type="Button" parent="Container/CenterContainer/VBoxContainer/HBoxContainer3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 106.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Arcade Level 3"
-flat = false
-align = 1
-
-[node name="Label" type="Label" parent="Container/CenterContainer/VBoxContainer/HBoxContainer3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 110.0
-margin_right = 231.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
-text = "Best time: 0.00"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="Container/CenterContainer/VBoxContainer" index="3"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 94.0
-margin_right = 231.0
-margin_bottom = 114.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="BackButton" type="Button" parent="Container/CenterContainer/VBoxContainer/HBoxContainer4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 69.0
-margin_right = 161.0
-margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -379,13 +112,187 @@ group = null
 text = "Back to Start"
 flat = false
 align = 1
+_sections_unfolded = [ "Rect" ]
 
-[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/HBoxContainer/Level1Button" to="." method="_on_Level1Button_pressed"]
+[node name="GridContainer" type="GridContainer" parent="Container" index="4"]
 
-[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/HBoxContainer2/Level2Button" to="." method="_on_Level2Button_pressed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -353.0
+margin_top = -20.0
+margin_right = 351.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 3
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_constants" ]
 
-[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/HBoxContainer3/Level3Button" to="." method="_on_Level3Button_pressed"]
+[node name="Level1Button" type="Button" parent="Container/GridContainer" index="0"]
 
-[connection signal="pressed" from="Container/CenterContainer/VBoxContainer/HBoxContainer4/BackButton" to="." method="_on_BackButton_pressed"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Level 1"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="Level2Button" type="Button" parent="Container/GridContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Level 2"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Level3Button" type="Button" parent="Container/GridContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Level 3"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label" type="Label" parent="Container/GridContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 100.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.294118, 0.294118, 0.294118, 1 )
+text = "00:00"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Label2" type="Label" parent="Container/GridContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 104.0
+margin_top = 44.0
+margin_right = 204.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.294118, 0.294118, 0.294118, 1 )
+text = "00:00"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Label3" type="Label" parent="Container/GridContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 208.0
+margin_top = 44.0
+margin_right = 308.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.294118, 0.294118, 0.294118, 1 )
+text = "00:00"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+
+[connection signal="pressed" from="Container/BackButton" to="." method="_on_BackButton_pressed"]
+
+[connection signal="pressed" from="Container/GridContainer/Level1Button" to="." method="_on_Level1Button_pressed"]
+
+[connection signal="pressed" from="Container/GridContainer/Level2Button" to="." method="_on_Level2Button_pressed"]
+
+[connection signal="pressed" from="Container/GridContainer/Level3Button" to="." method="_on_Level3Button_pressed"]
 
 
