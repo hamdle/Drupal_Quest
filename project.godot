@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Drupal Quest"
+config/name="Drupal Jump"
 run/main_scene="res://Scenes/Screen/Start.tscn"
 config/icon="res://icon.png"
 
