@@ -13,6 +13,14 @@
 [ext_resource path="res://Sprites/Buttons/select.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Buttons/select-hover.png" type="Texture" id=12]
 
+[sub_resource type="DynamicFont" id=1]
+
+size = 18
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 10 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [sub_resource type="DynamicFont" id=2]
 
 size = 18
@@ -27,17 +35,9 @@ size = 18
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 10 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=4]
-
-size = 18
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 
 size = 82
 use_mipmaps = false
@@ -355,7 +355,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 text = "Drupal"
 align = 1
@@ -397,7 +397,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 text = "Drupal 8"
 align = 1
@@ -439,7 +439,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 text = "Jump"
 align = 1
@@ -667,7 +667,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 text = "Character Select"
 align = 1
