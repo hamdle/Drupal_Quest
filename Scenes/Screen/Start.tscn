@@ -106,7 +106,7 @@ anti_aliasing_size = 1
 [sub_resource type="DynamicFontData" id=6]
 
 hinting = 2
-font_path = "res://Fonts/Ubuntu-R.ttf"
+font_path = "res://Fonts/Ubuntu-B.ttf"
 
 [sub_resource type="DynamicFont" id=7]
 
@@ -124,7 +124,7 @@ use_filter = false
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Start" type="Node" index="0"]
+[node name="Start" type="Node"]
 
 script = ExtResource( 1 )
 
