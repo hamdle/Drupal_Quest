@@ -245,7 +245,7 @@ use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Arcade" type="Node"]
+[node name="Arcade" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Margin" ]
@@ -349,7 +349,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="GridContainer2" type="GridContainer" parent="Container" index="5"]
+[node name="LevelGrid" type="GridContainer" parent="Container" index="5"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -366,8 +366,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 1
+_sections_unfolded = [ "Anchor" ]
 
-[node name="GridContainer" type="GridContainer" parent="Container/GridContainer2" index="0"]
+[node name="Row" type="GridContainer" parent="Container/LevelGrid" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -384,7 +385,7 @@ size_flags_vertical = 1
 columns = 6
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_constants" ]
 
-[node name="Container" type="Container" parent="Container/GridContainer2/GridContainer" index="0"]
+[node name="level1" type="Container" parent="Container/LevelGrid/Row" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -401,7 +402,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="Level1Button" type="Button" parent="Container/GridContainer2/GridContainer/Container" index="0"]
+[node name="level1button" type="Button" parent="Container/LevelGrid/Row/level1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -431,7 +432,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Margin", "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Label" type="Label" parent="Container/GridContainer2/GridContainer/Container" index="1"]
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level1" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -457,7 +458,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/GridContainer2/GridContainer/Container" index="2"]
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level1" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -475,22 +476,23 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="Star" type="Sprite" parent="Container/GridContainer2/GridContainer/Container/HBoxContainer" index="0"]
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox" index="0"]
 
 position = Vector2( 20, 16 )
 texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="Star2" type="Sprite" parent="Container/GridContainer2/GridContainer/Container/HBoxContainer" index="1"]
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox" index="1"]
 
 position = Vector2( 50, 16 )
 texture = ExtResource( 6 )
 
-[node name="Star3" type="Sprite" parent="Container/GridContainer2/GridContainer/Container/HBoxContainer" index="2"]
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox" index="2"]
 
 position = Vector2( 80, 16 )
 texture = ExtResource( 6 )
 
-[node name="Container2" type="Container" parent="Container/GridContainer2/GridContainer" index="1"]
+[node name="level2" type="Container" parent="Container/LevelGrid/Row" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -508,7 +510,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="Level1Button" type="Button" parent="Container/GridContainer2/GridContainer/Container2" index="0"]
+[node name="level2button" type="Button" parent="Container/LevelGrid/Row/level2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -538,7 +540,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Margin", "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Label" type="Label" parent="Container/GridContainer2/GridContainer/Container2" index="1"]
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level2" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -564,7 +566,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/GridContainer2/GridContainer/Container2" index="2"]
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level2" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -582,22 +584,23 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="Star" type="Sprite" parent="Container/GridContainer2/GridContainer/Container2/HBoxContainer" index="0"]
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox" index="0"]
 
 position = Vector2( 20, 16 )
 texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="Star2" type="Sprite" parent="Container/GridContainer2/GridContainer/Container2/HBoxContainer" index="1"]
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox" index="1"]
 
 position = Vector2( 50, 16 )
 texture = ExtResource( 6 )
 
-[node name="Star3" type="Sprite" parent="Container/GridContainer2/GridContainer/Container2/HBoxContainer" index="2"]
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox" index="2"]
 
 position = Vector2( 80, 16 )
 texture = ExtResource( 6 )
 
-[node name="Container3" type="Container" parent="Container/GridContainer2/GridContainer" index="2"]
+[node name="level3" type="Container" parent="Container/LevelGrid/Row" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -615,7 +618,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="Level1Button" type="Button" parent="Container/GridContainer2/GridContainer/Container3" index="0"]
+[node name="level3button" type="Button" parent="Container/LevelGrid/Row/level3" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -645,7 +648,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Margin", "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Label" type="Label" parent="Container/GridContainer2/GridContainer/Container3" index="1"]
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level3" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -671,7 +674,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/GridContainer2/GridContainer/Container3" index="2"]
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level3" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -689,22 +692,23 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="Star" type="Sprite" parent="Container/GridContainer2/GridContainer/Container3/HBoxContainer" index="0"]
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox" index="0"]
 
 position = Vector2( 20, 16 )
 texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="Star2" type="Sprite" parent="Container/GridContainer2/GridContainer/Container3/HBoxContainer" index="1"]
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox" index="1"]
 
 position = Vector2( 50, 16 )
 texture = ExtResource( 6 )
 
-[node name="Star3" type="Sprite" parent="Container/GridContainer2/GridContainer/Container3/HBoxContainer" index="2"]
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox" index="2"]
 
 position = Vector2( 80, 16 )
 texture = ExtResource( 6 )
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/GridContainer2" index="1"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/LevelGrid" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -724,10 +728,10 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="pressed" from="Container/BackButton" to="." method="_on_BackButton_pressed"]
 
-[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container/Level1Button" to="." method="_on_Level1Button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level1/level1button" to="." method="_on_level1button_pressed"]
 
-[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container2/Level1Button" to="." method="_on_Level1Button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level2/level2button" to="." method="_on_level2button_pressed"]
 
-[connection signal="pressed" from="Container/GridContainer2/GridContainer/Container3/Level1Button" to="." method="_on_Level1Button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level3/level3button" to="." method="_on_level3button_pressed"]
 
 

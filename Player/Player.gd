@@ -87,11 +87,11 @@ func flip_sprite(flip):
 
 func load_character():
 	var gs = get_node("/root/gamestate")
-	if gs.current_character == gs.CHARACTER.DRUPLICON:
+	if gs.current_character == gs.CHARACTER.CLASSIC:
 		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_texture
 	elif gs.current_character == gs.CHARACTER.DRUPAL8:
 		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_8_texture
-	elif gs.current_character == gs.CHARACTER.DRUPALQUEST:
+	elif gs.current_character == gs.CHARACTER.JUMPAL:
 		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_quest_texture
 	
 # Exit entered signal

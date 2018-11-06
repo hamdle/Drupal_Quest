@@ -1,16 +1,22 @@
 extends Node
 
 enum MODE { ARCADE }
-enum CHARACTER { DRUPLICON, DRUPAL8, DRUPALQUEST }
+enum CHARACTER { CLASSIC, DRUPAL8, JUMPAL }
 
 var level_map = {
 	"none": null,
 	"start": "res://Scenes/Screen/Start.tscn",
 	"character": "res://Scenes/Screen/Character.tscn",
-	"arcade": "res://Scenes/Screen/Arcade.tscn",
-	"arcade1": "res://Scenes/Arcade/Arcade1.tscn",
-	"arcade2": "res://Scenes/Arcade/Arcade2.tscn",
-	"arcade3": "res://Scenes/Arcade/Arcade3.tscn"	
+	"levelselect": "res://Scenes/Screen/Arcade.tscn",
+	"level1": "res://Scenes/Arcade/Level1.tscn",
+	"level2": "res://Scenes/Arcade/Arcade2.tscn",
+	"level3": "res://Scenes/Arcade/Arcade3.tscn"	
+}
+
+var level_data = {
+	"level1": "3-00:20:12",
+	"level2": "1-00:42:48",
+	"level3": "0-0"	
 }
 
 var current_scene_instance = null
@@ -29,10 +35,10 @@ func _ready():
 	# Bypass project settings > main scene
 	# load_scene("arcade")
 	
-	# Default story mode
+	# Default mode
 	arcade_mode()
 	# Default Druplicon character
-	select_character(CHARACTER.DRUPLICON)
+	select_character(CHARACTER.CLASSIC)
 
 # Scene loading
 func load_scene(res):
