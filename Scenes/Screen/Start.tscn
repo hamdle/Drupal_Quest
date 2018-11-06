@@ -1,22 +1,31 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Screen/Start.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/World/home-page-banner.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/World/drupal-home.png" type="Texture" id=4]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Sprites/Buttons/story.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Buttons/story-hover.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Buttons/arcade.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Buttons/arcade-story.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/World/Builder/drupal-logo-1280.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sprites/Buttons/story.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Buttons/story-hover.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Buttons/arcade.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Buttons/arcade-story.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=9]
+
+size = 92
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 92
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=4]
@@ -121,7 +130,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 size = 24
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 6 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Start" type="Node"]
@@ -221,16 +230,48 @@ texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
 
-[node name="DrupalQuestLabel" type="Label" parent="Container" index="5"]
+[node name="drupal-logo-1280" type="Sprite" parent="Container" index="5"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 234.0
-margin_top = 168.0
-margin_right = 791.0
-margin_bottom = 272.0
+visible = false
+position = Vector2( 469, 161 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="DrupalQuestLabel2" type="Label" parent="Container" index="6"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -416.5
+margin_top = -150.0
+margin_right = 140.5
+margin_bottom = -46.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 9 )
+text = "Drupal"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="DrupalQuestLabel" type="Label" parent="Container" index="7"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.5
+margin_top = -150.0
+margin_right = 426.5
+margin_bottom = -46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -238,14 +279,15 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
-text = "Drupal Jump"
+custom_colors/font_color = Color( 0.486275, 0.737255, 0.282353, 1 )
+text = "Jump"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="ArcadeButton2" type="Button" parent="Container" index="6"]
+[node name="ArcadeButton2" type="Button" parent="Container" index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -267,6 +309,7 @@ custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 8 )
 custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -274,9 +317,9 @@ group = null
 text = "Play"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container" index="7"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Container" index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -453,8 +496,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 7 )
-texture_hover = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
 _sections_unfolded = [ "Margin", "Textures" ]
 
 [node name="ArcadeButton" type="TextureButton" parent="CenterContainer/VBoxContainer/MarginContainer2/HBoxContainer" index="1"]
@@ -478,8 +521,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
 _sections_unfolded = [ "Margin", "Textures" ]
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer" index="2"]
