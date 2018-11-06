@@ -1,18 +1,12 @@
 extends Node
 
-enum MODE { STORY, ARCADE }
+enum MODE { ARCADE }
 enum CHARACTER { DRUPLICON, DRUPAL8, DRUPALQUEST }
 
 var level_map = {
 	"none": null,
-	"splash": "res://Scenes/Screen/Splash.tscn",
 	"start": "res://Scenes/Screen/Start.tscn",
 	"character": "res://Scenes/Screen/Character.tscn",
-	"intro": "res://Scenes/Cutscene/Intro.tscn",
-	"story1": "res://Scenes/Story/Story1.tscn",
-	"story2": "res://Scenes/Story/Story2.tscn",
-	"story3": "res://Scenes/Story/Story3.tscn",
-	"story4": "res://Scenes/Story/Story4.tscn",
 	"arcade": "res://Scenes/Screen/Arcade.tscn",
 	"arcade1": "res://Scenes/Arcade/Arcade1.tscn",
 	"arcade2": "res://Scenes/Arcade/Arcade2.tscn",
@@ -36,7 +30,7 @@ func _ready():
 	# load_scene("arcade")
 	
 	# Default story mode
-	story_mode()
+	arcade_mode()
 	# Default Druplicon character
 	select_character(CHARACTER.DRUPLICON)
 
@@ -67,9 +61,6 @@ func _deferred_load_scene(res):
 # Game mode
 func arcade_mode():
 	current_mode = MODE.ARCADE
-	
-func story_mode():
-	current_mode = MODE.STORY
 
 # Character select
 func select_character(character):
