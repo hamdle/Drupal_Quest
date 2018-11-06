@@ -11,16 +11,22 @@ func _ready():
 	var gs = get_node("/root/gamestate")
 	for i in gs.level_data:
 		var i_data = gs.level_data[i]
-		print(i_data)
 		var arr = i_data.split("-", i_data)
-		print(arr)
+		
+		# Calculate container row number
+		var row = i.to_int()
+		var row_str = ""
+		if row > 6:
+			row_str = "2"
+		if row > 12:
+			row_str = "3"
 		
 		# Create path strings
-		var button_str = "Container/LevelGrid/Row/" + i + "/" + i + "button"
-		var time_str = "Container/LevelGrid/Row/" + i + "/BestTime"
-		var star1_str = "Container/LevelGrid/Row/" + i + "/HBox/Star1"
-		var star2_str = "Container/LevelGrid/Row/" + i + "/HBox/Star2"
-		var star3_str = "Container/LevelGrid/Row/" + i + "/HBox/Star3"
+		var button_str = "Container/LevelGrid/Row" + row_str + "/" + i + "/" + i + "button"
+		var time_str = "Container/LevelGrid/Row" + row_str + "/" + i + "/BestTime"
+		var star1_str = "Container/LevelGrid/Row" + row_str + "/" + i + "/HBox/Star1"
+		var star2_str = "Container/LevelGrid/Row" + row_str + "/" + i + "/HBox/Star2"
+		var star3_str = "Container/LevelGrid/Row" + row_str + "/" + i + "/HBox/Star3"
 		
 		# Level is locked
 		if (arr[0] == "0"):
@@ -42,6 +48,10 @@ func _ready():
 			# Show time
 			var time_text = get_node(NodePath(time_str))
 			time_text.text = arr[1]
+			# Except for new, unplayed levels
+			# Which are marked as 4
+			if (arr[0] == "4"):
+				time_text.text = ""
 			# Show stars
 			if (arr[0] == "1"):
 				var star1 = get_node(NodePath(star1_str))
@@ -64,6 +74,13 @@ func _ready():
 				star2.visible = true
 				var star3 = get_node(NodePath(star3_str))
 				star3.visible = true
+			if (arr[0] == "4"):
+				var star1 = get_node(NodePath(star1_str))
+				star1.visible = false
+				var star2 = get_node(NodePath(star2_str))
+				star2.visible = false
+				var star3 = get_node(NodePath(star3_str))
+				star3.visible = false
 			# Enable button
 			var button = get_node(NodePath(button_str))
 			button.disabled = false

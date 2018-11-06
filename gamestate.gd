@@ -16,7 +16,24 @@ var level_map = {
 var level_data = {
 	"level1": "3-00:20:12",
 	"level2": "1-00:42:48",
-	"level3": "0-0"	
+	"level3": "3-00:24:44",
+	"level4": "2-01:09:32",
+	"level5": "4-0",
+	"level6": "4-0",
+	
+	"level7": "4-0",
+	"level8": "4-0",
+	"level9": "4-0",
+	"level10": "4-0",
+	"level11": "4-0",
+	"level12": "4-0",
+	
+	"level13": "4-0",
+	"level14": "4-0",
+	"level15": "4-0",
+	"level16": "4-0",
+	"level17": "4-0",
+	"level18": "4-0",
 }
 
 var current_scene_instance = null
