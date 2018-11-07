@@ -9,7 +9,7 @@ func _ready():
 	start_time = OS.get_ticks_msec()
 	
 	$DieMenu.visible = false
-	$WinMenu.visible = false
+	$Win.visible = false
 	$Pause.visible = false
 
 func _input(event):
@@ -23,25 +23,39 @@ func player_died():
 	_level_over($DieMenu)
 	
 func player_win():
-	$WinMenu.visible = true
+	$Win.visible = true
 	
 	# Set finish time
 	var gs = get_node("/root/gamestate")
 	var finish_time = (OS.get_ticks_msec() - start_time) / 1000.0
-	var time_label = $WinMenu/CC/VBC/MC3/TimeLabel
+	var time_label = $Win/TimeLabel
 	time_label.text = String(finish_time) \
 	+ " J" + String(gs.local_jumps) \
 	+ " L" + String(gs.local_launches) \
 	+ " M" + String(gs.local_moves)
-	_level_over($WinMenu)
+	
+	# Set menu location
+	var player = get_tree().get_root().get_node("World/Player")
+	var new_loc = Vector2()
+	#new_loc.x = player.position.x
+	#new_loc.y = player.position.y - 50
+	new_loc.x = $Win.rect_position.x
+	var offset = 0;
+	if player.position.y > 300:
+		offset	= player.position.y - 300
+	print($Win.rect_position.y)
+	print($Win.get_global_transform_with_canvas().get_origin().y)
+	new_loc.x = $Win.rect_position.x
+	new_loc.y = $Win.rect_position.y - $Win.get_global_transform_with_canvas().get_origin().y
+	$Win.rect_position = new_loc
+	
+	# Set level over
+	_level_over($Win)
 
 func _level_pause():
 	paused = not paused
 	
 	if paused == false:
-		#print(start_time)
-		#print(pause_time)
-		#print(OS.get_ticks_msec() - pause_time)
 		start_time = start_time + (OS.get_ticks_msec() - pause_time)
 	
 	pause_time = OS.get_ticks_msec()
@@ -67,37 +81,28 @@ func _level_pause():
 	
 	$Pause.visible = paused
 	get_tree().paused = paused
-	
-	
 
 func _level_over(menu):
-	
 	get_tree().paused = true
-	
 	showing_menu = true
-	
-	# Set menu location
-	var player = get_tree().get_root().get_node("World/Player")
-	var new_loc = Vector2()
-	new_loc.x = player.position.x
-	new_loc.y = player.position.y - 50
-	menu.position = new_loc
 
+# Signals
 
 func _on_PlayAgainButton_pressed():
 	var gs = get_node("/root/gamestate")
 	gs.reload_scene()
 
-
 func _on_NextLevelButton_pressed():
 	var gs = get_node("/root/gamestate")
 	gs.load_next_scene()
-
 
 func _on_QuitButton_pressed():
 	var gs = get_node("/root/gamestate")
 	gs.load_scene("start")
 
-
 func _on_ResumeButton_pressed():
 	_level_pause()
+
+func _on_MenuButton_pressed():
+	var gs = get_node("/root/gamestate")
+	gs.load_scene("levelselect")

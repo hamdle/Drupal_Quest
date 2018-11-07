@@ -95,7 +95,7 @@ func _process(delta):
 
 func _on_BackButton_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["start"])
+	gs.load_scene("start")
 
 func _on_level1button_pressed():
 	var gs = get_node("/root/gamestate")
@@ -103,83 +103,83 @@ func _on_level1button_pressed():
 	
 func _on_level2button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level2"])
+	gs.load_scene("level2")
 
 func _on_level3button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level3"])
+	gs.load_scene("level3")
 
 
 func _on_level4button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level4"])
+	gs.load_scene("level4")
 
 
 func _on_level5button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level5"])
+	gs.load_scene("level5")
 
 
 func _on_level6button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level6"])
+	gs.load_scene("level6")
 
 
 func _on_level7button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level7"])
+	gs.load_scene("level7")
 
 
 func _on_level8button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level8"])
+	gs.load_scene("level8")
 
 
 func _on_level9button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level9"])
+	gs.load_scene("level9")
 
 
 func _on_level10button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level10"])
+	gs.load_scene("level10")
 
 
 func _on_level11button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level11"])
+	gs.load_scene("level11")
 
 
 func _on_level12button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level12"])
+	gs.load_scene("level12")
 
 
 func _on_level13button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level13"])
+	gs.load_scene("level13")
 
 
 func _on_level14button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level14"])
+	gs.load_scene("level14")
 
 
 func _on_level15button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level15"])
+	gs.load_scene("level15")
 
 
 func _on_level16button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level16"])
+	gs.load_scene("level16")
 
 
 func _on_level17button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level17"])
+	gs.load_scene("level17")
 
 
 func _on_level18button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level18"])
+	gs.load_scene("level18")
