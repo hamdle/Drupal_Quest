@@ -429,7 +429,7 @@ use_filter = false
 font_data = SubResource( 11 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Menus" type="Node" index="0"]
+[node name="Menus" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -452,7 +452,23 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="TitleLabel" type="Label" parent="Die" index="0"]
+[node name="Polygon2D3" type="Polygon2D" parent="Die" index="0"]
+
+polygon = PoolVector2Array( 1094.53, -11.6101, 1064.84, 656.998, -34.4246, 649.595, -39.9764, -40.6851 )
+uv = PoolVector2Array(  )
+color = Color( 0, 0, 0, 0.569059 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+_sections_unfolded = [ "Material", "Texture", "Transform", "Visibility", "Z Index" ]
+
+[node name="TitleLabel" type="Label" parent="Die" index="1"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -476,7 +492,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="PlayAgainButton" type="Button" parent="Die" index="1"]
+[node name="PlayAgainButton" type="Button" parent="Die" index="2"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -506,7 +522,7 @@ text = "Restart"
 flat = false
 align = 1
 
-[node name="QuitButton" type="Button" parent="Die" index="2"]
+[node name="QuitButton" type="Button" parent="Die" index="3"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -535,7 +551,7 @@ text = "Quit"
 flat = false
 align = 1
 
-[node name="MenuButton" type="Button" parent="Die" index="3"]
+[node name="MenuButton" type="Button" parent="Die" index="4"]
 
 anchor_left = 0.5
 anchor_top = 0.5

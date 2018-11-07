@@ -56,6 +56,12 @@ var level_data = {
 	"level18": "0-0",
 }
 
+var time_tables = {
+	"level1": [10,6],
+	"level2": [5,4],
+	"level3": [5,4]
+}
+
 var current_scene_instance = null
 var current_mode = null
 var current_character = null
@@ -117,6 +123,21 @@ func _deferred_load_scene(res):
 	# Make sure the node tree is not paused
 	get_tree().paused = false
 
+# Complete level
+func level_won(finish_time):
+	# Create level entry
+	var entry = calc_level_data(finish_time)
+	update_level_data(entry, finish_time)
+	# Unlock next level
+	unlock_next_level()
+	
+func unlock_next_level():
+	var i = current_level_key.to_int() + 1
+	var key = "level" + str(i)
+	
+	if i <= number_of_levels:
+		level_data[key] = "4-0"
+
 # Game mode
 func arcade_mode():
 	current_mode = MODE.ARCADE
@@ -124,3 +145,30 @@ func arcade_mode():
 # Character select
 func select_character(character):
 	current_character = character
+
+func calc_level_data(finish_time):
+	# Calculate level_data entry
+	var scores = time_tables[current_level_key]
+	var star_rating = "1"
+	if finish_time < scores[0]:
+		star_rating = "2"
+	if finish_time < scores[1]:
+		star_rating = "3"
+	
+	var entry = star_rating + "-" + format_time(finish_time)
+	return entry
+
+# entry is a fully formed str
+# ex. "2-00:01:23"
+func update_level_data(entry, finish_time):
+	# TODO - check if better than current entry
+	level_data[current_level_key] = entry
+
+# Time formatter
+func format_time(time):
+	
+	var formatted = String()
+	var colon = " : "
+	formatted = str(time)
+	
+	return formatted

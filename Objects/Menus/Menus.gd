@@ -44,16 +44,14 @@ func player_win():
 	var gs = get_node("/root/gamestate")
 	var finish_time = (OS.get_ticks_msec() - start_time) / 1000.0
 	var time_label = $Win/TimeLabel
-	time_label.text = String(finish_time) \
-	+ " J" + String(gs.local_jumps) \
-	+ " L" + String(gs.local_launches) \
-	+ " M" + String(gs.local_moves)
+	time_label.text = gs.calc_level_data(finish_time)
+	#+ " J" + String(gs.local_jumps) \
+	#+ " L" + String(gs.local_launches) \
+	#+ " M" + String(gs.local_moves)
 	
 	# Set menu location
 	var player = get_tree().get_root().get_node("World/Player")
 	var new_loc = Vector2()
-	#new_loc.x = player.position.x
-	#new_loc.y = player.position.y - 50
 	new_loc.x = $Win.rect_position.x
 	var offset = 0;
 	if player.position.y > 300:
@@ -63,6 +61,9 @@ func player_win():
 	new_loc.x = $Win.rect_position.x
 	new_loc.y = $Win.rect_position.y - $Win.get_global_transform_with_canvas().get_origin().y
 	$Win.rect_position = new_loc
+	
+	# Update gamestate data
+	gs.level_won(finish_time)
 	
 	# Set level over
 	_level_over($Win)

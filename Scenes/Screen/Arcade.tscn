@@ -245,7 +245,7 @@ use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Arcade" type="Node"]
+[node name="Arcade" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Margin" ]
