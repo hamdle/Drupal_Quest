@@ -168,7 +168,7 @@ texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="home-page-banner" type="Sprite" parent="Container" index="1"]
 
@@ -229,6 +229,7 @@ texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
+_sections_unfolded = [ "Invert", "Material", "Texture", "Transform", "Visibility", "Z Index" ]
 
 [node name="drupal-logo-1280" type="Sprite" parent="Container" index="5"]
 

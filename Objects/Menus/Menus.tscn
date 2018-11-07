@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Objects/Menus/Menus.gd" type="Script" id=1]
 
-[node name="Menus" type="Node"]
+[node name="Menus" type="Node" index="0"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -13,6 +13,7 @@ next_level = "none"
 [node name="DieMenu" type="KinematicBody2D" parent="." index="0"]
 
 editor/display_folded = true
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -178,6 +179,8 @@ align = 1
 
 [node name="WinMenu" type="KinematicBody2D" parent="." index="1"]
 
+editor/display_folded = true
+visible = false
 position = Vector2( -2.45547, 78.5752 )
 input_pickable = false
 collision_layer = 1
@@ -379,78 +382,50 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="PauseMenu" type="KinematicBody2D" parent="." index="2"]
+[node name="Pause" type="Container" parent="." index="2"]
 
-position = Vector2( -2.45547, 155.923 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-_sections_unfolded = [ "Transform", "Visibility" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CC" type="CenterContainer" parent="PauseMenu" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 169.0
-margin_bottom = 56.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-use_top_left = true
+_sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
-[node name="VBC" type="VBoxContainer" parent="PauseMenu/CC" index="0"]
+[node name="Polygon2D" type="Polygon2D" parent="Pause" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -100.0
-margin_top = -28.0
-margin_right = 99.0
-margin_bottom = 28.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
+polygon = PoolVector2Array( 1094.53, -11.6101, 1064.84, 656.998, -34.4246, 649.595, -39.9764, -40.6851 )
+uv = PoolVector2Array(  )
+color = Color( 0, 0.298039, 0.564706, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+_sections_unfolded = [ "Material", "Texture", "Transform", "Visibility", "Z Index" ]
 
-[node name="MC2" type="MarginContainer" parent="PauseMenu/CC/VBC" index="0"]
+[node name="TitleLabel" type="Label" parent="Pause" index="1"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 199.0
-margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="TitleLabel" type="Label" parent="PauseMenu/CC/VBC/MC2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 199.0
-margin_bottom = 14.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = -67.0
+margin_right = 47.0
+margin_bottom = -53.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -462,50 +437,18 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="MC" type="MarginContainer" parent="PauseMenu/CC/VBC" index="1"]
+[node name="PlayAgainButton" type="Button" parent="Pause" index="2"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 18.0
-margin_right = 199.0
-margin_bottom = 38.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="HBC" type="HBoxContainer" parent="PauseMenu/CC/VBC/MC" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 199.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="PlayAgainButton" type="Button" parent="PauseMenu/CC/VBC/MC/HBC" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 95.0
-margin_bottom = 20.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = -40.0
+margin_right = 52.0
+rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -520,16 +463,19 @@ group = null
 text = "Restart Level"
 flat = false
 align = 1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 
-[node name="QuitButton" type="Button" parent="PauseMenu/CC/VBC/MC/HBC" index="1"]
+[node name="QuitButton" type="Button" parent="Pause" index="3"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 99.0
-margin_right = 191.0
-margin_bottom = 20.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = 10.0
+margin_right = 52.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -544,32 +490,18 @@ group = null
 text = "Quit to Main"
 flat = false
 align = 1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="MC3" type="MarginContainer" parent="PauseMenu/CC/VBC" index="2"]
+[node name="TimeLabel" type="Label" parent="Pause" index="4"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 42.0
-margin_right = 199.0
-margin_bottom = 56.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="TimeLabel" type="Label" parent="PauseMenu/CC/VBC/MC3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 199.0
-margin_bottom = 14.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = 63.0
+margin_right = 47.0
+margin_bottom = 77.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -581,6 +513,87 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="PauseMenu" type="KinematicBody2D" parent="." index="3"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="MC" type="MarginContainer" parent="PauseMenu" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 380.0
+margin_top = 258.0
+margin_right = 579.0
+margin_bottom = 278.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="HBC" type="HBoxContainer" parent="PauseMenu/MC" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 199.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="MC3" type="MarginContainer" parent="PauseMenu" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 462.0
+margin_top = 281.0
+margin_right = 498.0
+margin_bottom = 295.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="CC" type="CenterContainer" parent="PauseMenu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -32.0
+margin_right = 960.0
+margin_bottom = 568.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = true
+_sections_unfolded = [ "Material", "Rect", "Visibility" ]
 
 [connection signal="pressed" from="DieMenu/CC/VBC/MC/HBC/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
 
@@ -590,8 +603,8 @@ max_lines_visible = -1
 
 [connection signal="pressed" from="WinMenu/CC/VBC/MC/HBC/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 
-[connection signal="pressed" from="PauseMenu/CC/VBC/MC/HBC/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="Pause/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
 
-[connection signal="pressed" from="PauseMenu/CC/VBC/MC/HBC/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Pause/QuitButton" to="." method="_on_QuitButton_pressed"]
 
 

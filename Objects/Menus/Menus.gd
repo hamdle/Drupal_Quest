@@ -13,7 +13,7 @@ func _ready():
 	
 	$DieMenu.visible = false
 	$WinMenu.visible = false
-	$PauseMenu.visible = false
+	$Pause.visible = false
 
 func _input(event):
 	# Escape to Start screen shortcut
@@ -42,25 +42,33 @@ func _level_pause():
 	paused = not paused
 	
 	if paused == false:
-		print(start_time)
-		print(pause_time)
-		print(OS.get_ticks_msec() - pause_time)
+		#print(start_time)
+		#print(pause_time)
+		#print(OS.get_ticks_msec() - pause_time)
 		start_time = start_time + (OS.get_ticks_msec() - pause_time)
 	
 	pause_time = OS.get_ticks_msec()
 	
 	# Show current time
 	var current_time = (pause_time - start_time) / 1000.0
-	var time_label = $PauseMenu/CC/VBC/MC3/TimeLabel
+	var time_label = $Pause/TimeLabel
 	time_label.text = String(current_time)
 	# Set menu location
 	var player = get_tree().get_root().get_node("World/Player")
 	var new_loc = Vector2()
-	new_loc.x = player.position.x
-	new_loc.y = player.position.y - 50
-	$PauseMenu.position = new_loc
+	#new_loc.x = player.position.x
+	#new_loc.y = player.position.y - 50
+	new_loc.x = $Pause.rect_position.x
+	var offset = 0;
+	if player.position.y > 300:
+		offset	= player.position.y - 300
+	print($Pause.rect_position.y)
+	print($Pause.get_global_transform_with_canvas().get_origin().y)
+	new_loc.x = $Pause.rect_position.x
+	new_loc.y = $Pause.rect_position.y - $Pause.get_global_transform_with_canvas().get_origin().y
+	$Pause.rect_position = new_loc
 	
-	$PauseMenu.visible = paused
+	$Pause.visible = paused
 	get_tree().paused = paused
 	
 	

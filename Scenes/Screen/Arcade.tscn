@@ -119,7 +119,7 @@ content_margin_left = -1.0
 content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
-bg_color = Color( 0.137255, 0.666667, 0.247059, 1 )
+bg_color = Color( 0, 0.27451, 0.521569, 1 )
 draw_center = true
 border_width_left = 0
 border_width_top = 0
@@ -148,7 +148,7 @@ content_margin_left = -1.0
 content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
-bg_color = Color( 0, 0.27451, 0.521569, 1 )
+bg_color = Color( 0.137255, 0.666667, 0.247059, 1 )
 draw_center = true
 border_width_left = 0
 border_width_top = 0
@@ -239,13 +239,13 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
 [sub_resource type="DynamicFont" id=12]
 
-size = 18
+size = 16
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Arcade" type="Node" index="0"]
+[node name="Arcade" type="Node"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Margin" ]
@@ -388,7 +388,6 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="level1" type="Container" parent="Container/LevelGrid/Row" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -441,9 +440,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -496,7 +495,6 @@ texture = ExtResource( 6 )
 
 [node name="level2" type="Container" parent="Container/LevelGrid/Row" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -550,9 +548,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -605,7 +603,6 @@ texture = ExtResource( 6 )
 
 [node name="level3" type="Container" parent="Container/LevelGrid/Row" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -659,9 +656,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -714,7 +711,6 @@ texture = ExtResource( 6 )
 
 [node name="level4" type="Container" parent="Container/LevelGrid/Row" index="3"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -768,9 +764,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -823,7 +819,6 @@ texture = ExtResource( 6 )
 
 [node name="level5" type="Container" parent="Container/LevelGrid/Row" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -877,9 +872,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -932,7 +927,6 @@ texture = ExtResource( 6 )
 
 [node name="level6" type="Container" parent="Container/LevelGrid/Row" index="5"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -986,9 +980,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1078,7 +1072,6 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="level7" type="Container" parent="Container/LevelGrid/Row2" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1131,9 +1124,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1186,7 +1179,6 @@ texture = ExtResource( 6 )
 
 [node name="level8" type="Container" parent="Container/LevelGrid/Row2" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1240,9 +1232,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1295,7 +1287,6 @@ texture = ExtResource( 6 )
 
 [node name="level9" type="Container" parent="Container/LevelGrid/Row2" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1349,9 +1340,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1404,7 +1395,6 @@ texture = ExtResource( 6 )
 
 [node name="level10" type="Container" parent="Container/LevelGrid/Row2" index="3"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1458,9 +1448,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1513,7 +1503,6 @@ texture = ExtResource( 6 )
 
 [node name="level11" type="Container" parent="Container/LevelGrid/Row2" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1567,9 +1556,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1622,7 +1611,6 @@ texture = ExtResource( 6 )
 
 [node name="level12" type="Container" parent="Container/LevelGrid/Row2" index="5"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1676,9 +1664,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1749,7 +1737,6 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Row3" type="GridContainer" parent="Container/LevelGrid" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1768,7 +1755,6 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="level13" type="Container" parent="Container/LevelGrid/Row3" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1821,9 +1807,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1876,7 +1862,6 @@ texture = ExtResource( 6 )
 
 [node name="level14" type="Container" parent="Container/LevelGrid/Row3" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1930,9 +1915,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1985,7 +1970,6 @@ texture = ExtResource( 6 )
 
 [node name="level15" type="Container" parent="Container/LevelGrid/Row3" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2039,9 +2023,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2094,7 +2078,6 @@ texture = ExtResource( 6 )
 
 [node name="level16" type="Container" parent="Container/LevelGrid/Row3" index="3"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2148,9 +2131,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2203,7 +2186,6 @@ texture = ExtResource( 6 )
 
 [node name="level17" type="Container" parent="Container/LevelGrid/Row3" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2257,9 +2239,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -2312,7 +2294,6 @@ texture = ExtResource( 6 )
 
 [node name="level18" type="Container" parent="Container/LevelGrid/Row3" index="5"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2366,9 +2347,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 100.0
-margin_bottom = 96.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
