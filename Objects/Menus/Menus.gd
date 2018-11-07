@@ -100,3 +100,7 @@ func _on_NextLevelButton_pressed():
 func _on_QuitButton_pressed():
 	var gs = get_node("/root/gamestate")
 	gs.load_scene(gs.level_map["start"])
+
+
+func _on_ResumeButton_pressed():
+	_level_pause()
