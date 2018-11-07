@@ -99,7 +99,7 @@ func _on_BackButton_pressed():
 
 func _on_level1button_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["level1"])
+	gs.load_scene("level1")
 	
 func _on_level2button_pressed():
 	var gs = get_node("/root/gamestate")

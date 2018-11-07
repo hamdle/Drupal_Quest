@@ -5,9 +5,6 @@ var pause_time
 var paused = false
 var showing_menu = false
 
-export var current_level = "none"
-export var next_level = "none"
-
 func _ready():
 	start_time = OS.get_ticks_msec()
 	
@@ -89,17 +86,17 @@ func _level_over(menu):
 
 func _on_PlayAgainButton_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map[current_level])
+	gs.reload_scene()
 
 
 func _on_NextLevelButton_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map[next_level])
+	gs.load_next_scene()
 
 
 func _on_QuitButton_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene(gs.level_map["start"])
+	gs.load_scene("start")
 
 
 func _on_ResumeButton_pressed():

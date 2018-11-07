@@ -3,6 +3,8 @@ extends Node
 enum MODE { ARCADE }
 enum CHARACTER { CLASSIC, DRUPAL8, JUMPAL }
 
+var current_level_key = "none"
+const number_of_levels = 18
 var level_map = {
 	"none": null,
 	"start": "res://Scenes/Screen/Start.tscn",
@@ -76,7 +78,23 @@ func _ready():
 	select_character(CHARACTER.CLASSIC)
 
 # Scene loading
-func load_scene(res):
+func load_next_scene():
+	var i = current_level_key.to_int() + 1
+	var key = "level" + str(i)
+	
+	if i > number_of_levels:
+		load_scene("levelselect")
+	else:
+		load_scene(key)
+	pass
+
+func reload_scene():
+	load_scene(current_level_key)
+	pass
+	
+func load_scene(key):
+	current_level_key = key
+	var res = level_map[current_level_key]
 	call_deferred("_deferred_load_scene", res)
 
 func _deferred_load_scene(res):

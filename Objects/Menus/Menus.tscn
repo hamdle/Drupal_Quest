@@ -214,8 +214,6 @@ _sections_unfolded = [ "Font", "Settings" ]
 pause_mode = 2
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
-current_level = "none"
-next_level = "none"
 
 [node name="DieMenu" type="KinematicBody2D" parent="." index="0"]
 

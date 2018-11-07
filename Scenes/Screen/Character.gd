@@ -19,6 +19,6 @@ func _on_MagenticonButton_pressed():
 
 func load_scene_by_mode(gs):
 	if gs.current_mode == gs.MODE.ARCADE:
-		gs.load_scene(gs.level_map["levelselect"])
+		gs.load_scene("levelselect")
 	else:
 		print("No MODE selected")
