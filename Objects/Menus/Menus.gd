@@ -8,7 +8,7 @@ var showing_menu = false
 func _ready():
 	start_time = OS.get_ticks_msec()
 	
-	$DieMenu.visible = false
+	$Die.visible = false
 	$Win.visible = false
 	$Pause.visible = false
 
@@ -19,8 +19,23 @@ func _input(event):
 			_level_pause()
 
 func player_died():
-	$DieMenu.visible = true
-	_level_over($DieMenu)
+	# Set menu location
+	var player = get_tree().get_root().get_node("World/Player")
+	var new_loc = Vector2()
+	#new_loc.x = player.position.x
+	#new_loc.y = player.position.y - 50
+	new_loc.x = $Die.rect_position.x
+	var offset = 0;
+	if player.position.y > 300:
+		offset	= player.position.y - 300
+	print($Die.rect_position.y)
+	print($Die.get_global_transform_with_canvas().get_origin().y)
+	new_loc.x = $Die.rect_position.x
+	new_loc.y = $Die.rect_position.y - $Die.get_global_transform_with_canvas().get_origin().y
+	$Die.rect_position = new_loc
+	
+	$Die.visible = true
+	_level_over($Die)
 	
 func player_win():
 	$Win.visible = true

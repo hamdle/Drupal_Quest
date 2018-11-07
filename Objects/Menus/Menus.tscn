@@ -1,18 +1,115 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Objects/Menus/Menus.gd" type="Script" id=1]
 
-[sub_resource type="DynamicFontData" id=13]
+[sub_resource type="DynamicFontData" id=20]
 
 hinting = 2
 font_path = "res://Fonts/Ubuntu-R.ttf"
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=21]
 
 size = 24
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 13 )
+font_data = SubResource( 20 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=22]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.164706, 0.466667, 0.721569, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=23]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0, 0.27451, 0.521569, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="StyleBoxFlat" id=24]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.486275, 0.737255, 0.282353, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFontData" id=25]
+
+hinting = 2
+font_path = "res://Fonts/Ubuntu-B.ttf"
+
+[sub_resource type="DynamicFont" id=26]
+
+size = 18
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 25 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=15]
@@ -110,6 +207,19 @@ size = 18
 use_mipmaps = false
 use_filter = false
 font_data = SubResource( 18 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=13]
+
+hinting = 2
+font_path = "res://Fonts/Ubuntu-R.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+
+size = 24
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 13 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFontData" id=1]
@@ -325,134 +435,58 @@ pause_mode = 2
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
 
-[node name="DieMenu" type="KinematicBody2D" parent="." index="0"]
+[node name="Die" type="Container" parent="." index="0"]
 
 editor/display_folded = true
-visible = false
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-_sections_unfolded = [ "Transform", "Visibility" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CC" type="CenterContainer" parent="DieMenu" index="0"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 169.0
-margin_bottom = 56.0
+margin_right = 1024.0
+margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-use_top_left = true
+_sections_unfolded = [ "Rect" ]
 
-[node name="VBC" type="VBoxContainer" parent="DieMenu/CC" index="0"]
+[node name="TitleLabel" type="Label" parent="Die" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -91.0
-margin_top = -19.0
-margin_right = 90.0
-margin_bottom = 19.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="MC2" type="MarginContainer" parent="DieMenu/CC/VBC" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 181.0
-margin_bottom = 14.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="TitleLabel" type="Label" parent="DieMenu/CC/VBC/MC2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 181.0
-margin_bottom = 14.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.0
+margin_top = -139.0
+margin_right = 86.0
+margin_bottom = -111.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Lose"
+custom_fonts/font = SubResource( 21 )
+text = "Game Over"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="MC" type="MarginContainer" parent="DieMenu/CC/VBC" index="1"]
+[node name="PlayAgainButton" type="Button" parent="Die" index="1"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 18.0
-margin_right = 181.0
-margin_bottom = 38.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="HBC" type="HBoxContainer" parent="DieMenu/CC/VBC/MC" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
-margin_right = 181.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Margin" ]
-
-[node name="PlayAgainButton" type="Button" parent="DieMenu/CC/VBC/MC/HBC" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 77.0
-margin_bottom = 20.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -90.0
+margin_right = 50.0
+margin_bottom = -50.0
+rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -460,23 +494,28 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 26 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Play Again"
+text = "Restart"
 flat = false
 align = 1
 
-[node name="QuitButton" type="Button" parent="DieMenu/CC/VBC/MC/HBC" index="1"]
+[node name="QuitButton" type="Button" parent="Die" index="2"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 81.0
-margin_right = 173.0
-margin_bottom = 20.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -40.0
+margin_right = 50.0
+rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -484,16 +523,51 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 26 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Quit to Main"
+text = "Quit"
+flat = false
+align = 1
+
+[node name="MenuButton" type="Button" parent="Die" index="3"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = 10.0
+margin_right = 50.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 40 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+custom_fonts/font = SubResource( 19 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Levels"
 flat = false
 align = 1
 
 [node name="Win" type="Container" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -633,7 +707,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Menu"
+text = "Levels"
 flat = false
 align = 1
 
@@ -661,6 +735,7 @@ max_lines_visible = -1
 
 [node name="Pause" type="Container" parent="." index="2"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -836,9 +911,11 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[connection signal="pressed" from="DieMenu/CC/VBC/MC/HBC/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="Die/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
 
-[connection signal="pressed" from="DieMenu/CC/VBC/MC/HBC/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Die/QuitButton" to="." method="_on_QuitButton_pressed"]
+
+[connection signal="pressed" from="Die/MenuButton" to="." method="_on_MenuButton_pressed"]
 
 [connection signal="pressed" from="Win/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 
