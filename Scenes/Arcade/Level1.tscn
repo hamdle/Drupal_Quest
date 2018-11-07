@@ -69,7 +69,4 @@ position = Vector2( 140, 376 )
 
 [node name="Menus" parent="." index="5" instance=ExtResource( 9 )]
 
-current_level = "arcade1"
-next_level = "arcade2"
-
 

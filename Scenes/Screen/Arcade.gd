@@ -1,12 +1,31 @@
 extends Node
 
 func _ready():
+	# Get and set level data
+	load_level_data()
+	
+	# Show character selected
+	show_character()
+	
+	pass
+	
+func _process(delta):
+	pass
+
+func show_character():
+	var gs = get_node("/root/gamestate")
+	print(gs.current_character)
+	var cur = gs.current_character
+	if (cur == gs.CHARACTER.CLASSIC):
+		$Container/CharacterDisplay.texture = $Container/CharacterDisplay.drupal_texture
+	elif (cur == gs.CHARACTER.DRUPAL8):
+		$Container/CharacterDisplay.texture = $Container/CharacterDisplay.drupal_8_texture
+	elif (cur == gs.CHARACTER.JUMPAL):
+		$Container/CharacterDisplay.texture = $Container/CharacterDisplay.drupal_quest_texture
+
+func load_level_data():
 	var level1 = get_node("Container/LevelGrid/Row/level1/level1button")
-	#level1.disabled = true
-	#var star3 = get_node("Container/LevelGrid/Row/level1/HBox/Star3")
-	#star3.visible = false
 	var best_time = get_node("Container/LevelGrid/Row/level1/BestTime")
-	#best_time.text = "1:24:02"
 	
 	var gs = get_node("/root/gamestate")
 	for i in gs.level_data:
@@ -85,17 +104,12 @@ func _ready():
 			var button = get_node(NodePath(button_str))
 			button.disabled = false
 			pass
-	
-	pass
-	
-func _process(delta):
-	pass
 
 # Signals
 
 func _on_BackButton_pressed():
 	var gs = get_node("/root/gamestate")
-	gs.load_scene("start")
+	gs.load_scene("character")
 
 func _on_level1button_pressed():
 	var gs = get_node("/root/gamestate")

@@ -22,3 +22,7 @@ func load_scene_by_mode(gs):
 		gs.load_scene("levelselect")
 	else:
 		print("No MODE selected")
+
+func _on_BackButton_pressed():
+	var gs = get_node("/root/gamestate")
+	gs.load_scene("start")
