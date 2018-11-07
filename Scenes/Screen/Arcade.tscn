@@ -1749,6 +1749,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Row3" type="GridContainer" parent="Container/LevelGrid" index="4"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1767,6 +1768,7 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="level13" type="Container" parent="Container/LevelGrid/Row3" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1874,6 +1876,7 @@ texture = ExtResource( 6 )
 
 [node name="level14" type="Container" parent="Container/LevelGrid/Row3" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1982,6 +1985,7 @@ texture = ExtResource( 6 )
 
 [node name="level15" type="Container" parent="Container/LevelGrid/Row3" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2090,6 +2094,7 @@ texture = ExtResource( 6 )
 
 [node name="level16" type="Container" parent="Container/LevelGrid/Row3" index="3"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2198,6 +2203,7 @@ texture = ExtResource( 6 )
 
 [node name="level17" type="Container" parent="Container/LevelGrid/Row3" index="4"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2306,6 +2312,7 @@ texture = ExtResource( 6 )
 
 [node name="level18" type="Container" parent="Container/LevelGrid/Row3" index="5"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -2420,34 +2427,34 @@ texture = ExtResource( 6 )
 
 [connection signal="pressed" from="Container/LevelGrid/Row/level3/level3button" to="." method="_on_level3button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row/level4/level4button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level4/level4button" to="." method="_on_level4button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row/level5/level5button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level5/level5button" to="." method="_on_level5button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row/level6/level6button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level6/level6button" to="." method="_on_level6button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row2/level7/level7button" to="." method="_on_level1button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level7/level7button" to="." method="_on_level7button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row2/level8/level8button" to="." method="_on_level2button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level8/level8button" to="." method="_on_level8button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row2/level9/level9button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level9/level9button" to="." method="_on_level9button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row2/level10/level10button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level10/level10button" to="." method="_on_level10button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row2/level11/level11button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level11/level11button" to="." method="_on_level11button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row2/level12/level12button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level12/level12button" to="." method="_on_level12button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row3/level13/level13button" to="." method="_on_level1button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level13/level13button" to="." method="_on_level13button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row3/level14/level14button" to="." method="_on_level2button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level14/level14button" to="." method="_on_level14button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row3/level15/level15button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level15/level15button" to="." method="_on_level15button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row3/level16/level16button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level16/level16button" to="." method="_on_level16button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row3/level17/level17button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level17/level17button" to="." method="_on_level17button_pressed"]
 
-[connection signal="pressed" from="Container/LevelGrid/Row3/level18/level18button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level18/level18button" to="." method="_on_level18button_pressed"]
 
 

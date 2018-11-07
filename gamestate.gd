@@ -8,9 +8,27 @@ var level_map = {
 	"start": "res://Scenes/Screen/Start.tscn",
 	"character": "res://Scenes/Screen/Character.tscn",
 	"levelselect": "res://Scenes/Screen/Arcade.tscn",
+	
 	"level1": "res://Scenes/Arcade/Level1.tscn",
 	"level2": "res://Scenes/Arcade/Arcade2.tscn",
-	"level3": "res://Scenes/Arcade/Arcade3.tscn"	
+	"level3": "res://Scenes/Arcade/Arcade3.tscn",
+	"level4": "res://Scenes/Arcade/Arcade4.tscn",
+	"level5": "res://Scenes/Arcade/Arcade5.tscn",
+	"level6": "res://Scenes/Arcade/Arcade6.tscn",
+	
+	"level7": "res://Scenes/Arcade/Arcade7.tscn",
+	"level8": "res://Scenes/Arcade/Arcade8.tscn",
+	"level9": "res://Scenes/Arcade/Arcade9.tscn",
+	"level10": "res://Scenes/Arcade/Arcade10.tscn",
+	"level11": "res://Scenes/Arcade/Arcade11.tscn",
+	"level12": "res://Scenes/Arcade/Arcade12.tscn",
+	
+	"level13": "res://Scenes/Arcade/Arcade13.tscn",
+	"level14": "res://Scenes/Arcade/Arcade14.tscn",
+	"level15": "res://Scenes/Arcade/Arcade15.tscn",
+	"level16": "res://Scenes/Arcade/Arcade16.tscn",
+	"level17": "res://Scenes/Arcade/Arcade17.tscn",
+	"level18": "res://Scenes/Arcade/Arcade18.tscn",
 }
 
 var level_data = {
