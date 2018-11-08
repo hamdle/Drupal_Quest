@@ -58,8 +58,25 @@ var level_data = {
 
 var time_tables = {
 	"level1": [10,6],
-	"level2": [5,4],
-	"level3": [5,4]
+	"level2": [10,5],
+	"level3": [10,5],
+	"level4": [10,5],
+	"level5": [10,5],
+	"level6": [10,5],
+	
+	"level7": [10,5],
+	"level8": [10,5],
+	"level9": [10,5],
+	"level10": [10,5],
+	"level11": [10,5],
+	"level12": [10,5],
+	
+	"level13": [10,5],
+	"level14": [10,5],
+	"level15": [10,5],
+	"level16": [10,5],
+	"level17": [10,5],
+	"level18": [10,5],
 }
 
 var current_scene_instance = null
@@ -134,9 +151,10 @@ func level_won(finish_time):
 func unlock_next_level():
 	var i = current_level_key.to_int() + 1
 	var key = "level" + str(i)
-	
+	# Unlock level (code 4) if there is no data
 	if i <= number_of_levels:
-		level_data[key] = "4-0"
+		if level_data[key] == "0-0":
+			level_data[key] = "4-0"
 
 # Game mode
 func arcade_mode():
@@ -166,9 +184,12 @@ func update_level_data(entry, finish_time):
 
 # Time formatter
 func format_time(time):
-	
-	var formatted = String()
-	var colon = " : "
-	formatted = str(time)
+	#var formatted = String()
+	var formatted = str(stepify(time, 0.001))
+	# Convert to 0:00
+	#var b = time - int(time)
+	#var c = stepify(b, 0.01)
+	#var d = int(c * 100)
+	#formatted = str(int(time)) + ":" + str(d)
 	
 	return formatted

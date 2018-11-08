@@ -438,6 +438,7 @@ _sections_unfolded = [ "Pause" ]
 [node name="Die" type="Container" parent="." index="0"]
 
 editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -584,6 +585,8 @@ align = 1
 
 [node name="Win" type="Container" parent="." index="1"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -751,6 +754,8 @@ max_lines_visible = -1
 
 [node name="Pause" type="Container" parent="." index="2"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
