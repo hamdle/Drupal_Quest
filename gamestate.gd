@@ -88,6 +88,9 @@ var local_jumps = 0
 var local_launches = 0
 var local_moves = 0
 
+# Audio
+var stream_player
+
 func _ready():
 	# Get main scene
 	var root = get_tree().get_root()
@@ -99,6 +102,7 @@ func _ready():
 	arcade_mode()
 	# Default Druplicon character
 	select_character(CHARACTER.CLASSIC)
+	
 
 # Scene loading
 func load_next_scene():
@@ -121,6 +125,11 @@ func load_scene(key):
 	call_deferred("_deferred_load_scene", res)
 
 func _deferred_load_scene(res):
+	
+	# Get Audio stream
+	#var root = get_tree().get_root()
+	#var stream = current_scene_instance.get_child(root.get_child_count())
+	
 	# Immediately release current scene
 	current_scene_instance.free()
 	
