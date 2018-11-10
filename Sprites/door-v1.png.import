@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/key-black.png-9006b868e67c29cebbe042f237a7a02d.stex"
+path="res://.import/door-v1.png-4cf38e63cc8c50ef8f6f73ad379b7120.stex"
 
 [deps]
 
-source_file="res://Sprites/key-black.png"
-dest_files=[ "res://.import/key-black.png-9006b868e67c29cebbe042f237a7a02d.stex" ]
+source_file="res://Sprites/door-v1.png"
+dest_files=[ "res://.import/door-v1.png-4cf38e63cc8c50ef8f6f73ad379b7120.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0

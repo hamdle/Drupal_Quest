@@ -10,7 +10,7 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=9]
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 [node name="TestObjects" type="Node" parent="." index="0"]
 
@@ -48,7 +48,7 @@ texture = ExtResource( 3 )
 
 editor/display_folded = false
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 512.644, 573.54 )
+position = Vector2( 512.644, 471.54 )
 _sections_unfolded = [ "Material", "Pickable", "Transform", "Visibility", "collision" ]
 
 [node name="Key" parent="." index="1" instance=ExtResource( 5 )]
@@ -57,7 +57,7 @@ position = Vector2( -86.201, 82.693 )
 
 [node name="Exit" parent="." index="2" instance=ExtResource( 6 )]
 
-position = Vector2( 891.192, 518.715 )
+position = Vector2( 870.331, 420.444 )
 
 [node name="Bug2" parent="." index="3" instance=ExtResource( 7 )]
 
