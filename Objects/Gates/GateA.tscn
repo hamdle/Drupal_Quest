@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 21.6056
+radius = 32.0
 
 [node name="GateA" type="KinematicBody2D"]
 
@@ -20,6 +20,7 @@ gate_player = true
 gate_bug = true
 gate_flying = true
 gate_key = true
+spawn_y_diff = 70
 
 [node name="Position2D" type="Position2D" parent="." index="0"]
 
@@ -42,6 +43,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
+position = Vector2( 0, 13 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]

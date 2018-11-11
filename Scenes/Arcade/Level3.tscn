@@ -1,33 +1,45 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Sprites/World/home-page-banner.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Gates/GateA.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Objects/Gates/GateB.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sprites/World/code-background.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/World/home-page-banner.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Gates/GateA.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Gates/GateB.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 508.063, 24.0422 )
 
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 50, 1000 )
+
 [node name="World" type="Node" index="0"]
 
 [node name="Level" type="Node" parent="." index="0"]
 
-[node name="home-page-banner" type="Sprite" parent="Level" index="0"]
+[node name="code-background" type="Sprite" parent="Level" index="0"]
 
-position = Vector2( 540.911, 441.774 )
+visible = false
+position = Vector2( 643.634, 107.696 )
 texture = ExtResource( 1 )
 
-[node name="Floor3" type="KinematicBody2D" parent="Level" index="1"]
+[node name="home-page-banner" type="Sprite" parent="Level" index="1"]
+
+position = Vector2( 540.911, 621.774 )
+texture = ExtResource( 2 )
+
+[node name="Floor3" type="KinematicBody2D" parent="Level" index="2"]
 
 editor/display_folded = true
-position = Vector2( 510.201, 571.081 )
+position = Vector2( 510.201, 831.081 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -45,12 +57,12 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Level/Floor3" index="1"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
-[node name="Floor4" type="KinematicBody2D" parent="Level" index="2"]
+[node name="Floor4" type="KinematicBody2D" parent="Level" index="3"]
 
 editor/display_folded = true
-position = Vector2( 510.618, 282.669 )
+position = Vector2( 510.618, 456.669 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -68,38 +80,67 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Level/Floor4" index="1"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
+
+[node name="Position2D" type="Position2D" parent="Level" index="4"]
+
+editor/display_folded = true
+position = Vector2( 0, 180 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level/Position2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="LeftBound" type="CollisionShape2D" parent="Level/Position2D/StaticBody2D" index="0"]
+
+position = Vector2( -50, 0 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="RightBound" type="CollisionShape2D" parent="Level/Position2D/StaticBody2D" index="1"]
+
+position = Vector2( 1075, 0 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Gates" type="Node" parent="." index="1"]
 
-[node name="GateA" parent="Gates" index="0" instance=ExtResource( 3 )]
+[node name="GateA" parent="Gates" index="0" instance=ExtResource( 4 )]
 
-position = Vector2( 273.435, 338.733 )
+position = Vector2( 273.435, 568.733 )
+spawn_y_diff = 70
 
-[node name="GateB" parent="Gates" index="1" instance=ExtResource( 4 )]
+[node name="GateB" parent="Gates" index="1" instance=ExtResource( 5 )]
 
-position = Vector2( 276.156, 32.649 )
+position = Vector2( 876.156, 162.649 )
+spawn_y_diff = 70
 
 [node name="Enemies" type="Node" parent="." index="2"]
 
 editor/display_folded = true
 
-[node name="Bug" parent="Enemies" index="0" instance=ExtResource( 5 )]
+[node name="Bug" parent="Enemies" index="0" instance=ExtResource( 6 )]
 
-position = Vector2( 606.276, 212.113 )
+position = Vector2( 391.545, 209.022 )
 
-[node name="Exit" parent="." index="3" instance=ExtResource( 6 )]
+[node name="Exit" parent="." index="3" instance=ExtResource( 7 )]
 
-position = Vector2( 524.539, 520.813 )
+position = Vector2( 524.539, 780.813 )
 
-[node name="Key" parent="." index="4" instance=ExtResource( 7 )]
+[node name="Key" parent="." index="4" instance=ExtResource( 8 )]
 
 position = Vector2( -132.79, 110.358 )
 
-[node name="Player" parent="." index="5" instance=ExtResource( 8 )]
+[node name="Player" parent="." index="5" instance=ExtResource( 9 )]
 
-position = Vector2( 110.19, 467.969 )
+position = Vector2( 110.19, 647.969 )
 
-[node name="Menus" parent="." index="6" instance=ExtResource( 9 )]
+[node name="Menus" parent="." index="6" instance=ExtResource( 10 )]
 
 

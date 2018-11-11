@@ -2,8 +2,6 @@
 
 [ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=1]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -17,7 +15,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
