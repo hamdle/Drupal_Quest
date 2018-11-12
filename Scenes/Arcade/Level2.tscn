@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Sprites/World/Builder/get-involved-body-1.png" type="Texture" id=1]
-[ext_resource path="res://Enemies/Flying/Flying.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/World/Builder/footer-1280.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/grass-2.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Flying/Flying.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -28,6 +30,8 @@ extents = Vector2( 20, 800 )
 
 [node name="get-involved-body-1" type="Sprite" parent="Level" index="0"]
 
+editor/display_folded = true
+visible = false
 position = Vector2( 509.245, 377.011 )
 texture = ExtResource( 1 )
 
@@ -49,10 +53,12 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="footer-1" type="Sprite" parent="Level" index="1"]
 
-position = Vector2( 505.705, 776.584 )
+position = Vector2( 509.705, 799.584 )
+texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level/footer-1" index="0"]
 
+position = Vector2( 0, -161 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -63,11 +69,12 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/footer-1/StaticBody2D" index="0"]
 
-position = Vector2( 3.53922, -100.573 )
+position = Vector2( 3.53922, -52.573 )
 shape = SubResource( 2 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Level" index="2"]
 
+visible = false
 position = Vector2( 0.0012207, 60 )
 polygon = PoolVector2Array( 649.476, 394.054, 647.021, 562.254, 944.133, 562.254, 945.361, 380.549 )
 uv = PoolVector2Array(  )
@@ -83,6 +90,8 @@ invert_enable = false
 invert_border = 100.0
 
 [node name="Position2D" type="Position2D" parent="Level" index="3"]
+
+editor/display_folded = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level/Position2D" index="0"]
 
@@ -106,25 +115,50 @@ position = Vector2( 1044, 0 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="grass-2" type="Sprite" parent="Level" index="4"]
+
+position = Vector2( 112, 574 )
+texture = ExtResource( 3 )
+
+[node name="grass-3" type="Sprite" parent="Level" index="5"]
+
+position = Vector2( 352, 574 )
+texture = ExtResource( 3 )
+
+[node name="grass-4" type="Sprite" parent="Level" index="6"]
+
+position = Vector2( 592, 574 )
+texture = ExtResource( 3 )
+
+[node name="grass-5" type="Sprite" parent="Level" index="7"]
+
+position = Vector2( 832, 574 )
+texture = ExtResource( 3 )
+
+[node name="grass-6" type="Sprite" parent="Level" index="8"]
+
+position = Vector2( 1072, 574 )
+texture = ExtResource( 3 )
+
 [node name="Enemies" type="Node" parent="." index="1"]
 
-[node name="Flying" parent="Enemies" index="0" instance=ExtResource( 2 )]
+[node name="Flying" parent="Enemies" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 166.442, 310.354 )
 
-[node name="Exit" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Exit" parent="." index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 863.505, 71.857 )
+position = Vector2( 841.505, 540.857 )
 _sections_unfolded = [ "collision" ]
 
-[node name="Key" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Key" parent="." index="3" instance=ExtResource( 6 )]
 
 position = Vector2( -144.04, 168.076 )
 
-[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Player" parent="." index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 115.777, 454.5 )
 
-[node name="Menus" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Menus" parent="." index="5" instance=ExtResource( 8 )]
 
 
