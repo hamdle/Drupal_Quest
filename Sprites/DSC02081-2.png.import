@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/particle-3.png-174cf2198bccc32228f84d561275fc68.stex"
+path="res://.import/DSC02081-2.png-346f29ad52a68319f72ddc0665ef6f77.stex"
 
 [deps]
 
-source_file="res://Sprites/particle-3.png"
-dest_files=[ "res://.import/particle-3.png-174cf2198bccc32228f84d561275fc68.stex" ]
+source_file="res://Sprites/DSC02081-2.png"
+dest_files=[ "res://.import/DSC02081-2.png-346f29ad52a68319f72ddc0665ef6f77.stex" ]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/particle-4.png-0c12261f0a94127a971e4392d326e4ad.stex"
+path="res://.import/DSC02081.png-e506a6c4d2d6d224843528c2a09586c6.stex"
 
 [deps]
 
-source_file="res://Sprites/particle-4.png"
-dest_files=[ "res://.import/particle-4.png-0c12261f0a94127a971e4392d326e4ad.stex" ]
+source_file="res://Sprites/DSC02081.png"
+dest_files=[ "res://.import/DSC02081.png-e506a6c4d2d6d224843528c2a09586c6.stex" ]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0

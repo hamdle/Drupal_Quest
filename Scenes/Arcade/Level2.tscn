@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprites/World/Builder/get-involved-body-1.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/Flying/Flying.tscn" type="PackedScene" id=2]
@@ -16,6 +16,11 @@ extents = Vector2( 150, 165 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 600, 20 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 20, 800 )
 
 [node name="World" type="Node"]
 
@@ -76,6 +81,30 @@ texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
+
+[node name="Position2D" type="Position2D" parent="Level" index="3"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level/Position2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Position2D/StaticBody2D" index="0"]
+
+position = Vector2( -20, 0 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Position2D/StaticBody2D" index="1"]
+
+position = Vector2( 1044, 0 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Enemies" type="Node" parent="." index="1"]
 

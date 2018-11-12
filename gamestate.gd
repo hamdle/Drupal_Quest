@@ -57,9 +57,9 @@ var level_data = {
 }
 
 var time_tables = {
-	"level1": [10,6],
-	"level2": [10,5],
-	"level3": [10,5],
+	"level1": [10,5],
+	"level2": [12,7],
+	"level3": [12,10],
 	"level4": [10,5],
 	"level5": [10,5],
 	"level6": [10,5],

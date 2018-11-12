@@ -1,19 +1,20 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Screen/Start.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/World/home-page-banner.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/World/drupal-home.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/World/Builder/drupal-logo-1280.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sprites/ground-tile-2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/World/home-page-banner.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/World/drupal-home.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/World/Builder/drupal-logo-1280.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 92
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 6 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -21,7 +22,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 92
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 7 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=3]
@@ -126,7 +127,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 size = 24
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 7 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Start" type="Node"]
@@ -166,12 +167,49 @@ invert_enable = false
 invert_border = 100.0
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="home-page-banner" type="Sprite" parent="Container" index="1"]
+[node name="TileTexture" type="TextureRect" parent="Container" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 340.0
+margin_right = 1024.0
+margin_bottom = 1364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="TileTexture2" type="TextureRect" parent="Container" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 800.0
+margin_top = 340.0
+margin_right = 1824.0
+margin_bottom = 1364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="home-page-banner" type="Sprite" parent="Container" index="3"]
 
 position = Vector2( 523.588, 153.048 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
-[node name="NavHeaderTexture" type="TextureRect" parent="Container" index="2"]
+[node name="NavHeaderTexture" type="TextureRect" parent="Container" index="4"]
 
 visible = false
 anchor_left = 0.0
@@ -186,11 +224,11 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin" ]
 
-[node name="DrupalHeaderTexture" type="TextureRect" parent="Container" index="3"]
+[node name="DrupalHeaderTexture" type="TextureRect" parent="Container" index="5"]
 
 visible = false
 anchor_left = 0.0
@@ -207,11 +245,11 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin" ]
 
-[node name="Polygon2D3" type="Polygon2D" parent="Container" index="4"]
+[node name="Polygon2D3" type="Polygon2D" parent="Container" index="6"]
 
 visible = false
 position = Vector2( -1, 100 )
@@ -229,15 +267,15 @@ invert_enable = false
 invert_border = 100.0
 _sections_unfolded = [ "Invert", "Material", "Texture", "Transform", "Visibility", "Z Index" ]
 
-[node name="drupal-logo-1280" type="Sprite" parent="Container" index="5"]
+[node name="drupal-logo-1280" type="Sprite" parent="Container" index="7"]
 
 visible = false
 position = Vector2( 469, 161 )
 scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Material", "Transform" ]
 
-[node name="DrupalQuestLabel2" type="Label" parent="Container" index="6"]
+[node name="DrupalQuestLabel2" type="Label" parent="Container" index="8"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -261,7 +299,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="DrupalQuestLabel" type="Label" parent="Container" index="7"]
+[node name="DrupalQuestLabel" type="Label" parent="Container" index="9"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -286,16 +324,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="ArcadeButton2" type="Button" parent="Container" index="8"]
+[node name="ArcadeButton2" type="Button" parent="Container" index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 466.0
-margin_top = 400.0
+margin_top = 270.0
 margin_right = 566.0
-margin_bottom = 440.0
+margin_bottom = 310.0
 rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -318,16 +356,16 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container" index="9"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Container" index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 347.0
-margin_top = 474.0
+margin_top = 434.0
 margin_right = 685.0
-margin_bottom = 534.0
+margin_bottom = 494.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
