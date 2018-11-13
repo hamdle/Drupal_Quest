@@ -8,7 +8,7 @@
 [ext_resource path="res://Sprites/mario-clouds-5.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/drupal 8 logo - edit orange.png" type="Texture" id=7]
 [ext_resource path="res://Objects/Floor.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Sprites/grass-2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/grass-3.png" type="Texture" id=9]
 [ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=12]
