@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=2]
 
-[ext_resource path="res://Sprites/World/Pages/download-edit.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Web/Pages/download-edit.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Gates/GateA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Gates/GateB.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=4]
@@ -10,6 +10,7 @@
 [ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=10]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

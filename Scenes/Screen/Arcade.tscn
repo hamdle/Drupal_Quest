@@ -1,8 +1,8 @@
 [gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Screen/Arcade.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/World/Builder/nav-bar-1280.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Web/Builder/nav-bar-1280.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=6]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=9]
 [ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://Sprites/star.png" type="Texture" id=11]
+
 
 [sub_resource type="DynamicFont" id=1]
 

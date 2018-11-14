@@ -1,22 +1,19 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/Screen/Start.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/World/home-page-banner.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/World/drupal-home.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/World/Builder/drupal-logo-1280.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/dirt-v2.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/dirt-v1.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/grass-3.png" type="Texture" id=8]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Sprites/Web/home-page-banner.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Web/drupal-home.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Web/Builder/drupal-logo-1280.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 92
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -24,7 +21,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 92
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 10 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=3]
@@ -129,10 +126,10 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 size = 24
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 10 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Start" type="Node"]
+[node name="Start" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -156,7 +153,7 @@ _sections_unfolded = [ "Margin" ]
 
 polygon = PoolVector2Array( 9.14093, -11.8707, 1044.12, -13.0984, 1042.89, 621.638, -12.9582, 622.866, -14.0664, 339.18, -15.4137, -5.73201 )
 uv = PoolVector2Array(  )
-color = Color( 0.313726, 0.188235, 0, 1 )
+color = Color( 0.67451, 0.486275, 0, 1 )
 vertex_colors = PoolColorArray(  )
 offset = Vector2( 0, 0 )
 antialiased = false
@@ -170,7 +167,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="home-page-banner" type="Sprite" parent="Container" index="1"]
 
-position = Vector2( 523.588, 153.048 )
+position = Vector2( 523.588, 174.696 )
 texture = ExtResource( 2 )
 
 [node name="NavHeaderTexture" type="TextureRect" parent="Container" index="2"]
@@ -239,53 +236,7 @@ scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Material", "Transform" ]
 
-[node name="dirt-v2" type="Sprite" parent="Container" index="6"]
-
-position = Vector2( 800.31, 549.881 )
-texture = ExtResource( 6 )
-
-[node name="dirt-v3" type="Sprite" parent="Container" index="7"]
-
-position = Vector2( 319.424, 548.773 )
-texture = ExtResource( 6 )
-
-[node name="dirt-v4" type="Sprite" parent="Container" index="8"]
-
-position = Vector2( -162.571, 542.125 )
-texture = ExtResource( 6 )
-
-[node name="dirt-v1" type="Sprite" parent="Container" index="9"]
-
-visible = false
-position = Vector2( 60.1441, 391.432 )
-texture = ExtResource( 7 )
-
-[node name="grass-2" type="Sprite" parent="Container" index="10"]
-
-position = Vector2( 88.7508, 346.333 )
-texture = ExtResource( 8 )
-
-[node name="grass-3" type="Sprite" parent="Container" index="11"]
-
-position = Vector2( 328.751, 346.333 )
-texture = ExtResource( 8 )
-
-[node name="grass-4" type="Sprite" parent="Container" index="12"]
-
-position = Vector2( 568.751, 346.333 )
-texture = ExtResource( 8 )
-
-[node name="grass-5" type="Sprite" parent="Container" index="13"]
-
-position = Vector2( 808.751, 346.333 )
-texture = ExtResource( 8 )
-
-[node name="grass-6" type="Sprite" parent="Container" index="14"]
-
-position = Vector2( 1048.75, 346.333 )
-texture = ExtResource( 8 )
-
-[node name="DrupalQuestLabel2" type="Label" parent="Container" index="15"]
+[node name="DrupalQuestLabel2" type="Label" parent="Container" index="6"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -309,7 +260,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="DrupalQuestLabel" type="Label" parent="Container" index="16"]
+[node name="DrupalQuestLabel" type="Label" parent="Container" index="7"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -334,16 +285,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="ArcadeButton2" type="Button" parent="Container" index="17"]
+[node name="ArcadeButton2" type="Button" parent="Container" index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 466.0
-margin_top = 270.0
+margin_top = 280.0
 margin_right = 566.0
-margin_bottom = 310.0
+margin_bottom = 320.0
 rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -366,7 +317,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container" index="18"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Container" index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0

@@ -1,16 +1,17 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Screen/Character.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/World/Builder/white-bar-200.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/World/bubble-type-1.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/World/bubble-type-2.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/World/bubble-type-3.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/World/nonary.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/World/nav-header.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Web/Builder/white-bar-200.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Web/bubble-type-1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Web/bubble-type-2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Web/bubble-type-3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Web/nonary.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=7]
 [ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=11]
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 
