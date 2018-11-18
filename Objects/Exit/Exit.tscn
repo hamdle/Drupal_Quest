@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Exit/Exit.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Pixel/door-nes-1.png" type="Texture" id=2]
-
+[ext_resource path="res://Sprites/Pixel/door-1.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -39,7 +38,10 @@ playback/speed = 1.0
 
 [node name="Sprite" type="Sprite" parent="Position2D" index="0"]
 
+position = Vector2( 1.98787, -28.3508 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Area2D" type="Area2D" parent="." index="3"]
 

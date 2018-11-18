@@ -10,6 +10,7 @@ extents = Vector2( 508.063, 24.0422 )
 [node name="Floor" type="KinematicBody2D"]
 
 editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 512.644, 574.734 )
 input_pickable = false
 collision_layer = 1

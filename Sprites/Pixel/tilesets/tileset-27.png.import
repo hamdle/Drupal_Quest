@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset-19.png-70e9545607295a8e3ef21f54f046aa99.stex"
+path="res://.import/tileset-27.png-4581a1490f1416afd60e81733417ba33.stex"
 
 [deps]
 
-source_file="res://Sprites/Pixel/tilesets/tileset-19.png"
-dest_files=[ "res://.import/tileset-19.png-70e9545607295a8e3ef21f54f046aa99.stex" ]
+source_file="res://Sprites/Pixel/tilesets/tileset-27.png"
+dest_files=[ "res://.import/tileset-27.png-4581a1490f1416afd60e81733417ba33.stex" ]
 
 [params]
 
