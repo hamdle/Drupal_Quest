@@ -1,24 +1,26 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/Screen/Arcade.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Web/Builder/nav-bar-1280.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=4]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/Screen/CharacterDisplay.gd" type="Script" id=7]
-[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=9]
-[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://Sprites/star.png" type="Texture" id=11]
-
+[ext_resource path="res://Sprites/Web/Builder/home-banner-1280.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-29.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-20.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Web/Builder/nav-bar-1280.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Screen/CharacterDisplay.gd" type="Script" id=10]
+[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=12]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Sprites/star.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 82
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=2]
@@ -240,7 +242,7 @@ _sections_unfolded = [ "Corner Radius" ]
 size = 45
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
 [sub_resource type="DynamicFont" id=12]
@@ -248,10 +250,10 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 10 )
+font_data = ExtResource( 13 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Arcade" type="Node"]
+[node name="Arcade" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Margin" ]
@@ -272,12 +274,19 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="SceneBackground" type="Polygon2D" parent="Container" index="0"]
+[node name="home-banner-1280" type="Sprite" parent="Container" index="0"]
 
 visible = false
-polygon = PoolVector2Array( -49.2596, -27.5451, -36.9563, 628.63, 1045.73, 624.529, 1041.63, -15.2418 )
+position = Vector2( 555.801, 174.913 )
+texture = ExtResource( 2 )
+
+[node name="SceneBackground" type="Polygon2D" parent="Container" index="1"]
+
+visible = false
+position = Vector2( 10.5514, -390.401 )
+polygon = PoolVector2Array( -49.2596, -27.5451, -36.9563, 628.63, 1045.73, 624.529, 1045.54, 174.602, 1041.63, -15.2418 )
 uv = PoolVector2Array(  )
-color = Color( 1, 1, 1, 1 )
+color = Color( 0.164706, 0.294118, 0.721569, 1 )
 vertex_colors = PoolColorArray(  )
 offset = Vector2( 0, 0 )
 antialiased = false
@@ -288,29 +297,144 @@ texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
 
-[node name="nav-header" type="Sprite" parent="Container" index="1"]
+[node name="Node2D2" type="Node2D" parent="Container" index="2"]
+
+editor/display_folded = true
+position = Vector2( -35.8667, 141.259 )
+
+[node name="tileset-25" type="Sprite" parent="Container/Node2D2" index="0"]
+
+position = Vector2( 120, 227 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-26" type="Sprite" parent="Container/Node2D2" index="1"]
+
+position = Vector2( 376, 227 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-27" type="Sprite" parent="Container/Node2D2" index="2"]
+
+position = Vector2( 632, 227 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-28" type="Sprite" parent="Container/Node2D2" index="3"]
+
+position = Vector2( 888, 227 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-29" type="Sprite" parent="Container/Node2D2" index="4"]
+
+position = Vector2( 1144, 227 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Node2D" type="Node2D" parent="Container" index="3"]
+
+editor/display_folded = true
+position = Vector2( -35.8667, 141.259 )
+
+[node name="tileset-33" type="Sprite" parent="Container/Node2D" index="0"]
+
+position = Vector2( 119.84, 418.307 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-36" type="Sprite" parent="Container/Node2D" index="1"]
+
+position = Vector2( 119.84, 607.844 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-30" type="Sprite" parent="Container/Node2D" index="2"]
+
+position = Vector2( 375.84, 418.307 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-38" type="Sprite" parent="Container/Node2D" index="3"]
+
+position = Vector2( 375.84, 607.844 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-31" type="Sprite" parent="Container/Node2D" index="4"]
+
+position = Vector2( 631.84, 418.307 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-37" type="Sprite" parent="Container/Node2D" index="5"]
+
+position = Vector2( 631.84, 607.844 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-34" type="Sprite" parent="Container/Node2D" index="6"]
+
+position = Vector2( 887.84, 418.307 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-39" type="Sprite" parent="Container/Node2D" index="7"]
+
+position = Vector2( 887.84, 607.844 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-32" type="Sprite" parent="Container/Node2D" index="8"]
+
+position = Vector2( 1143.84, 418.307 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-35" type="Sprite" parent="Container/Node2D" index="9"]
+
+position = Vector2( 1143.84, 607.844 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="nav-header" type="Sprite" parent="Container" index="4"]
 
 visible = false
 position = Vector2( 511.684, 37.022 )
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 
-[node name="nav-bar-1280" type="Sprite" parent="Container" index="2"]
+[node name="nav-bar-1280" type="Sprite" parent="Container" index="5"]
 
 visible = false
 position = Vector2( 501.017, 35.1543 )
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 
-[node name="ground-1024x50-white" type="Sprite" parent="Container" index="3"]
+[node name="ground-1024x50-white" type="Sprite" parent="Container" index="6"]
 
 position = Vector2( 511.379, 24.8255 )
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 
-[node name="ground-1024x50-white2" type="Sprite" parent="Container" index="4"]
+[node name="ground-1024x50-white2" type="Sprite" parent="Container" index="7"]
 
 position = Vector2( 511.379, 44.8255 )
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 
-[node name="TextureRect" type="TextureRect" parent="Container" index="5"]
+[node name="TextureRect" type="TextureRect" parent="Container" index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -324,10 +448,10 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 stretch_mode = 0
 
-[node name="LevelSelectLabel" type="Label" parent="Container" index="6"]
+[node name="LevelSelectLabel" type="Label" parent="Container" index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -352,7 +476,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="BackButton" type="Button" parent="Container" index="7"]
+[node name="BackButton" type="Button" parent="Container" index="10"]
 
 anchor_left = 0.5
 anchor_top = 1.0
@@ -384,7 +508,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="CharacterBackground" type="Polygon2D" parent="Container" index="8"]
+[node name="CharacterBackground" type="Polygon2D" parent="Container" index="11"]
 
 polygon = PoolVector2Array( 924.235, 13.3875, 923.76, 63.3312, 983.454, 61.6664, 982.027, 11.9606 )
 uv = PoolVector2Array(  )
@@ -399,16 +523,16 @@ texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
 
-[node name="CharacterDisplay" type="Sprite" parent="Container" index="9"]
+[node name="CharacterDisplay" type="Sprite" parent="Container" index="12"]
 
 position = Vector2( 952, 35 )
-texture = ExtResource( 6 )
-script = ExtResource( 7 )
-drupal_texture = ExtResource( 6 )
-drupal_8_texture = ExtResource( 8 )
-drupal_quest_texture = ExtResource( 9 )
+texture = ExtResource( 9 )
+script = ExtResource( 10 )
+drupal_texture = ExtResource( 9 )
+drupal_8_texture = ExtResource( 11 )
+drupal_quest_texture = ExtResource( 12 )
 
-[node name="LevelGrid" type="GridContainer" parent="Container" index="10"]
+[node name="LevelGrid" type="GridContainer" parent="Container" index="13"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -538,18 +662,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level2" type="Container" parent="Container/LevelGrid/Row" index="1"]
 
@@ -646,18 +770,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level3" type="Container" parent="Container/LevelGrid/Row" index="2"]
 
@@ -754,18 +878,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level4" type="Container" parent="Container/LevelGrid/Row" index="3"]
 
@@ -862,18 +986,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level4/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level4/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level4/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level5" type="Container" parent="Container/LevelGrid/Row" index="4"]
 
@@ -970,18 +1094,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level5/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level5/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level5/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level6" type="Container" parent="Container/LevelGrid/Row" index="5"]
 
@@ -1078,18 +1202,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level6/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level6/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level6/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="MarginContainer" type="MarginContainer" parent="Container/LevelGrid" index="1"]
 
@@ -1222,18 +1346,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level7/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level7/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level7/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level8" type="Container" parent="Container/LevelGrid/Row2" index="1"]
 
@@ -1330,18 +1454,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level8/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level8/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level8/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level9" type="Container" parent="Container/LevelGrid/Row2" index="2"]
 
@@ -1438,18 +1562,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level9/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level9/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level9/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level10" type="Container" parent="Container/LevelGrid/Row2" index="3"]
 
@@ -1546,18 +1670,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level10/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level10/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level10/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level11" type="Container" parent="Container/LevelGrid/Row2" index="4"]
 
@@ -1654,18 +1778,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level11/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level11/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level11/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level12" type="Container" parent="Container/LevelGrid/Row2" index="5"]
 
@@ -1762,18 +1886,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level12/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level12/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level12/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="MarginContainer2" type="MarginContainer" parent="Container/LevelGrid" index="3"]
 
@@ -1905,18 +2029,18 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect",
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level13/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level13/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level13/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level14" type="Container" parent="Container/LevelGrid/Row3" index="1"]
 
@@ -2013,18 +2137,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level14/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level14/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level14/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level15" type="Container" parent="Container/LevelGrid/Row3" index="2"]
 
@@ -2121,18 +2245,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level15/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level15/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level15/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level16" type="Container" parent="Container/LevelGrid/Row3" index="3"]
 
@@ -2229,18 +2353,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level16/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level16/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level16/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level17" type="Container" parent="Container/LevelGrid/Row3" index="4"]
 
@@ -2337,18 +2461,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level17/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level17/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level17/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="level18" type="Container" parent="Container/LevelGrid/Row3" index="5"]
 
@@ -2445,18 +2569,18 @@ _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 [node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level18/HBox" index="0"]
 
 position = Vector2( 20, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level18/HBox" index="1"]
 
 position = Vector2( 50, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level18/HBox" index="2"]
 
 position = Vector2( 80, 16 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 
 [connection signal="pressed" from="Container/BackButton" to="." method="_on_BackButton_pressed"]
 

@@ -5,9 +5,9 @@
 [ext_resource path="res://Sprites/Pixel/dirt-v2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Pixel/grass-2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Pixel/tilesets/tileset-19.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Pixel/tilesets/tileset-18.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Pixel/tilesets/tileset-16.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-27.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Web/Builder/footer-1280.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-33.png" type="Texture" id=8]
 [ext_resource path="res://Objects/Gates/GateA.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Gates/GateB.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=11]
@@ -199,117 +199,80 @@ texture = ExtResource( 5 )
 
 [node name="TilesetNode2D3" type="Node2D" parent="Level" index="10"]
 
-[node name="tileset-3" type="Sprite" parent="Level/TilesetNode2D3" index="0"]
+position = Vector2( 0, -378 )
 
-position = Vector2( 111.326, 311.488 )
+[node name="tileset-16" type="Sprite" parent="Level/TilesetNode2D3" index="0"]
+
+position = Vector2( 158.038, 849.498 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="tileset-7" type="Sprite" parent="Level/TilesetNode2D3" index="1"]
+[node name="tileset-17" type="Sprite" parent="Level/TilesetNode2D3" index="1"]
 
-position = Vector2( 111.326, 71.4883 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-11" type="Sprite" parent="Level/TilesetNode2D3" index="2"]
-
-position = Vector2( 158.007, 1090.89 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-4" type="Sprite" parent="Level/TilesetNode2D3" index="3"]
-
-position = Vector2( 431.326, 311.488 )
+position = Vector2( 478.038, 849.498 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="tileset-8" type="Sprite" parent="Level/TilesetNode2D3" index="4"]
+[node name="tileset-18" type="Sprite" parent="Level/TilesetNode2D3" index="2"]
 
-position = Vector2( 431.326, 71.4883 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-12" type="Sprite" parent="Level/TilesetNode2D3" index="5"]
-
-position = Vector2( 478.007, 1090.89 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-5" type="Sprite" parent="Level/TilesetNode2D3" index="6"]
-
-position = Vector2( 751.326, 311.488 )
+position = Vector2( 798.038, 849.498 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="tileset-9" type="Sprite" parent="Level/TilesetNode2D3" index="7"]
+[node name="tileset-19" type="Sprite" parent="Level/TilesetNode2D3" index="3"]
 
-position = Vector2( 751.326, 71.4883 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-13" type="Sprite" parent="Level/TilesetNode2D3" index="8"]
-
-position = Vector2( 798.007, 1090.89 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-6" type="Sprite" parent="Level/TilesetNode2D3" index="9"]
-
-position = Vector2( 1071.33, 311.488 )
+position = Vector2( 1118.04, 849.498 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="tileset-10" type="Sprite" parent="Level/TilesetNode2D3" index="10"]
+[node name="footer-1280" type="Sprite" parent="Level" index="11"]
 
-position = Vector2( 1071.33, 71.4883 )
-scale = Vector2( 5, 5 )
+position = Vector2( 522.912, 1038.77 )
 texture = ExtResource( 7 )
+
+[node name="Node2D3" type="Node2D" parent="Level" index="12"]
+
+editor/display_folded = true
+position = Vector2( 0, -4 )
+
+[node name="tileset-13" type="Sprite" parent="Level/Node2D3" index="0"]
+
+position = Vector2( 121, 841 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="tileset-14" type="Sprite" parent="Level/TilesetNode2D3" index="11"]
+[node name="tileset-14" type="Sprite" parent="Level/Node2D3" index="1"]
 
-position = Vector2( 1118.01, 1090.89 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 7 )
+position = Vector2( 378, 841 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="tileset-16" type="Sprite" parent="Level/TilesetNode2D3" index="12"]
+[node name="tileset-15" type="Sprite" parent="Level/Node2D3" index="2"]
 
-position = Vector2( 158.038, 851.005 )
-scale = Vector2( 5, 5 )
+position = Vector2( 636, 841 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Transform" ]
 
-[node name="tileset-17" type="Sprite" parent="Level/TilesetNode2D3" index="13"]
+[node name="tileset-16" type="Sprite" parent="Level/Node2D3" index="3"]
 
-position = Vector2( 478.038, 851.005 )
-scale = Vector2( 5, 5 )
+position = Vector2( 892, 841 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Transform" ]
 
-[node name="tileset-18" type="Sprite" parent="Level/TilesetNode2D3" index="14"]
+[node name="tileset-17" type="Sprite" parent="Level/Node2D3" index="4"]
 
-position = Vector2( 798.038, 851.005 )
-scale = Vector2( 5, 5 )
+position = Vector2( 1148, 841 )
+scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
-
-[node name="tileset-19" type="Sprite" parent="Level/TilesetNode2D3" index="15"]
-
-position = Vector2( 1118.04, 851.005 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 8 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Transform" ]
 
 [node name="Gates" type="Node" parent="." index="1"]
 
@@ -331,7 +294,7 @@ position = Vector2( 391.545, 209.022 )
 
 [node name="Exit" parent="." index="3" instance=ExtResource( 12 )]
 
-position = Vector2( 525.08, 778.544 )
+position = Vector2( 795.08, 777.544 )
 
 [node name="Key" parent="." index="4" instance=ExtResource( 13 )]
 

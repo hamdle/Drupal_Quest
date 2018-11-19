@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Screen/Character.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Web/Builder/white-bar-200.png" type="Texture" id=2]
@@ -7,11 +7,13 @@
 [ext_resource path="res://Sprites/Web/bubble-type-3.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Web/nonary.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=7]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=11]
-
+[ext_resource path="res://Sprites/Web/Builder/drupal-solutions.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-32.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-5.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -115,7 +117,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 18
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 8 )
+font_data = ExtResource( 11 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=7]
@@ -123,7 +125,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 18
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 8 )
+font_data = ExtResource( 11 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=8]
@@ -131,7 +133,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 18
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 8 )
+font_data = ExtResource( 11 )
 _sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 
 [sub_resource type="DynamicFont" id=9]
@@ -139,10 +141,10 @@ _sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 size = 82
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 8 )
+font_data = ExtResource( 11 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Character" type="Node" index="0"]
+[node name="Character" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -152,8 +154,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1025.0
-margin_bottom = 600.0
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 1024.0
+margin_bottom = 601.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -164,8 +168,8 @@ _sections_unfolded = [ "Margin" ]
 
 [node name="Polygon2D" type="Polygon2D" parent="Container" index="0"]
 
-visible = false
-polygon = PoolVector2Array( 1037.11, -28.7379, 1042.55, 639.206, -18.5367, 624.242, -30.7801, -12.4134 )
+position = Vector2( 0, 316.967 )
+polygon = PoolVector2Array( 1037.11, -28.7379, 1042.55, 639.206, -18.5367, 624.242, -31.9159, -29.2433 )
 uv = PoolVector2Array(  )
 color = Color( 1, 1, 1, 1 )
 vertex_colors = PoolColorArray(  )
@@ -314,25 +318,147 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="white-bar-201" type="Sprite" parent="Container" index="8"]
 
+visible = false
 position = Vector2( 509.544, 344.298 )
 texture = ExtResource( 2 )
 
 [node name="white-bar-202" type="Sprite" parent="Container" index="9"]
 
+visible = false
 position = Vector2( 509.544, 514.298 )
 texture = ExtResource( 2 )
 
-[node name="GridContainer" type="GridContainer" parent="." index="1"]
+[node name="drupal-solutions" type="Sprite" parent="Container" index="10"]
+
+position = Vector2( 511.802, 796.762 )
+texture = ExtResource( 8 )
+
+[node name="Node2D" type="Node2D" parent="Container" index="11"]
 
 editor/display_folded = true
+position = Vector2( 0, 6 )
+
+[node name="tileset-26" type="Sprite" parent="Container/Node2D" index="0"]
+
+position = Vector2( 124.673, 316.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-27" type="Sprite" parent="Container/Node2D" index="1"]
+
+position = Vector2( 380.673, 316.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-28" type="Sprite" parent="Container/Node2D" index="2"]
+
+position = Vector2( 636.673, 316.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-29" type="Sprite" parent="Container/Node2D" index="3"]
+
+position = Vector2( 892.673, 316.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-30" type="Sprite" parent="Container/Node2D" index="4"]
+
+position = Vector2( 1148.67, 316.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TilesetNode2D" type="Node2D" parent="Container" index="12"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 0, 40 )
+
+[node name="tileset-34" type="Sprite" parent="Container/TilesetNode2D" index="0"]
+
+position = Vector2( 124.673, 468.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-38" type="Sprite" parent="Container/TilesetNode2D" index="1"]
+
+position = Vector2( 124.673, 660.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-35" type="Sprite" parent="Container/TilesetNode2D" index="2"]
+
+position = Vector2( 380.673, 468.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-39" type="Sprite" parent="Container/TilesetNode2D" index="3"]
+
+position = Vector2( 380.673, 660.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-32" type="Sprite" parent="Container/TilesetNode2D" index="4"]
+
+position = Vector2( 636.673, 468.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-37" type="Sprite" parent="Container/TilesetNode2D" index="5"]
+
+position = Vector2( 636.673, 660.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-33" type="Sprite" parent="Container/TilesetNode2D" index="6"]
+
+position = Vector2( 892.673, 468.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-40" type="Sprite" parent="Container/TilesetNode2D" index="7"]
+
+position = Vector2( 892.673, 660.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-31" type="Sprite" parent="Container/TilesetNode2D" index="8"]
+
+position = Vector2( 1148.67, 468.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-36" type="Sprite" parent="Container/TilesetNode2D" index="9"]
+
+position = Vector2( 1148.67, 660.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="GridContainer" type="GridContainer" parent="." index="1"]
+
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 246.0
-margin_top = 283.0
+margin_top = 229.0
 margin_right = 777.0
-margin_bottom = 453.0
+margin_bottom = 399.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -481,7 +607,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 9 )
+texture = ExtResource( 12 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
 
@@ -538,7 +664,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor" ]
 
@@ -595,7 +721,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin" ]
 
@@ -607,8 +733,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 47.0
 margin_right = 100.0
-margin_bottom = 67.0
-rect_min_size = Vector2( 0, 20 )
+margin_bottom = 87.0
+rect_min_size = Vector2( 0, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -625,8 +751,8 @@ anchor_bottom = 0.0
 margin_left = 104.0
 margin_top = 47.0
 margin_right = 204.0
-margin_bottom = 67.0
-rect_min_size = Vector2( 0, 20 )
+margin_bottom = 87.0
+rect_min_size = Vector2( 0, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -643,8 +769,8 @@ anchor_bottom = 0.0
 margin_left = 208.0
 margin_top = 47.0
 margin_right = 308.0
-margin_bottom = 67.0
-rect_min_size = Vector2( 0, 20 )
+margin_bottom = 87.0
+rect_min_size = Vector2( 0, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -661,8 +787,8 @@ anchor_bottom = 0.0
 margin_left = 312.0
 margin_top = 47.0
 margin_right = 412.0
-margin_bottom = 67.0
-rect_min_size = Vector2( 0, 20 )
+margin_bottom = 87.0
+rect_min_size = Vector2( 0, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -679,8 +805,8 @@ anchor_bottom = 0.0
 margin_left = 416.0
 margin_top = 47.0
 margin_right = 516.0
-margin_bottom = 67.0
-rect_min_size = Vector2( 0, 20 )
+margin_bottom = 87.0
+rect_min_size = Vector2( 0, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -694,9 +820,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 71.0
+margin_top = 91.0
 margin_right = 100.0
-margin_bottom = 111.0
+margin_bottom = 131.0
 rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -726,9 +852,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 104.0
-margin_top = 71.0
+margin_top = 91.0
 margin_right = 204.0
-margin_bottom = 111.0
+margin_bottom = 131.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -743,9 +869,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 208.0
-margin_top = 71.0
+margin_top = 91.0
 margin_right = 308.0
-margin_bottom = 111.0
+margin_bottom = 131.0
 rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -775,9 +901,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 312.0
-margin_top = 71.0
+margin_top = 91.0
 margin_right = 412.0
-margin_bottom = 111.0
+margin_bottom = 131.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -792,9 +918,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 416.0
-margin_top = 71.0
+margin_top = 91.0
 margin_right = 516.0
-margin_bottom = 111.0
+margin_bottom = 131.0
 rect_min_size = Vector2( 100, 40 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -977,7 +1103,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 9 )
+texture = ExtResource( 12 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
 
@@ -1034,7 +1160,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor" ]
 
@@ -1091,7 +1217,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin" ]
 
