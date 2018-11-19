@@ -154,7 +154,7 @@ position = Vector2( -89.7859, 67.2781 )
 
 [node name="Exit" parent="." index="2" instance=ExtResource( 10 )]
 
-position = Vector2( 872.087, 298.203 )
+position = Vector2( 872.087, 294.203 )
 
 [node name="Bug2" parent="." index="3" instance=ExtResource( 11 )]
 
