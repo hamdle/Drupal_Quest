@@ -6,9 +6,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 20, 8.05862 )
+extents = Vector2( 20, 19.5286 )
 
-[node name="Exit" type="KinematicBody2D" index="0"]
+[node name="Exit" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -55,7 +55,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( 0.0852585, 17.4494 )
+position = Vector2( 0.472679, 3.30847 )
 shape = SubResource( 1 )
 
 

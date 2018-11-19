@@ -26,7 +26,7 @@ extents = Vector2( 508.063, 24.0422 )
 custom_solver_bias = 0.0
 extents = Vector2( 50, 1000 )
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 [node name="Level" type="Node" parent="." index="0"]
 
@@ -199,6 +199,7 @@ texture = ExtResource( 5 )
 
 [node name="TilesetNode2D3" type="Node2D" parent="Level" index="10"]
 
+editor/display_folded = true
 position = Vector2( 0, -378 )
 
 [node name="tileset-16" type="Sprite" parent="Level/TilesetNode2D3" index="0"]

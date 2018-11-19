@@ -195,7 +195,7 @@ script = ExtResource( 5 )
 script = ExtResource( 6 )
 carry_offset = Vector2( 0, -50 )
 throw_x_motion = 300
-throw_y_motion = 300
+throw_y_motion = 100
 
 [node name="Area2D" type="Area2D" parent="." index="5"]
 

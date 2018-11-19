@@ -8,7 +8,7 @@ const FLOOR_FRICTION = 0.2
 
 export var carry_offset = Vector2(0, -50)
 export var throw_x_motion = 300
-export var throw_y_motion = 300
+export var throw_y_motion = 100
 
 var time_start = 0
 
@@ -31,11 +31,11 @@ func enter(key):
 	
 	# False is facing to the right
 	if player_sprite.flip_h == false:
-		print (player.motion.x)
 		key.motion.x = throw_x_motion + player.motion.x
+		key.flip_sprite(false)
 	else:
-		print (player.motion.x)
 		key.motion.x = -(throw_x_motion - player.motion.x)
+		key.flip_sprite(true)
 	# Throw key up
 	key.motion.y = -throw_y_motion
 	

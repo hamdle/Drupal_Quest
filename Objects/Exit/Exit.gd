@@ -11,4 +11,6 @@ func _process(delta):
 	var area = get_node("Area2D")
 	for body in area.get_overlapping_bodies():
 		if body.name == "Player":
-			emit_signal("exit_entered")
+			emit_signal("exit_entered", body.name)
+		if body.name == "Key":
+			emit_signal("exit_entered", body.name)

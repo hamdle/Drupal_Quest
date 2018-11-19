@@ -11,6 +11,7 @@ var mouse_press = Vector2()
 var mouse_release = Vector2()
 # Key
 var has_key = false
+var key_thrown = false
 
 # State Machine
 var current_state
@@ -96,7 +97,7 @@ func load_character():
 
 func throw_key():
 	if has_key:
-		print ("throwing..")
+		key_thrown = true
 		var key = get_node("/root/World/Key")
 		key.throw()
 	# $Position2D/Sprite.flip_
@@ -104,13 +105,17 @@ func throw_key():
 	# Flase is right -->
 
 # Exit entered signal
-func _on_Exit_entered():
-	if has_key:
+func _on_Exit_entered(obj_entered):
+	if obj_entered == "Key" && key_thrown: 
 		if not current_state == state_nodes[STATE.WIN]:
 			current_state.exit(self)
 			current_state = state_nodes[STATE.WIN]
 			current_state.enter(self)
-	pass
+	if obj_entered == "Player" && has_key: 
+		if not current_state == state_nodes[STATE.WIN]:
+			current_state.exit(self)
+			current_state = state_nodes[STATE.WIN]
+			current_state.enter(self)
 
 func _on_Player_damage():
 	current_state.exit(self)
