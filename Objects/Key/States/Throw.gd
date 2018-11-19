@@ -7,8 +7,8 @@ const GRAVITY = 12
 const FLOOR_FRICTION = 0.2
 
 export var carry_offset = Vector2(0, -50)
-export var spawn_x_motion = 100
-export var spawn_y_motion = 300
+export var throw_x_motion = 300
+export var throw_y_motion = 300
 
 var time_start = 0
 
@@ -31,11 +31,13 @@ func enter(key):
 	
 	# False is facing to the right
 	if player_sprite.flip_h == false:
-		key.motion.x = spawn_x_motion
+		print (player.motion.x)
+		key.motion.x = throw_x_motion + player.motion.x
 	else:
-		key.motion.x = -spawn_x_motion
+		print (player.motion.x)
+		key.motion.x = -(throw_x_motion - player.motion.x)
 	# Throw key up
-	key.motion.y = -spawn_y_motion
+	key.motion.y = -throw_y_motion
 	
 	pass
 
