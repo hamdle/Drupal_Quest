@@ -47,4 +47,6 @@ func handleInput(player, event):
 		return STATE.WALK
 	if Input.is_action_just_pressed("jump"):
 		return STATE.JUMP
+	if Input.is_action_pressed("throw"):
+		player.throw_key()
 	pass

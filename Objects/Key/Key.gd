@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-enum STATE { NULL, HIDE, SHOW, CARRY }
+enum STATE { NULL, HIDE, SHOW, CARRY, THROW }
 
 const TAG = "Key"
 # Physics and Jump
@@ -16,7 +16,8 @@ var spawn_position = Vector2()
 onready var state_nodes = {
 	STATE.HIDE: $States/Hide,
 	STATE.SHOW: $States/Show,
-	STATE.CARRY: $States/Carry
+	STATE.CARRY: $States/Carry,
+	STATE.THROW: $States/Throw
 }
 
 func _ready():
@@ -51,6 +52,11 @@ func flip_sprite(flip):
 
 func set_character(character):
 	self.character = character
+
+func throw():
+	current_state.exit(self)
+	current_state = state_nodes[STATE.THROW]
+	current_state.enter(self)
 
 func _on_Enemy_die(pos):
 	var e = get_tree().get_nodes_in_group("enemies")

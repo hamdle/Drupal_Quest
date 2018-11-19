@@ -93,7 +93,16 @@ func load_character():
 		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_8_texture
 	elif gs.current_character == gs.CHARACTER.JUMPAL:
 		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_quest_texture
-	
+
+func throw_key():
+	if has_key:
+		print ("throwing..")
+		var key = get_node("/root/World/Key")
+		key.throw()
+	# $Position2D/Sprite.flip_
+	# True is left <--
+	# Flase is right -->
+
 # Exit entered signal
 func _on_Exit_entered():
 	if has_key:

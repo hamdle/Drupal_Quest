@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Objects/Key/Key.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Pixel/key-1.png" type="Texture" id=2]
 [ext_resource path="res://Objects/Key/States/Show.gd" type="Script" id=3]
 [ext_resource path="res://Objects/Key/States/Carry.gd" type="Script" id=4]
 [ext_resource path="res://Objects/Key/States/Hide.gd" type="Script" id=5]
+[ext_resource path="res://Objects/Key/States/Throw.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -188,6 +189,13 @@ carry_offset = Vector2( 0, -50 )
 [node name="Hide" type="Node" parent="States" index="2"]
 
 script = ExtResource( 5 )
+
+[node name="Throw" type="Node" parent="States" index="3"]
+
+script = ExtResource( 6 )
+carry_offset = Vector2( 0, -50 )
+spawn_x_motion = 100
+spawn_y_motion = 300
 
 [node name="Area2D" type="Area2D" parent="." index="5"]
 

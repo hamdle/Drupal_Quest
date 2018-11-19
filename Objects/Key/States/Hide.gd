@@ -1,6 +1,6 @@
 extends Node
 
-enum STATE { NULL, HIDE, SHOW, CARRY }
+enum STATE { NULL, HIDE, SHOW, CARRY, THROW }
 
 const UP = Vector2(0, -1)
 const GRAVITY = 0

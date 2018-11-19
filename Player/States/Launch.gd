@@ -66,7 +66,8 @@ func update(player, delta):
 	pass
 	
 func handleInput(player, event):
-	pass
+	if Input.is_action_pressed("throw"):
+		player.throw_key()
 
 func calculate_launch_velocity(mouse_press, mouse_release):
 	# Calculate velocity

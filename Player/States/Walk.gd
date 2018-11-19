@@ -45,4 +45,6 @@ func handleInput(player, event):
 	#if not Input.is_action_pressed("move_right") or \
 	#not Input.is_action_pressed("move_left"):
 	#	return STATE.IDLE
+	if Input.is_action_pressed("throw"):
+		player.throw_key()
 	pass

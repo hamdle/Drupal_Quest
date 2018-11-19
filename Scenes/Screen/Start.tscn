@@ -1,21 +1,22 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Screen/Start.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Web/drupal-home.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Web/Builder/drupal-logo-1280.png" type="Texture" id=4]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Sprites/Pixel/tilesets/tileset-28.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Web/home-page-banner.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Pixel/tilesets/tileset-14.png" type="Texture" id=8]
-[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Sprites/Pixel/cloud-1.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-28.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Web/home-page-banner.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-14.png" type="Texture" id=9]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 92
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=3]
@@ -120,7 +121,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 size = 24
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Start" type="Node"]
@@ -226,7 +227,21 @@ scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Material", "Transform" ]
 
-[node name="DrupalQuestLabel2" type="Label" parent="Container" index="5"]
+[node name="cloud-1" type="Sprite" parent="Container" index="5"]
+
+position = Vector2( 766, 54 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="cloud-2" type="Sprite" parent="Container" index="6"]
+
+position = Vector2( 915, 114 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="DrupalQuestLabel2" type="Label" parent="Container" index="7"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -251,7 +266,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="DrupalQuestLabel3" type="Label" parent="Container" index="6"]
+[node name="DrupalQuestLabel3" type="Label" parent="Container" index="8"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -276,7 +291,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "Rect", "custom_colors", "custom_styles" ]
 
-[node name="TilesetNode2D" type="Node2D" parent="Container" index="7"]
+[node name="TilesetNode2D" type="Node2D" parent="Container" index="9"]
 
 editor/display_folded = true
 position = Vector2( -53.0546, -99.3073 )
@@ -285,43 +300,43 @@ position = Vector2( -53.0546, -99.3073 )
 
 position = Vector2( 123.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-10" type="Sprite" parent="Container/TilesetNode2D" index="1"]
 
 position = Vector2( 379.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-11" type="Sprite" parent="Container/TilesetNode2D" index="2"]
 
 position = Vector2( 635.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-12" type="Sprite" parent="Container/TilesetNode2D" index="3"]
 
 position = Vector2( 891.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-13" type="Sprite" parent="Container/TilesetNode2D" index="4"]
 
 position = Vector2( 1147.3, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="home-page-banner" type="Sprite" parent="Container" index="8"]
+[node name="home-page-banner" type="Sprite" parent="Container" index="10"]
 
 position = Vector2( 535.07, 450.178 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
-[node name="TilesetNode2D2" type="Node2D" parent="Container" index="9"]
+[node name="TilesetNode2D2" type="Node2D" parent="Container" index="11"]
 
 position = Vector2( 1217.97, 752.875 )
 rotation = 3.14159
@@ -331,38 +346,38 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 123.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-10" type="Sprite" parent="Container/TilesetNode2D2" index="1"]
 
 position = Vector2( 379.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-11" type="Sprite" parent="Container/TilesetNode2D2" index="2"]
 
 position = Vector2( 635.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-12" type="Sprite" parent="Container/TilesetNode2D2" index="3"]
 
 position = Vector2( 891.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-13" type="Sprite" parent="Container/TilesetNode2D2" index="4"]
 
 position = Vector2( 1147.3, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="ArcadeButton2" type="Button" parent="Container" index="10"]
+[node name="ArcadeButton2" type="Button" parent="Container" index="12"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -394,7 +409,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container" index="11"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Container" index="13"]
 
 anchor_left = 0.5
 anchor_top = 1.0

@@ -62,4 +62,5 @@ func update(player, delta):
 	pass
 	
 func handleInput(player, event):
-	pass
+	if Input.is_action_pressed("throw"):
+		player.throw_key()
