@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Screen/Character.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Web/Builder/white-bar-200.png" type="Texture" id=2]
@@ -136,13 +136,18 @@ use_filter = false
 font_data = ExtResource( 11 )
 _sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFontData" id=9]
 
-size = 82
+hinting = 2
+font_path = "res://Fonts/TradeWinds-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 90
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 11 )
-_sections_unfolded = [ "Font", "Settings" ]
+font_data = SubResource( 9 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [node name="Character" type="Node"]
 
@@ -1443,22 +1448,22 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Label" type="Label" parent="." index="3"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 189.0
-margin_top = 90.0
-margin_right = 842.0
-margin_bottom = 183.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -406.0
+margin_top = -210.0
+margin_right = 405.0
+margin_bottom = -87.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 9 )
-custom_colors/font_color = Color( 0.972549, 0.219608, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.0235294, 0.470588, 0.745098, 1 )
 text = "Character Select"
 align = 1
 percent_visible = 1.0

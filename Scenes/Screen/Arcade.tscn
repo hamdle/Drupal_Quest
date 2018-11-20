@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/Screen/Arcade.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Web/Builder/home-banner-1280.png" type="Texture" id=2]
@@ -10,23 +10,28 @@
 [ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Web/Builder/nav-bar-1280.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/ground-1024x50-white.png" type="Texture" id=10]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=12]
-[ext_resource path="res://Scenes/Screen/CharacterDisplay.gd" type="Script" id=13]
-[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Screen/CharacterDisplay.gd" type="Script" id=12]
+[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=14]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Sprites/star.png" type="Texture" id=17]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFontData" id=1]
 
-size = 82
+hinting = 2
+font_path = "res://Fonts/MINSPSW_.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 90
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 11 )
+font_data = SubResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -54,7 +59,7 @@ shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -82,7 +87,7 @@ shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=5]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -110,21 +115,21 @@ shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
 
-[sub_resource type="DynamicFontData" id=5]
+[sub_resource type="DynamicFontData" id=6]
 
 hinting = 2
 font_path = "res://Fonts/Ubuntu-B.ttf"
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 
 size = 18
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 5 )
+font_data = SubResource( 6 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=8]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -153,7 +158,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Corner Radius" ]
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=9]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -182,7 +187,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Corner Radius" ]
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=10]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -211,7 +216,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Corner Radius", "Expand Margin" ]
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=11]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -240,15 +245,15 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Corner Radius" ]
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=12]
 
 size = 45
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 11 )
+font_data = ExtResource( 15 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=13]
 
 size = 16
 use_mipmaps = false
@@ -475,21 +480,21 @@ stretch_mode = 0
 
 [node name="LevelSelectLabel" type="Label" parent="Container" index="12"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 123.0
-margin_top = 90.0
-margin_right = 901.0
-margin_bottom = 183.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -389.0
+margin_top = -210.0
+margin_right = 389.0
+margin_bottom = -87.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.972549, 0.219608, 0, 1 )
 text = "Level Select"
 align = 1
@@ -516,10 +521,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -549,11 +554,11 @@ invert_border = 100.0
 [node name="CharacterDisplay" type="Sprite" parent="Container" index="15"]
 
 position = Vector2( 952, 35 )
-texture = ExtResource( 12 )
-script = ExtResource( 13 )
-drupal_texture = ExtResource( 12 )
-drupal_8_texture = ExtResource( 14 )
-drupal_quest_texture = ExtResource( 15 )
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
+drupal_texture = ExtResource( 11 )
+drupal_8_texture = ExtResource( 13 )
+drupal_quest_texture = ExtResource( 14 )
 
 [node name="LevelGrid" type="GridContainer" parent="Container" index="16"]
 
@@ -626,11 +631,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -656,7 +661,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -734,11 +739,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -764,7 +769,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -842,11 +847,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -872,7 +877,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -950,11 +955,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -980,7 +985,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1058,11 +1063,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1088,7 +1093,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1166,11 +1171,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1196,7 +1201,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1310,11 +1315,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1340,7 +1345,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1418,11 +1423,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1448,7 +1453,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1526,11 +1531,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1556,7 +1561,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1634,11 +1639,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1664,7 +1669,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1742,11 +1747,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1772,7 +1777,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1850,11 +1855,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1880,7 +1885,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -1993,11 +1998,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2023,7 +2028,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -2101,11 +2106,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2131,7 +2136,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -2209,11 +2214,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2239,7 +2244,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -2317,11 +2322,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2347,7 +2352,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -2425,11 +2430,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2455,7 +2460,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1
@@ -2533,11 +2538,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -2563,7 +2568,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "00:00"
 align = 1

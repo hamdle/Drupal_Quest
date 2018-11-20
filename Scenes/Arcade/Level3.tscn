@@ -25,7 +25,7 @@ extents = Vector2( 508.063, 24.0422 )
 custom_solver_bias = 0.0
 extents = Vector2( 50, 1000 )
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 [node name="Level" type="Node" parent="." index="0"]
 

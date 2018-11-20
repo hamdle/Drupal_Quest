@@ -1,22 +1,39 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Screen/Start.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Web/drupal-home.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Web/Builder/drupal-logo-1280.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Pixel/cloud-1.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Sprites/Pixel/tilesets/tileset-28.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Web/home-page-banner.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Pixel/tilesets/tileset-14.png" type="Texture" id=9]
-[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-28.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Web/home-page-banner.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-14.png" type="Texture" id=8]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFontData" id=11]
+
+hinting = 2
+font_path = "res://Fonts/TradeWinds-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+
+size = 90
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 11 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=10]
+
+hinting = 2
+font_path = "res://Fonts/MINSPSW_.ttf"
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 92
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 6 )
+font_data = SubResource( 10 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=2]
@@ -121,10 +138,10 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 size = 24
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 10 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Start" type="Node"]
+[node name="Start" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -249,16 +266,16 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -278.5
 margin_top = -210.0
-margin_right = 278.5
-margin_bottom = -106.0
+margin_right = 306.5
+margin_bottom = -78.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.972549, 0.219608, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0.0235294, 0.470588, 0.745098, 1 )
 text = "Drupal Jump"
 align = 1
 percent_visible = 1.0
@@ -301,41 +318,41 @@ position = Vector2( -53.0546, -99.3073 )
 
 position = Vector2( 123.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-10" type="Sprite" parent="Container/TilesetNode2D" index="1"]
 
 position = Vector2( 379.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-11" type="Sprite" parent="Container/TilesetNode2D" index="2"]
 
 position = Vector2( 635.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-12" type="Sprite" parent="Container/TilesetNode2D" index="3"]
 
 position = Vector2( 891.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-13" type="Sprite" parent="Container/TilesetNode2D" index="4"]
 
 position = Vector2( 1147.3, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="home-page-banner" type="Sprite" parent="Container" index="10"]
 
 position = Vector2( 535.07, 450.178 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="TilesetNode2D2" type="Node2D" parent="Container" index="11"]
 
@@ -347,35 +364,35 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 123.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-10" type="Sprite" parent="Container/TilesetNode2D2" index="1"]
 
 position = Vector2( 379.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-11" type="Sprite" parent="Container/TilesetNode2D2" index="2"]
 
 position = Vector2( 635.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-12" type="Sprite" parent="Container/TilesetNode2D2" index="3"]
 
 position = Vector2( 891.296, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="tileset-13" type="Sprite" parent="Container/TilesetNode2D2" index="4"]
 
 position = Vector2( 1147.3, 393.859 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="ArcadeButton2" type="Button" parent="Container" index="12"]
