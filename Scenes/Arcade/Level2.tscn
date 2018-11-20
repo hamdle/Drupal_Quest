@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/Web/Builder/get-involved-body-1.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Web/Builder/footer-1280.png" type="Texture" id=2]
@@ -20,11 +20,6 @@ extents = Vector2( 150, 231.337 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 600, 20 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 542.856, 98.6008 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -133,21 +128,6 @@ position = Vector2( 1113.33, 1.54586 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Level/TilesetNode2D" index="5"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/TilesetNode2D/StaticBody2D" index="0"]
-
-position = Vector2( 507.207, -3.61 )
-shape = SubResource( 4 )
 
 [node name="Position2D" type="Position2D" parent="Level" index="4"]
 
