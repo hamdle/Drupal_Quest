@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/Web/Builder/get-involved-body-1.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Pixel/tilesets/tileset-19.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Web/Builder/footer-1280.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Web/Builder/footer-1280.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Pixel/tilesets/tileset-19.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Pixel/tilesets/tileset-33.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Web/Builder/front-three.png" type="Texture" id=5]
 [ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=6]
@@ -21,6 +21,11 @@ extents = Vector2( 150, 231.337 )
 custom_solver_bias = 0.0
 extents = Vector2( 600, 20 )
 
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 542.856, 98.6008 )
+
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
@@ -30,7 +35,23 @@ extents = Vector2( 20, 800 )
 
 [node name="Level" type="Node" parent="." index="0"]
 
-[node name="get-involved-body-1" type="Sprite" parent="Level" index="0"]
+[node name="Polygon2D" type="Polygon2D" parent="Level" index="0"]
+
+position = Vector2( 0.0012207, 60 )
+polygon = PoolVector2Array( -57.4328, 40.4927, -73.7573, 311.208, 1030.87, 311.208, 1032.23, 50.0154 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="get-involved-body-1" type="Sprite" parent="Level" index="1"]
 
 editor/display_folded = true
 position = Vector2( 509.245, 597.011 )
@@ -52,51 +73,11 @@ position = Vector2( 322.123, -47.3111 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
-[node name="TilesetNode2D" type="Node2D" parent="Level" index="1"]
-
-editor/display_folded = true
-position = Vector2( 0, 222.361 )
-
-[node name="tileset-3" type="Sprite" parent="Level/TilesetNode2D" index="0"]
-
-position = Vector2( 89.3256, 1.54586 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-4" type="Sprite" parent="Level/TilesetNode2D" index="1"]
-
-position = Vector2( 345.326, 1.54586 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-5" type="Sprite" parent="Level/TilesetNode2D" index="2"]
-
-position = Vector2( 601.326, 1.54586 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-6" type="Sprite" parent="Level/TilesetNode2D" index="3"]
-
-position = Vector2( 857.326, 1.54586 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="tileset-7" type="Sprite" parent="Level/TilesetNode2D" index="4"]
-
-position = Vector2( 1113.33, 1.54586 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
 [node name="footer-1" type="Sprite" parent="Level" index="2"]
 
 editor/display_folded = true
 position = Vector2( 509.705, 799.584 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level/footer-1" index="0"]
 
@@ -114,26 +95,61 @@ bounce = 0.0
 position = Vector2( 3.53922, -52.573 )
 shape = SubResource( 2 )
 
-[node name="Polygon2D" type="Polygon2D" parent="Level" index="3"]
+[node name="TilesetNode2D" type="Node2D" parent="Level" index="3"]
 
-visible = false
-position = Vector2( 0.0012207, 60 )
-polygon = PoolVector2Array( 649.476, 394.054, 647.021, 562.254, 944.133, 562.254, 945.361, 380.549 )
-uv = PoolVector2Array(  )
-color = Color( 1, 1, 1, 1 )
-vertex_colors = PoolColorArray(  )
-offset = Vector2( 0, 0 )
-antialiased = false
-texture = null
-texture_offset = Vector2( 0, 0 )
-texture_scale = Vector2( 1, 1 )
-texture_rotation_degrees = 0.0
-invert_enable = false
-invert_border = 100.0
+position = Vector2( 0, 26.361 )
+
+[node name="tileset-3" type="Sprite" parent="Level/TilesetNode2D" index="0"]
+
+position = Vector2( 89.3256, 1.54586 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-4" type="Sprite" parent="Level/TilesetNode2D" index="1"]
+
+position = Vector2( 345.326, 1.54586 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-5" type="Sprite" parent="Level/TilesetNode2D" index="2"]
+
+position = Vector2( 601.326, 1.54586 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-6" type="Sprite" parent="Level/TilesetNode2D" index="3"]
+
+position = Vector2( 857.326, 1.54586 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tileset-7" type="Sprite" parent="Level/TilesetNode2D" index="4"]
+
+position = Vector2( 1113.33, 1.54586 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level/TilesetNode2D" index="5"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/TilesetNode2D/StaticBody2D" index="0"]
+
+position = Vector2( 507.207, -3.61 )
+shape = SubResource( 4 )
 
 [node name="Position2D" type="Position2D" parent="Level" index="4"]
-
-editor/display_folded = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level/Position2D" index="0"]
 
@@ -160,6 +176,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="TilesetsNode2D" type="Node2D" parent="Level" index="5"]
 
 editor/display_folded = true
+visible = false
 
 [node name="tileset-3" type="Sprite" parent="Level/TilesetsNode2D" index="0"]
 
@@ -198,7 +215,8 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="front-three" type="Sprite" parent="Level" index="6"]
 
-position = Vector2( 522.637, -70.5226 )
+visible = false
+position = Vector2( 522.637, -0.522598 )
 texture = ExtResource( 5 )
 
 [node name="Enemies" type="Node" parent="." index="1"]
