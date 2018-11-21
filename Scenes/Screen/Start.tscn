@@ -146,7 +146,7 @@ use_filter = false
 font_data = ExtResource( 11 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Start" type="Node" index="0"]
+[node name="Start" type="Node"]
 
 script = ExtResource( 1 )
 
